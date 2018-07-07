@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="错误笔记," />
+  <meta name="keywords" content="学习笔记," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="inf值要设大但不要溢出  vis之类的数组使用前都memset一下  memset一些除0外的奇怪的数字时，最好老老实实写for循环（谁叫我脸黑）  edge数组不要设小了  C++ 11 不要用register int  手写堆中$heap[]$最好不用结构体，若用，手写swap函数  $bool$ $flag$一定要赋初值！！！！  树链剖分注意https://www.cnblogs.co">
-<meta name="keywords" content="错误笔记">
+<meta name="description" content="前言  树链剖分是一个很好用的处理树上统计信息的方法,大致思想就是把树上路径分成$log N$条链,再用线段树之类的数据结构维护一下,所以时间复杂度得到了保障 怎么做  个人认为这篇讲的很好:   https://www.cnblogs.com/George1994/p/7821357.html 注意几点  debug树链剖分对于我来说真是个痛苦的过程,查了近一个小时错才查出来.   首先你要只要">
+<meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="错误笔记">
-<meta property="og:url" content="https://rye-catcher.github.io/2018/07/07/错误笔记/index.html">
+<meta property="og:title" content="学习笔记--树链剖分">
+<meta property="og:url" content="https://rye-catcher.github.io/2018/07/07/学习笔记-树链剖分/index.html">
 <meta property="og:site_name" content="Rye_Catcher">
-<meta property="og:description" content="inf值要设大但不要溢出  vis之类的数组使用前都memset一下  memset一些除0外的奇怪的数字时，最好老老实实写for循环（谁叫我脸黑）  edge数组不要设小了  C++ 11 不要用register int  手写堆中$heap[]$最好不用结构体，若用，手写swap函数  $bool$ $flag$一定要赋初值！！！！  树链剖分注意https://www.cnblogs.co">
+<meta property="og:description" content="前言  树链剖分是一个很好用的处理树上统计信息的方法,大致思想就是把树上路径分成$log N$条链,再用线段树之类的数据结构维护一下,所以时间复杂度得到了保障 怎么做  个人认为这篇讲的很好:   https://www.cnblogs.com/George1994/p/7821357.html 注意几点  debug树链剖分对于我来说真是个痛苦的过程,查了近一个小时错才查出来.   首先你要只要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-07T11:51:17.223Z">
+<meta property="og:updated_time" content="2018-07-07T15:14:45.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="错误笔记">
-<meta name="twitter:description" content="inf值要设大但不要溢出  vis之类的数组使用前都memset一下  memset一些除0外的奇怪的数字时，最好老老实实写for循环（谁叫我脸黑）  edge数组不要设小了  C++ 11 不要用register int  手写堆中$heap[]$最好不用结构体，若用，手写swap函数  $bool$ $flag$一定要赋初值！！！！  树链剖分注意https://www.cnblogs.co">
+<meta name="twitter:title" content="学习笔记--树链剖分">
+<meta name="twitter:description" content="前言  树链剖分是一个很好用的处理树上统计信息的方法,大致思想就是把树上路径分成$log N$条链,再用线段树之类的数据结构维护一下,所以时间复杂度得到了保障 怎么做  个人认为这篇讲的很好:   https://www.cnblogs.com/George1994/p/7821357.html 注意几点  debug树链剖分对于我来说真是个痛苦的过程,查了近一个小时错才查出来.   首先你要只要">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://rye-catcher.github.io/2018/07/07/错误笔记/"/>
+  <link rel="canonical" href="https://rye-catcher.github.io/2018/07/07/学习笔记-树链剖分/"/>
 
 
 
 
 
-  <title>错误笔记 | Rye_Catcher</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>学习笔记--树链剖分 | Rye_Catcher</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -277,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/07/错误笔记/">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/07/学习笔记-树链剖分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rye_Catcher">
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">错误笔记</h1>
+          <h1 class="post-title" itemprop="name headline">学习笔记--树链剖分</h1>
         
 
         <div class="post-meta">
@@ -306,7 +306,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-07T19:50:47+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-07T23:13:22+08:00">
                 2018-07-07
               </time>
             
@@ -349,24 +349,22 @@
       
 
       
-        <ul>
-<li><p>inf值要设大但不要溢出</p>
-</li>
-<li><p>vis之类的数组使用前都memset一下</p>
-</li>
-<li><p>memset一些除0外的奇怪的数字时，最好老老实实写for循环（谁叫我脸黑）</p>
-</li>
-<li><p>edge数组不要设小了</p>
-</li>
-<li><p>C++ 11 不要用register int</p>
-</li>
-<li><p>手写堆中$heap[]$最好不用结构体，若用，手写swap函数</p>
-</li>
-<li><p>$bool$ $flag$一定要赋初值！！！！</p>
-</li>
-<li><p>树链剖分注意<a href="https://www.cnblogs.com/Rye-Catcher/p/9265860.html" target="_blank" rel="noopener">https://www.cnblogs.com/Rye-Catcher/p/9265860.html</a></p>
-</li>
-<li><p>边权树上差分注意根节点不能算作贡献</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  树链剖分是一个很好用的处理树上统计信息的方法,大致思想就是把树上路径分成$log N$条链,再用线段树之类的数据结构维护一下,所以时间复杂度得到了保障</p>
+<h2 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h2><p>  个人认为这篇讲的很好:</p>
+<p>  <a href="https://www.cnblogs.com/George1994/p/7821357.html" target="_blank" rel="noopener">https://www.cnblogs.com/George1994/p/7821357.html</a></p>
+<h2 id="注意几点"><a href="#注意几点" class="headerlink" title="注意几点"></a>注意几点</h2><p>  debug树链剖分对于我来说真是个痛苦的过程,查了近一个小时错才查出来.</p>
+<p>  首先你要只要线段树上序列是什么?他们是$dfs_2$中的每个树节点的$dfs$顺序存在$dfn[]$中,$rnk[]$则记录对应$dfn[]$对应的节点编号</p>
+<h4 id="build函数"><a href="#build函数" class="headerlink" title="build函数"></a>build函数</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">   void build(int now,int l,int r)&#123;</span><br><span class="line">if(l==r)&#123;</span><br><span class="line">	mx[now]=sum[now]=w[rnk[l]];//注意是rnk[l]</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">int mid=(l+r)&gt;&gt;1;</span><br><span class="line">build(now&lt;&lt;1,l,mid);</span><br><span class="line">build(now&lt;&lt;1|1,mid+1,r);</span><br><span class="line">sum[now]=sum[now&lt;&lt;1]+sum[now&lt;&lt;1|1];</span><br><span class="line">   mx[now]=max(mx[now&lt;&lt;1],mx[now&lt;&lt;1|1]);</span><br><span class="line">return ;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="dfs之前的操作"><a href="#dfs之前的操作" class="headerlink" title="dfs之前的操作"></a>dfs之前的操作</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   dep[1]=1,fa[1]=1;//假设root是1</span><br><span class="line">dfs_1(1);</span><br><span class="line">dfs_2(1,1);</span><br><span class="line">build(1,1,n);</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="size-子树大小如果初始为1则对子树更新是这样的，若为0则不用-1"><a href="#size-子树大小如果初始为1则对子树更新是这样的，若为0则不用-1" class="headerlink" title="$size[]$子树大小如果初始为1则对子树更新是这样的，若为0则不用-1"></a>$size[]$子树大小如果初始为1则对子树更新是这样的，若为0则不用-1</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">read(x),read(z);</span><br><span class="line">L=dfn[x],R=dfn[x]+size[x]-1,dta=z;</span><br><span class="line">update(1,1,n);</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h4><h2 id="例题1"><a href="#例题1" class="headerlink" title="例题1;"></a>例题1;</h2><p>  <a href="https://www.luogu.org/problemnew/show/P2590" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P2590</a></p>
+<p>  代码:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;cctype&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#define ri register int </span><br><span class="line">#define ll long long </span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn=30305;</span><br><span class="line">const int inf=0x7fffffff;</span><br><span class="line">template &lt;class T&gt;inline void read(T &amp;x)&#123;</span><br><span class="line">	x=0;int ne=0;char c;</span><br><span class="line">	while(!isdigit(c=getchar()))ne=c==&apos;-&apos;;</span><br><span class="line">	x=c-48;</span><br><span class="line">	while(isdigit(c=getchar()))x=(x&lt;&lt;3)+(x&lt;&lt;1)+c-48;</span><br><span class="line">	x=ne?-x:x;</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">int n,q,t,w[maxn],dta;</span><br><span class="line">int dep[maxn],size[maxn],top[maxn],son[maxn],dfn[maxn],rnk[maxn],fa[maxn],cnt=0;</span><br><span class="line">struct Edge&#123;</span><br><span class="line">	int ne,to;</span><br><span class="line">&#125;edge[maxn&lt;&lt;1];</span><br><span class="line">int h[maxn],num_edge=0;</span><br><span class="line">inline void add_edge(int f,int to)&#123;</span><br><span class="line">	edge[++num_edge].ne=h[f];</span><br><span class="line">	edge[num_edge].to=to;</span><br><span class="line">	h[f]=num_edge;</span><br><span class="line">&#125;</span><br><span class="line">int sum[maxn&lt;&lt;2],mx[maxn&lt;&lt;2],L,R;</span><br><span class="line">/*inline void pushdown(int now,int ln,int rn)&#123;</span><br><span class="line">	if(tag[now])&#123;</span><br><span class="line">		sum[now&lt;&lt;1]+=tag[now]*ln;</span><br><span class="line">		sum[now&lt;&lt;1|1]+=tag[now]*rn;</span><br><span class="line">		tag[now&lt;&lt;1]+=tag[now];</span><br><span class="line">		tag[now&lt;&lt;1|1]+=tag[now];</span><br><span class="line">		tag[now]=0;</span><br><span class="line">	&#125;</span><br><span class="line">	return ;</span><br><span class="line">&#125;*/</span><br><span class="line">void build(int now,int l,int r)&#123;</span><br><span class="line">	if(l==r)&#123;</span><br><span class="line">		mx[now]=sum[now]=w[rnk[l]];</span><br><span class="line">		return ;</span><br><span class="line">	&#125;</span><br><span class="line">	int mid=(l+r)&gt;&gt;1;</span><br><span class="line">	build(now&lt;&lt;1,l,mid);</span><br><span class="line">	build(now&lt;&lt;1|1,mid+1,r);</span><br><span class="line">	sum[now]=sum[now&lt;&lt;1]+sum[now&lt;&lt;1|1];</span><br><span class="line">    mx[now]=max(mx[now&lt;&lt;1],mx[now&lt;&lt;1|1]);</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">void update(int now,int l,int r)&#123;</span><br><span class="line">	if(l==r)&#123;</span><br><span class="line">		sum[now]=mx[now]=dta;</span><br><span class="line">		return ;</span><br><span class="line">	&#125;</span><br><span class="line">	int mid=(l+r)&gt;&gt;1;</span><br><span class="line">	if(t&lt;=mid)update(now&lt;&lt;1,l,mid);</span><br><span class="line">	else update(now&lt;&lt;1|1,mid+1,r);</span><br><span class="line">	sum[now]=sum[now&lt;&lt;1]+sum[now&lt;&lt;1|1];</span><br><span class="line">    mx[now]=max(mx[now&lt;&lt;1],mx[now&lt;&lt;1|1]);</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">int query_mx(int now,int l,int r)&#123;</span><br><span class="line">	if(L&lt;=l&amp;&amp;r&lt;=R)&#123;</span><br><span class="line">		return mx[now];</span><br><span class="line">	&#125;</span><br><span class="line">	int mid=(l+r)&gt;&gt;1,ans=-inf;</span><br><span class="line">	if(L&lt;=mid)ans=max(ans,query_mx(now&lt;&lt;1,l,mid));</span><br><span class="line">	if(mid&lt;R)ans=max(ans,query_mx(now&lt;&lt;1|1,mid+1,r));</span><br><span class="line">	return ans;</span><br><span class="line">&#125;</span><br><span class="line">int  query_sum(int now,int l,int r)&#123;</span><br><span class="line">	if(L&lt;=l&amp;&amp;r&lt;=R)&#123;</span><br><span class="line">		return sum[now];</span><br><span class="line">	&#125;</span><br><span class="line">	int mid=(l+r)&gt;&gt;1,ans=0;</span><br><span class="line">	if(L&lt;=mid)ans+=query_sum(now&lt;&lt;1,l,mid);</span><br><span class="line">	if(mid&lt;R)ans+=query_sum(now&lt;&lt;1|1,mid+1,r);</span><br><span class="line">	return ans;</span><br><span class="line">&#125;</span><br><span class="line">void dfs_1(int now)&#123;</span><br><span class="line">	int v;size[now]=1;</span><br><span class="line">	//cout&lt;&lt;now&lt;&lt;&quot;-----&quot;&lt;&lt;endl;</span><br><span class="line">	for(ri i=h[now];i;i=edge[i].ne)&#123;</span><br><span class="line">		v=edge[i].to;</span><br><span class="line">		if(v==fa[now])continue;</span><br><span class="line">		fa[v]=now,dep[v]=dep[now]+1;</span><br><span class="line">		dfs_1(v);</span><br><span class="line">		size[now]+=size[v];</span><br><span class="line">		if(!son[now]||size[son[now]]&lt;size[v])son[now]=v;</span><br><span class="line">	&#125;</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">void dfs_2(int now,int t)&#123;</span><br><span class="line">	int v;top[now]=t;</span><br><span class="line">	dfn[now]=++cnt,rnk[cnt]=now;</span><br><span class="line">	//cout&lt;&lt;now&lt;&lt;&apos; &apos;&lt;&lt;dfn[now]&lt;&lt;&apos; &apos;&lt;&lt;cnt&lt;&lt;endl;</span><br><span class="line">    if(!son[now])return ;</span><br><span class="line">	dfs_2(son[now],t);</span><br><span class="line">	for(ri i=h[now];i;i=edge[i].ne)&#123;</span><br><span class="line">		v=edge[i].to;</span><br><span class="line">		if(v==fa[now]||v==son[now])continue;</span><br><span class="line">		dfs_2(v,v);</span><br><span class="line">	&#125;</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">void query_path_sum(int x,int y)&#123;</span><br><span class="line">	int ans=0;</span><br><span class="line">	while(top[x]!=top[y])&#123;</span><br><span class="line">		if(dep[top[x]]&lt;dep[top[y]])swap(x,y);</span><br><span class="line">		L=dfn[top[x]],R=dfn[x];</span><br><span class="line">		ans+=query_sum(1,1,n);</span><br><span class="line">		x=fa[top[x]];</span><br><span class="line">	&#125;</span><br><span class="line">	if(dfn[x]&gt;dfn[y])swap(x,y);</span><br><span class="line">	L=dfn[x],R=dfn[y];</span><br><span class="line">	ans+=query_sum(1,1,n);</span><br><span class="line">	printf(&quot;%d\n&quot;,ans);</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">void query_path_mx(int x,int y)&#123;</span><br><span class="line">	int ans=-inf;</span><br><span class="line">	//cout&lt;&lt;x&lt;&lt;&apos; &apos;&lt;&lt;y&lt;&lt;endl;</span><br><span class="line">	while(top[x]!=top[y])&#123;</span><br><span class="line">		if(dep[top[x]]&lt;dep[top[y]])swap(x,y);</span><br><span class="line">		L=dfn[top[x]],R=dfn[x];</span><br><span class="line">		ans=max(ans,query_mx(1,1,n));</span><br><span class="line">		x=fa[top[x]];</span><br><span class="line">	&#125;</span><br><span class="line">	//cout&lt;&lt;x&lt;&lt;&apos; &apos;&lt;&lt;y&lt;&lt;endl;</span><br><span class="line">	if(dfn[x]&gt;dfn[y])swap(x,y);</span><br><span class="line">	L=dfn[x],R=dfn[y];</span><br><span class="line">	//cout&lt;&lt;&apos;-&apos;&lt;&lt;L&lt;&lt;&apos; &apos;&lt;&lt;R&lt;&lt;endl;</span><br><span class="line">	ans=max(ans,query_mx(1,1,n));</span><br><span class="line">	//cout&lt;&lt;x&lt;&lt;&apos; &apos;&lt;&lt;y&lt;&lt;endl;</span><br><span class="line">	printf(&quot;%d\n&quot;,ans);</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">void update_set(int x)&#123;</span><br><span class="line">	t=dfn[x];</span><br><span class="line">	update(1,1,n);</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int x,y;</span><br><span class="line">    char opt[64];</span><br><span class="line">	read(n);</span><br><span class="line">	for(ri i=1;i&lt;n;i++)&#123;</span><br><span class="line">		read(x),read(y);</span><br><span class="line">		//cout&lt;&lt;x&lt;&lt;&apos; &apos;&lt;&lt;y&lt;&lt;endl;</span><br><span class="line">		add_edge(x,y);</span><br><span class="line">		add_edge(y,x);</span><br><span class="line">	&#125;</span><br><span class="line">	for(ri i=1;i&lt;=n;i++)&#123;</span><br><span class="line">		read(w[i]);</span><br><span class="line">		dep[i]=fa[i]=son[i]=0;</span><br><span class="line">	&#125;</span><br><span class="line">	dep[1]=1,fa[1]=1;</span><br><span class="line">	dfs_1(1);</span><br><span class="line">	dfs_2(1,1);</span><br><span class="line">	build(1,1,n);</span><br><span class="line">	read(q);</span><br><span class="line">	while(q--)&#123;</span><br><span class="line">		scanf(&quot;%s&quot;,opt);</span><br><span class="line">		if(opt[0]==&apos;C&apos;)&#123;</span><br><span class="line">			read(x),read(y);</span><br><span class="line">			dta=y;</span><br><span class="line">			update_set(x);</span><br><span class="line">		&#125;</span><br><span class="line">		else if(opt[1]==&apos;M&apos;)&#123;</span><br><span class="line">			read(x),read(y);</span><br><span class="line">			//cout&lt;&lt;x&lt;&lt;&apos; &apos;&lt;&lt;y&lt;&lt;&apos;*&apos;&lt;&lt;endl;</span><br><span class="line">			query_path_mx(x,y);</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			read(x),read(y);</span><br><span class="line">			query_path_sum(x,y);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="例题2-待填坑"><a href="#例题2-待填坑" class="headerlink" title="例题2:(待填坑)"></a>例题2:(待填坑)</h2><p>  <a href="https://www.luogu.org/problemnew/show/P3384" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P3384</a></p>
+<p>  我比较傻逼现在还不知道为什么只得了30分</p>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><ul>
+<li><p>简单变式-1</p>
+<p><a href="https://www.cnblogs.com/Rye-Catcher/p/9275770.html" target="_blank" rel="noopener">https://www.cnblogs.com/Rye-Catcher/p/9275770.html</a></p>
 </li>
 </ul>
 
@@ -389,7 +387,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://rye-catcher.github.io/2018/07/07/错误笔记/" title="错误笔记">https://rye-catcher.github.io/2018/07/07/错误笔记/</a>
+    <a href="https://rye-catcher.github.io/2018/07/07/学习笔记-树链剖分/" title="学习笔记--树链剖分">https://rye-catcher.github.io/2018/07/07/学习笔记-树链剖分/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -404,7 +402,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/错误笔记/" rel="tag"># 错误笔记</a>
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
           
         </div>
       
@@ -429,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/07/APIO2018游记/" rel="next" title="APIO2018游记">
-                <i class="fa fa-chevron-left"></i> APIO2018游记
+              <a href="/2018/07/07/AtcoderSoundHound-Inc-Contest解题报告/" rel="next" title="AtcoderSoundHound Inc.Contest解题报告">
+                <i class="fa fa-chevron-left"></i> AtcoderSoundHound Inc.Contest解题报告
               </a>
             
           </div>
@@ -439,8 +437,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/07/AtcoderSoundHound-Inc-Contest解题报告/" rel="prev" title="AtcoderSoundHound Inc.Contest解题报告">
-                AtcoderSoundHound Inc.Contest解题报告 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/07/学习笔记-树上差分/" rel="prev" title="学习笔记--树上差分">
+                学习笔记--树上差分 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -493,8 +491,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -545,6 +552,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么做"><span class="nav-number">2.</span> <span class="nav-text">怎么做</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意几点"><span class="nav-number">3.</span> <span class="nav-text">注意几点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#build函数"><span class="nav-number">3.0.1.</span> <span class="nav-text">build函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dfs之前的操作"><span class="nav-number">3.0.2.</span> <span class="nav-text">dfs之前的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#size-子树大小如果初始为1则对子树更新是这样的，若为0则不用-1"><span class="nav-number">3.0.3.</span> <span class="nav-text">$size[]$子树大小如果初始为1则对子树更新是这样的，若为0则不用-1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#未完待续"><span class="nav-number">3.0.4.</span> <span class="nav-text">未完待续</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题1"><span class="nav-number">4.</span> <span class="nav-text">例题1;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题2-待填坑"><span class="nav-number">5.</span> <span class="nav-text">例题2:(待填坑)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#练习"><span class="nav-number">5.1.</span> <span class="nav-text">练习</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
