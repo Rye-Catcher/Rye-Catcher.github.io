@@ -92,7 +92,7 @@
 <meta property="og:description" content="前言  在OI学习过程中,我们常常会发现一些题目(尤其数据结构题)中,一些数据的范围很大,但是涉及的数值的个数却很少,同时我们想用一个数组的下标与这些数据建立一一对应关系,这时我们就需要离散化 大致思路  对于一个大小为$N$不含重复数字的数组$a[N] (a[i]&amp;lt;=10^9)$,我们可以将$a[]$中的N个整数与$1$ ~ $N$这$N$构成一一映射关系,也就是说把$a[i]$用一个$1">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s1.ax1x.com/2018/07/15/PM51Rx.png">
-<meta property="og:updated_time" content="2018-07-15T05:53:07.929Z">
+<meta property="og:updated_time" content="2018-07-15T05:59:32.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记--几种离散化方式">
 <meta name="twitter:description" content="前言  在OI学习过程中,我们常常会发现一些题目(尤其数据结构题)中,一些数据的范围很大,但是涉及的数值的个数却很少,同时我们想用一个数组的下标与这些数据建立一一对应关系,这时我们就需要离散化 大致思路  对于一个大小为$N$不含重复数字的数组$a[N] (a[i]&amp;lt;=10^9)$,我们可以将$a[]$中的N个整数与$1$ ~ $N$这$N$构成一一映射关系,也就是说把$a[i]$用一个$1">
@@ -407,31 +407,29 @@
 <p>$f[a[i]]$就是原数组$a[i]$的值</p>
 <p>但是$map$是用红黑树实现的,储存的元素是有序的</p>
 <p>而$unordered $_$map$是用哈希表实现的</p>
-<p>而在这里$map$纯粹只是起到了$hash$的查找与赋值,用$unordered<script type="math/tex">\_$map$也能实现,相比较之下一般会更</script>unordered$_$map$快一点(实际上您可以手写一个哈希表完成上面的离散化操作)</p>
+<p>而在这里$map$纯粹只是起到了$hash$的查找与赋值,用$unordered$_$map$也能实现,相比较之下一般会更$unordered$_$map$快一点(实际上您可以手写一个哈希表完成上面的离散化操作)</p>
 <p>然而使用$unordered$_$map$时注意,$C++11$之前使用需要</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;tr1/unordered_map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>::tr1;</span><br><span class="line"><span class="built_in">unordered_map</span> &lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;g;</span><br></pre></td></tr></table></figure>
 <p>$C++ 11$之后则可以使用</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;g;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>$pb $_$ds$中的$hash $_$table$</p>
-<p>$pb$ _$ds$中有许多黑科技,您可以在这篇博客中了解:</p>
+<li><p>$pb$_$ds$中的$hash$_$table$</p>
+<p>$pb$_$ds$中有许多黑科技,您可以在这篇博客中了解:</p>
 <p><a href="https://blog.csdn.net/Only_AiR/article/details/51940500" target="_blank" rel="noopener">https://blog.csdn.net/Only_AiR/article/details/51940500</a></p>
-<p>其中就有个$hash $_$table$，顾名思义,就是个蛤希表了,可以只用$find()$和$operator[]$,十分方便</p>
+<p>其中就有个$hash$_$table$，顾名思义,就是个蛤希表了,可以只用$find()$和$operator[]$,十分方便</p>
 <p>然而使用它需要记一点东西,但你问我资不资瓷，当然是资瓷啊</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ext/pb_ds/assoc_container.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ext/pb_ds/hash_policy.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> __gnu_pbds;</span><br><span class="line">cc_hash_table &lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;g1;<span class="comment">//两种hash_table,都跑得和香港记者一样快</span></span><br><span class="line">gp_hash_table &lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;g2;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>后记</p>
-<p>话说写这篇博客还是因为这道题</p>
-<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4241" target="_blank" rel="noopener">https://www.lydsy.com/JudgeOnline/problem.php?id=4241</a></p>
-<p>我调整各种离散化方式来看看哪个最快,同时在luogu的个人私题中同步测试</p>
-<p>然后给大家看看时间比较(因为怕影响大家评测把时间限制开的很小,难免会TLE,$bzoj$时限是80s)</p>
-<p><img src="https://s1.ax1x.com/2018/07/15/PM51Rx.png" alt=""></p>
-<p>$hash $_$table$不知道高到哪里去</p>
-<p>然而戏剧性的是BZOJ 上我测出来是$map$最快!!! $18000+ms$</p>
-<p>其余的都比裸$map​$慢了近$1000​$~$2000+​$ $ \ ​$ $ms​$</p>
-<p>很奇怪,BZOJ评测鸭太玄学了,如果有谁知道原因的可以解释下谢谢</p>
-</li>
 </ul>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>  话说写这篇博客还是因为这道题</p>
+<p>  <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4241" target="_blank" rel="noopener">https://www.lydsy.com/JudgeOnline/problem.php?id=4241</a></p>
+<p>  我调整各种离散化方式来看看哪个最快,同时在luogu的个人私题中同步测试</p>
+<p>  然后给大家看看时间比较(因为怕影响大家评测把时间限制开的很小,难免会TLE,$bzoj$时限是80s)</p>
+<p>  <img src="https://s1.ax1x.com/2018/07/15/PM51Rx.png" alt=""></p>
+<p>  $hash $_$table$不知道高到哪里去</p>
+<p>  然而戏剧性的是BZOJ 上我测出来是$map$最快!!! $18000+ms$</p>
+<p>  其余的都比裸$map$慢了近$1000$~$2000+$ $ \ $ $ms$</p>
+<p>  很奇怪,BZOJ评测鸭太玄学了,如果有谁知道原因的可以解释下谢谢</p>
 
       
     </div>
@@ -676,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大致思路"><span class="nav-number">2.</span> <span class="nav-text">大致思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式"><span class="nav-number">3.</span> <span class="nav-text">方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大致思路"><span class="nav-number">2.</span> <span class="nav-text">大致思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式"><span class="nav-number">3.</span> <span class="nav-text">方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
 
           </div>
