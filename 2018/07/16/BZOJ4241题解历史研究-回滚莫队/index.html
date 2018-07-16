@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="题解," />
 
 
 
@@ -83,17 +83,18 @@
 
 
 
-<meta name="description" content="想对我说点什么? \mathcal{Enjoy \ Your \ Reading}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="留言板GuestBook">
-<meta property="og:url" content="https://rye-catcher.github.io/guestbook/index.html">
+<meta name="description" content="题目链接  https://www.lydsy.com/JudgeOnline/problem.php?id=4241 分析  这题就是求区间权值乘以权值出现次数的最大值,一看莫队法块可搞,但仔细想想,莫队的加入很容易,但是删除需要维护许多东西,非常麻烦,于是就有dalao想出了一个新科技—回滚莫队.回滚莫队能使操作全部变成加入或全部变成删除.这道题我们需要全部变成加入.   怎么做呢？我们对询问">
+<meta name="keywords" content="题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BZOJ4241题解历史研究--回滚莫队">
+<meta property="og:url" content="https://rye-catcher.github.io/2018/07/16/BZOJ4241题解历史研究-回滚莫队/index.html">
 <meta property="og:site_name" content="Rye_Catcher">
-<meta property="og:description" content="想对我说点什么? \mathcal{Enjoy \ Your \ Reading}">
+<meta property="og:description" content="题目链接  https://www.lydsy.com/JudgeOnline/problem.php?id=4241 分析  这题就是求区间权值乘以权值出现次数的最大值,一看莫队法块可搞,但仔细想想,莫队的加入很容易,但是删除需要维护许多东西,非常麻烦,于是就有dalao想出了一个新科技—回滚莫队.回滚莫队能使操作全部变成加入或全部变成删除.这道题我们需要全部变成加入.   怎么做呢？我们对询问">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-08T09:33:42.535Z">
+<meta property="og:updated_time" content="2018-07-16T03:27:04.275Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="留言板GuestBook">
-<meta name="twitter:description" content="想对我说点什么? \mathcal{Enjoy \ Your \ Reading}">
+<meta name="twitter:title" content="BZOJ4241题解历史研究--回滚莫队">
+<meta name="twitter:description" content="题目链接  https://www.lydsy.com/JudgeOnline/problem.php?id=4241 分析  这题就是求区间权值乘以权值出现次数的最大值,一看莫队法块可搞,但仔细想想,莫队的加入很容易,但是删除需要维护许多东西,非常麻烦,于是就有dalao想出了一个新科技—回滚莫队.回滚莫队能使操作全部变成加入或全部变成删除.这道题我们需要全部变成加入.   怎么做呢？我们对询问">
 
 
 
@@ -123,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://rye-catcher.github.io/guestbook/"/>
+  <link rel="canonical" href="https://rye-catcher.github.io/2018/07/16/BZOJ4241题解历史研究-回滚莫队/"/>
 
 
 
 
 
-  <title>留言板GuestBook | Rye_Catcher</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>BZOJ4241题解历史研究--回滚莫队 | Rye_Catcher</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -292,34 +293,188 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/16/BZOJ4241题解历史研究-回滚莫队/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/07/07/PegaoF.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">留言板GuestBook</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body han-init-context">
         
         
-          <p>想对我说点什么?</p>
-<script type="math/tex; mode=display">\mathcal{Enjoy \ Your \ Reading}</script>
+          <h1 class="post-title" itemprop="name headline">BZOJ4241题解历史研究--回滚莫队</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-16T11:26:10+08:00">
+                2018-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p>  <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4241" target="_blank" rel="noopener">https://www.lydsy.com/JudgeOnline/problem.php?id=4241</a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>  这题就是求区间权值乘以权值出现次数的最大值,一看莫队法块可搞,但仔细想想,莫队的加入很容易,但是删除需要维护许多东西,非常麻烦,于是就有dalao想出了一个新科技—回滚莫队.回滚莫队能使操作全部变成加入或全部变成删除.这道题我们需要全部变成加入.</p>
+<p>  怎么做呢？我们对询问进行处理,左端点在一个块中的先归在一起,然后以右端点为关键字进行排序,使得右端点靠前的在前.然后依次处理按左端点归好后每个块中的询问,我们找到块中最靠后的左端点,和最靠前的右端点(其实就是块中第一个询问的右端点),统计区间信息。</p>
+<p>  对于每一个询问,先移动右端点加入元素,然后左端点左移得到询问答案后再向右移撤销,由于不需要维护什么信息撤销变得非常容易.简单来说,总的思路就是先找出最“窄”的区间,然后不断加入补全到询问区间.</p>
+<p>  当然,如果询问的左端点和右端点在一个块中就直接暴力处理</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ri register int </span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::min;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::max;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">vector</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">map</span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;<span class="title">inline</span> <span class="title">void</span> <span class="title">read</span>(<span class="title">T</span> &amp;<span class="title">x</span>)&#123;</span></span><br><span class="line">    x=<span class="number">0</span>;<span class="keyword">int</span> ne=<span class="number">0</span>;<span class="keyword">char</span> c;</span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c=getchar()))ne=c==<span class="string">'-'</span>;</span><br><span class="line">    x=c<span class="number">-48</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(c=getchar()))x=(x&lt;&lt;<span class="number">3</span>)+(x&lt;&lt;<span class="number">1</span>)+c<span class="number">-48</span>;x=ne?-x:x;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Qur</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l,r,id;</span><br><span class="line">    Qur(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)&#123;l=a,r=b,id=c;&#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> Qur &amp; b)<span class="keyword">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> r&lt;b.r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxb=<span class="number">355</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">0x7fffffff</span>;</span><br><span class="line"><span class="keyword">int</span> n,w[maxn],pos[maxn];</span><br><span class="line"><span class="keyword">int</span> blo,mxl[maxb];</span><br><span class="line"><span class="built_in">map</span> &lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; g;<span class="keyword">int</span> tot=<span class="number">0</span>,f[maxn];</span><br><span class="line"><span class="keyword">int</span> cnt[maxn];</span><br><span class="line">LL res=inf,ans[maxn];</span><br><span class="line"><span class="built_in">vector</span> &lt;Qur&gt; qry[maxb];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    cnt[x]++;</span><br><span class="line">    res=max(res,<span class="number">1l</span>l*cnt[x]*f[x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l,r,q;</span><br><span class="line">    read(n);read(q);</span><br><span class="line">    blo=<span class="built_in">sqrt</span>(n+<span class="number">0.5</span>);</span><br><span class="line">    <span class="built_in">memset</span>(mxl,<span class="number">0</span>,<span class="keyword">sizeof</span>(mxl));</span><br><span class="line">    <span class="keyword">for</span>(ri i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        read(w[i]);</span><br><span class="line">        <span class="keyword">if</span>(!g[w[i]])&#123;</span><br><span class="line">            g[w[i]]=++tot;</span><br><span class="line">            f[tot]=w[i];</span><br><span class="line">        &#125;w[i]=g[w[i]];</span><br><span class="line">        pos[i]=(i<span class="number">-1</span>)/blo+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ri i=<span class="number">1</span>;i&lt;=q;i++)&#123;</span><br><span class="line">        read(l),read(r);</span><br><span class="line">        <span class="keyword">if</span>(pos[l]==pos[r])&#123;<span class="comment">//左端点右端点在一个块中</span></span><br><span class="line">            res=-inf;</span><br><span class="line">            <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">            <span class="keyword">for</span>(ri j=l;j&lt;=r;j++)add(w[j]);</span><br><span class="line">            <span class="keyword">for</span>(ri j=l;j&lt;=r;j++)cnt[j]--;</span><br><span class="line">            ans[i]=res; </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            qry[pos[l]].push_back(Qur(l,r,i));</span><br><span class="line">            mxl[pos[l]]=max(mxl[pos[l]],l);<span class="comment">//记录询问块中的最后左端点</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ll,rr;LL last;</span><br><span class="line">    <span class="keyword">for</span>(ri i=<span class="number">1</span>;i&lt;=pos[n];i++)&#123;<span class="comment">//处理每个询问块</span></span><br><span class="line">        <span class="keyword">if</span>(qry[i].empty())<span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));res=-inf;</span><br><span class="line">        sort(qry[i].begin(),qry[i].end());</span><br><span class="line">        l=mxl[i],r=qry[i][<span class="number">0</span>].r;</span><br><span class="line">        <span class="keyword">for</span>(ri j=l;j&lt;=r;j++)add(w[j]);</span><br><span class="line">        <span class="keyword">for</span>(ri j=<span class="number">0</span>;j&lt;qry[i].size();j++)&#123;</span><br><span class="line">            ll=qry[i][j].l,rr=qry[i][j].r;</span><br><span class="line">            <span class="keyword">while</span>(r&lt;rr)r++,add(w[r]);</span><br><span class="line">            last=res;<span class="comment">//记录下右端点操作后信息</span></span><br><span class="line">            <span class="keyword">for</span>(ri k=ll;k&lt;l;k++)add(w[k]);</span><br><span class="line">            ans[qry[i][j].id]=res,res=last;<span class="comment">//左端点左移后撤回</span></span><br><span class="line">            <span class="keyword">for</span>(ri k=ll;k&lt;l;k++)cnt[w[k]]--;<span class="comment">//已经得到答案,撤回非常容易</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ri i=<span class="number">1</span>;i&lt;=q;i++)<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans[i]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>  关于这题的离散化处理,我还进行了一些比较,在这篇博客中</p>
+<p>  <a href="https://rye-catcher.github.io/2018/07/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%87%A0%E7%A7%8D%E7%A6%BB%E6%95%A3%E5%8C%96%E6%96%B9%E5%BC%8F/">https://rye-catcher.github.io/2018/07/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%87%A0%E7%A7%8D%E7%A6%BB%E6%95%A3%E5%8C%96%E6%96%B9%E5%BC%8F/</a></p>
+<p>  推荐学习博客</p>
+<p>  <a href="http://isrothy.blog.uoj.ac/blog/3673" target="_blank" rel="noopener">http://isrothy.blog.uoj.ac/blog/3673</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Rye_Catcher
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://rye-catcher.github.io/2018/07/16/BZOJ4241题解历史研究-回滚莫队/" title="BZOJ4241题解历史研究--回滚莫队">https://rye-catcher.github.io/2018/07/16/BZOJ4241题解历史研究-回滚莫队/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/题解/" rel="tag"># 题解</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/15/BZOJ2659算不出的算式不正经题解/" rel="next" title="BZOJ2659算不出的算式不正经题解">
+                <i class="fa fa-chevron-left"></i> BZOJ2659算不出的算式不正经题解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -357,8 +512,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,6 +621,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1032,6 +1212,23 @@
 
   
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 2427367956@qq.com,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
   
