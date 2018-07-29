@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Rye_Catcher">
 <meta property="og:description" content="前言   数论在OI中还是比较重要的,这些笔记是在课上匆忙记下的,可能不太美观。    一些约定:在这里整数间除法是向下取整;$(a,b)$代表$gcd(a,b)$ Problems:   小凯的疑惑   $sol$:构造   $ax+by = k(a,b &amp;gt;= 0)$ 使其无解   设一组解$x1 \in [0,b-1] ,y1&amp;gt;=0$   若$k&amp;gt;ab-a-b$   则$y1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-28T14:25:42.064Z">
+<meta property="og:updated_time" content="2018-07-29T02:29:10.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记--数论知识集合">
 <meta name="twitter:description" content="前言   数论在OI中还是比较重要的,这些笔记是在课上匆忙记下的,可能不太美观。    一些约定:在这里整数间除法是向下取整;$(a,b)$代表$gcd(a,b)$ Problems:   小凯的疑惑   $sol$:构造   $ax+by = k(a,b &amp;gt;= 0)$ 使其无解   设一组解$x1 \in [0,b-1] ,y1&amp;gt;=0$   若$k&amp;gt;ab-a-b$   则$y1">
@@ -385,7 +385,12 @@
 <p>   用$f(i)$表示有序三元组(a,b,c)个数,使得$a<em>b</em>c=i$,求出$f(1)$~$f(n)$<br>   $sol: i=\prod {p_i}^{c_i} $ $ f(i)=\prod C^{ci+2}_2$  使用扩展欧拉筛</p>
 <p>   数论之神</p>
 <h2 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms:"></a>Algorithms:</h2><ul>
-<li><p>线性推逆元:<br>​     $inv[fac[i]] = inv[fac[i+1]]<em>(i+1)$<br>设$p=i</em>k+r$<br>$i<em>k+r \equiv 0 \mod p$<br>$i</em>k \equiv -r \mod p$<br>$r^{-1}<em>k \equiv -i^{-1} \mod p$<br>$i^{-1}   \equiv  -p/i</em>inv[p \% i]$ $\mod p$</p>
+<li><p>线性推逆元:<br>   $inv[fac[i]] = inv[fac[i+1]]*(i+1)$</p>
+<p>   设$p=i*k+r$</p>
+<p>   $i*k+r \equiv 0 \mod p$</p>
+<p>   $i*k \equiv -r \mod p$</p>
+<p>   $r^{-1}*k \equiv -i^{-1} \mod p$</p>
+<p>   $i^{-1}   \equiv  -p/i*inv[p \% i]$ $\mod p$</p>
 </li>
 <li><p>中国剩余定理<br>  ExCRT(增量法):若m不互质<br>  $x \equiv a \mod b -&gt; x=kb+a $<br>  $x \equiv c \mod d -&gt; kb+a \equiv c \mod d -&gt; kb+pd = c-a$<br>  条件$(c-a)|gcd(b,d)$<br>  求解后回代即可</p>
 </li>
@@ -399,87 +404,83 @@
 <li><p>Pollard-Rho(未懂)</p>
 <p>   生日攻击</p>
 </li>
-<li><p>类欧几里得算法(未懂)<br>​       <a href="https://www.cnblogs.com/LLppdd/p/8428349.html" target="_blank" rel="noopener">https://www.cnblogs.com/LLppdd/p/8428349.html</a></p>
+<li><p>类欧几里得算法(未懂)<br>  ​       <a href="https://www.cnblogs.com/LLppdd/p/8428349.html" target="_blank" rel="noopener">https://www.cnblogs.com/LLppdd/p/8428349.html</a></p>
 </li>
 <li><p>BSGS&amp;&amp;ExBSGS</p>
 </li>
 </ul>
 <h2 id="Other-Things"><a href="#Other-Things" class="headerlink" title="Other Things:"></a>Other Things:</h2><ol>
-<li>$\sum_{i=1}^N {1/i} = O(log N)$    <ul>
+<li><p>$\sum_{i=1}^N {1/i} = O(log N)$    </p>
+<ul>
 <li>Prove:<br> 下界 1/2 * log N<br>  $\sum_{i=1}^N {1/i} &gt;= 1+1/2+1/4+1/4+1/8+1/8+1/8+1/8+…$<br>  上界 log N<br>  $ \sum_{i=1}^N {1/i}&lt;=1+1/2+1/2+1/4+1/4+1/4+1/4+…$</li>
 </ul>
 </li>
-<li>$\sum{1/p} = O(log log N)$</li>
-<li>裴蜀定理: $(a,b)|d  $   is equal to $ua+vb=d(u,v \in Z)$</li>
-<li><p>$扩展欧几里得Exgcd:$<br> $a \mod b = a-a/b<em>b$<br> $ua+vb = gcd(a,b)$<br> $u’b+v’(a mod b) = gcd(a,b)$<br> $u’b+v’(a-a/b</em>b) = gcd(a,b)$<br> $v’a+(u’-a/b<em>v’)</em>b = gcd(a,b)$<br> 通解:$x_0=x+t<em>b/(a,b) $    $y_0=y-t</em>a/(a,b)$</p>
+<li><p>$\sum{1/p} = O(log log N)$</p>
 </li>
-<li><p>$(k,m)=d$  $且$ $ka \equiv kb \mod m  -&gt; a \equiv b \mod m/d$<br> $Prove:   ka \equiv kb \mod m -&gt; m|(ka-kb) -&gt; m|k(a-b) -&gt; (m/d)|(a-b)$ </p>
+<li><p>裴蜀定理: $(a,b)|d  $   is equal to $ua+vb=d(u,v \in Z)$</p>
+</li>
+<li><p>$扩展欧几里得Exgcd:$ </p>
+<p> $a \mod b = a-a/b*b$</p>
+<p> $ua+vb = gcd(a,b)$</p>
+<p> $u’b+v’(a mod b) = gcd(a,b)$</p>
+<p> $u’b+v’(a-a/b*b) = gcd(a,b)$</p>
+<p> $v’a+(u’-a/b<em>v’)</em>b = gcd(a,b)$</p>
+<p> 通解:$x_0=x+t<em>b/(a,b) $    $y_0=y-t</em>a/(a,b)$</p>
+</li>
+<li><p>一个小性质</p>
+<p> $(k,m)=d$  $且$ $ka \equiv kb \mod m  则 a \equiv b \mod m/d$<br> $Prove:   ka \equiv kb \mod m -&gt; m|(ka-kb) -&gt; m|k(a-b) -&gt; (m/d)|(a-b)$ </p>
 </li>
 <li><p>简化剩余系</p>
 <ul>
-<li><p>所有$0&lt;n&lt;=m,(n,m)=1​$的n构成了模m的简化剩余系，简称缩系</p>
-<pre><code>记这样n的个数为$ \phi(m)$
-</code></pre></li>
-<li><p>如果$(m,m’)=1$,$a$取遍模$m$缩系,$a’$取遍m’缩系</p>
-<pre><code>那么$am&#39;+a&#39;m$取遍$mm&#39;$缩系
-</code></pre><ul>
+<li><p>所有$0&lt;n&lt;=m,(n,m)=1​$的n构成了模m的简化剩余系，简称缩系<br>  记这样n的个数为$ \phi(m)$</p>
+</li>
+<li><p>如果$(m,m’)=1$,$a$取遍模$m$缩系,$a’$取遍m’缩系<br> 那么$am’+a’m$取遍$mm’$缩系</p>
+<ul>
 <li>$Prove: 已知(a,m)=1,(a’,m’)=1 , (m,m’)=1$<br>   $(am’,m)=1,(a’m,m’)=1$<br>   $(am’+a’m,m)=1,(a’m+am’,m’)=1$   //加上另一个数的若干倍仍互质<br>   $(am’+a’m,mm’)=1$</li>
 <li>所以如果$(n,m)=1,\phi(nm)=\phi(n)*\phi(m)$</li>
 </ul>
 </li>
 <li><p>$phi(p^e)=(p-1)<em>p^{e-1}=p^e</em>(1-1/p) $   p是质数</p>
 <ul>
-<li>$Prove: [1,p^e]中与p不互质的数的个数为p^e/p=p^{e-1}$<pre><code> $\phi(p^e)=p^e-p^{e-1} =p^e*(1-1/p)$
-</code></pre></li>
+<li>$Prove: [1,p^e]中与p不互质的数的个数为p^e/p=p^{e-1}$<br>$\phi(p^e)=p^e-p^{e-1} =p^e*(1-1/p)$</li>
+</ul>
+<ul>
+<li>计算公式:<strong>$\phi(p)= \prod \phi(p_i^{c_i}) = \prod (p^c_i <em> (1-1/p_i)) = n</em> \prod (1-1/p_i)$</strong></li>
 </ul>
 </li>
-<li><p>计算公式:<strong>$\phi(p)= \prod \phi(p_i^{c_i}) = \prod (p^c_i <em> (1-1/p_i)) = n</em> \prod (1-1/p_i)$</strong></p>
-</li>
 </ul>
 </li>
-<li><p>欧拉定理 如果$(a,m)=1,a^{phi(m)} \equiv 1 \mod m$</p>
-<pre><code>$Prove: $设x取遍m的缩系,则ax取遍m的缩系
-       $ \prod x = \prod ax \mod m$
-       $\prod x = \prod x *a^{ \phi(m)} \mod m  $  //这样的a有phi(m)个
-          由于$(x,m)=1$,保证$\prod x $存在模m意义下的逆元
-           所以 $a^{ \phi(m)} \equiv 1 \mod m$
-</code></pre></li>
+<li><p>欧拉定理 如果$(a,m)=1,a^{phi(m)} \equiv 1 \mod m$<br> $Prove: $设x取遍m的缩系,则ax取遍m的缩系<br> $ \prod x = \prod ax \mod m$<br> $\prod x = \prod x *a^{ \phi(m)} \mod m  $  //这样的a有phi(m)个<br> 由于$(x,m)=1$,保证$\prod x $存在模m意义下的逆元<br> 所以 $a^{ \phi(m)} \equiv 1 \mod m$</p>
+</li>
 <li><p>费马小定理 如果$(a,m)=1$,且m是个质数 $a^{m-1} \equiv 1 \mod m $  </p>
 </li>
 <li><p>扩展欧拉定理 如果$(a,m)!=1 $  则 $a^b \equiv a^{min(b,b \% \phi(m)+\phi(m))} \mod m$</p>
 </li>
-<li><p>阶</p>
-<pre><code>   如果(a,m)那么最小的正整数使得$a^{x} \equiv 1 \mod m$,x称为a模m的阶
-   性质:$x|\phi(m)$
-   Prove: 
-</code></pre></li>
-<li><p>原根</p>
-<pre><code>     如果g在模m的阶是$\phi(m)$,那么称g是模m的原根
-</code></pre></li>
-<li><p>积性函数</p>
-<pre><code>     欧拉函数，莫比乌斯函数，除数函数
-</code></pre></li>
+<li><p>阶<br>如果(a,m)那么最小的正整数使得$a^{x} \equiv 1 \mod m$,x称为a模m的阶<br>性质:$x|\phi(m)$<br>Prove: 咕咕咕</p>
+</li>
+<li><p>原根<br> 如果g在模m的阶是$\phi(m)$,那么称g是模m的原根</p>
+</li>
+<li><p>积性函数<br> 欧拉函数，莫比乌斯函数，除数函数</p>
+</li>
 <li><p>狄利克雷卷积</p>
-<pre><code>     满足交换律结合律分配律,可用倍增
-     $(f*g)(n) = \sum_{d|n} f(d)*g(n/d)$
-     如果f,g是积性函数,f*g也是积性函数
-     $f*e=f$  单位元:e  $e(1)=1$,其他$e(i)=0$;
-</code></pre></li>
-<li><p>莫比乌斯函数</p>
-<pre><code>      $e(n)=\sum_{d|n}mu(d)$
-      Prove:转化为二项式系数后转化
-
-  ​    性质: $e(n)=mu(n)*1$ 
-</code></pre></li>
+<p> 满足交换律结合律分配律,可用倍增</p>
+<p> $(f<em>g)(n) = \sum_{d|n} f(d)</em>g(n/d)$</p>
+<p> 如果f,g是积性函数,f*g也是积性函数</p>
+<p> $f*e=f$  单位元:e  $e(1)=1$,其他$e(i)=0$;</p>
+</li>
+<li><p>莫比乌斯函数<br> $e(n)=\sum_{d|n}\mu(d)$</p>
+<p> Prove:转化为二项式系数后转化</p>
+<p> 性质: $e(n)=\mu(n)*1$ </p>
+</li>
 <li><p>莫比乌斯反演</p>
-<pre><code>      若$f(n)=\sum_{d|n} g(d)$
-      则$g(n)=\sum_{d|n} mu(d) f(n/d)$
-      $Prove:$
-      $f = g*1$      $mu*1 = e$
-      $f*u = g*1*mu$
-      $f*u = g*e$
-      $g=f*u  $   -&gt; $g(n)= \sum_{d|n} mu(d) f(n/d)$
-</code></pre></li>
+<p> 若$f(n)=\sum_{d|n} g(d)$</p>
+<p> 则$g(n)=\sum_{d|n} \mu(d) f(n/d)$</p>
+<p> $Prove:$</p>
+<p> $f = g<em>1$      $\mu</em>1 = e$</p>
+<p> $f<em>\mu = g</em>1*\mu$</p>
+<p> $f<em>\mu = g</em>e$</p>
+<p> $g=f*\mu  $   -&gt; $g(n)= \sum_{d|n} \mu(d) f(n/d)$</p>
+</li>
 </ol>
 
       
