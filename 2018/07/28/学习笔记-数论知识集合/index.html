@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Rye_Catcher">
 <meta property="og:description" content="前言   数论在OI中还是比较重要的,这些笔记是在课上匆忙记下的,可能不太美观。    一些约定:在这里整数间除法是向下取整;$(a,b)$代表$gcd(a,b)$ Problems:   小凯的疑惑   $sol$:构造   $ax+by = k(a,b &amp;gt;= 0)$ 使其无解   设一组解$x1 \in [0,b-1] ,y1&amp;gt;=0$   若$k&amp;gt;ab-a-b$   则$y1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-29T02:30:57.703Z">
+<meta property="og:updated_time" content="2018-07-29T05:36:11.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记--数论知识集合">
 <meta name="twitter:description" content="前言   数论在OI中还是比较重要的,这些笔记是在课上匆忙记下的,可能不太美观。    一些约定:在这里整数间除法是向下取整;$(a,b)$代表$gcd(a,b)$ Problems:   小凯的疑惑   $sol$:构造   $ax+by = k(a,b &amp;gt;= 0)$ 使其无解   设一组解$x1 \in [0,b-1] ,y1&amp;gt;=0$   若$k&amp;gt;ab-a-b$   则$y1">
@@ -102,7 +102,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -424,7 +424,7 @@
 <p> $ua+vb = gcd(a,b)$</p>
 <p> $u’b+v’(a mod b) = gcd(a,b)$</p>
 <p> $u’b+v’(a-a/b*b) = gcd(a,b)$</p>
-<p> $v’a+(u’-a/b<em>v’)</em>b = gcd(a,b)$</p>
+<p> $v’a+(u’-a/b <em>$ $v’)</em>b = gcd(a,b)$</p>
 <p> 通解:$x_0=x+t<em>b/(a,b) $    $y_0=y-t</em>a/(a,b)$</p>
 </li>
 <li><p>一个小性质</p>
@@ -440,12 +440,12 @@
 <li>所以如果$(n,m)=1,\phi(nm)=\phi(n)*\phi(m)$</li>
 </ul>
 </li>
-<li><p>$phi(p^e)=(p-1)<em>p^{e-1}=p^e</em>(1-1/p) $   p是质数</p>
+<li><p>$phi(p^e)=(p-1)<em>$ $p^{e-1}=p^e</em>(1-1/p) $   p是质数</p>
 <ul>
 <li>$Prove: [1,p^e]中与p不互质的数的个数为p^e/p=p^{e-1}$<br>$\phi(p^e)=p^e-p^{e-1} =p^e*(1-1/p)$</li>
 </ul>
 <ul>
-<li>计算公式:<strong>$\phi(p)= \prod \phi(p_i^{c_i}) = \prod (p^c_i <em> (1-1/p_i)) = n</em> \prod (1-1/p_i)$</strong></li>
+<li>计算公式:$\phi(p)= \prod \phi(p_i^{c_i}) = \prod (p^c_i <em> $ $(1-1/p_i)) = n</em> \prod (1-1/p_i)$</li>
 </ul>
 </li>
 </ul>
@@ -464,7 +464,7 @@
 </li>
 <li><p>狄利克雷卷积</p>
 <p> 满足交换律结合律分配律,可用倍增</p>
-<p> $(f<em>g)(n) = \sum_{d|n} f(d)</em>g(n/d)$</p>
+<p> $(f<em>$ $g)(n) = \sum_{d|n} f(d)</em>g(n/d)$</p>
 <p> 如果f,g是积性函数,f*g也是积性函数</p>
 <p> $f*e=f$  单位元:e  $e(1)=1$,其他$e(i)=0$;</p>
 </li>
@@ -475,10 +475,10 @@
 <li><p>莫比乌斯反演</p>
 <p> 若$f(n)=\sum_{d|n} g(d)$</p>
 <p> 则$g(n)=\sum_{d|n} \mu(d) f(n/d)$</p>
-<p> $Prove:$</p>
+<p> $Prove:​$</p>
 <p> $f = g<em>1$      $\mu</em>1 = e$</p>
-<p> $f  <em>  \mu = g </em> 1*\mu$</p>
-<p> $f<em>\mu = g</em>e$</p>
+<p> $f  <em>  $$\mu = g </em>$ 1$*\mu$</p>
+<p> $f<em>\mu$ $= g</em>e$</p>
 <p> $g=f*\mu  $   -&gt; $g(n)= \sum_{d|n} \mu(d) f(n/d)$</p>
 </li>
 </ol>
@@ -681,7 +681,7 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                友链
+                小伙伴们
               </div>
               <ul class="links-of-blogroll-list">
                 
@@ -775,7 +775,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
