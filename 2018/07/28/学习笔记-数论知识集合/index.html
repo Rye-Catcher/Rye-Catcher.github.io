@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Rye_Catcher">
 <meta property="og:description" content="前言   数论在OI中还是比较重要的,这些笔记是在课上匆忙记下的,可能不太美观。    一些约定:在这里整数间除法是向下取整;$(a,b)$代表$gcd(a,b)$ Problems:   小凯的疑惑   $sol$:构造   $ax+by = k(a,b &amp;gt;= 0)$ 使其无解   设一组解$x1 \in [0,b-1] ,y1&amp;gt;=0$   若$k&amp;gt;ab-a-b$   则$y1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-29T05:36:11.206Z">
+<meta property="og:updated_time" content="2018-07-29T14:05:18.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记--数论知识集合">
 <meta name="twitter:description" content="前言   数论在OI中还是比较重要的,这些笔记是在课上匆忙记下的,可能不太美观。    一些约定:在这里整数间除法是向下取整;$(a,b)$代表$gcd(a,b)$ Problems:   小凯的疑惑   $sol$:构造   $ax+by = k(a,b &amp;gt;= 0)$ 使其无解   设一组解$x1 \in [0,b-1] ,y1&amp;gt;=0$   若$k&amp;gt;ab-a-b$   则$y1">
@@ -165,7 +165,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">一个弱省菜鸡OIer</p>
+        <p class="site-subtitle">Stay Young,Stay Simple</p>
       
   </div>
 
@@ -382,7 +382,7 @@
 <h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems:"></a>Problems:</h2><p>   小凯的疑惑<br>   $sol$:构造<br>   $ax+by = k(a,b &gt;= 0)$ 使其无解<br>   设一组解$x1 \in [0,b-1] ,y1&gt;=0$<br>   若$k&gt;ab-a-b$<br>   则$y1&gt;(k-a*x1)/b = (ab-a-b-a(b-1))/b $ $= -1$<br>   即$y1&gt;=0$<br>   故$k=ab-a-b$是符合条件的最大值</p>
 <p>   上帝与集合的正确用法—扩展欧拉定理<br>   <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3884" target="_blank" rel="noopener">https://www.lydsy.com/JudgeOnline/problem.php?id=3884</a></p>
 <p>   屠龙勇士—扩展中国剩余定理</p>
-<p>   用$f(i)$表示有序三元组(a,b,c)个数,使得$a<em>b</em>c=i$,求出$f(1)$~$f(n)$<br>   $sol: i=\prod {p_i}^{c_i} $ $ f(i)=\prod C^{ci+2}_2$  使用扩展欧拉筛</p>
+<p>   用$f(i)​$表示有序三元组(a,b,c)个数,使得$a$*$b$*$c=i$,求出$f(1)$~$f(n)$<br>   $sol: i=\prod {p_i}^{c_i} $ $ f(i)=\prod C^{ci+2}_2$  使用扩展欧拉筛</p>
 <p>   数论之神</p>
 <h2 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms:"></a>Algorithms:</h2><ul>
 <li><p>线性推逆元:<br>   $inv[fac[i]] = inv[fac[i+1]]*(i+1)$</p>
@@ -390,7 +390,7 @@
 <p>   $i*k+r \equiv 0 \mod p$</p>
 <p>   $i*k \equiv -r \mod p$</p>
 <p>   $r^{-1}*k \equiv -i^{-1} \mod p$</p>
-<p>   $i^{-1}   \equiv  -p/i*inv[p \% i]$ $\mod p$</p>
+<p>   $i^{-1}   \equiv  -p/i * inv[p \% i]$ $\mod p$</p>
 </li>
 <li><p>中国剩余定理<br>  ExCRT(增量法):若m不互质<br>  $x \equiv a \mod b -&gt; x=kb+a $<br>  $x \equiv c \mod d -&gt; kb+a \equiv c \mod d -&gt; kb+pd = c-a$<br>  条件$(c-a)|gcd(b,d)$<br>  求解后回代即可</p>
 </li>
@@ -404,7 +404,7 @@
 <li><p>Pollard-Rho(未懂)</p>
 <p>   生日攻击</p>
 </li>
-<li><p>类欧几里得算法(未懂)<br>  ​       <a href="https://www.cnblogs.com/LLppdd/p/8428349.html" target="_blank" rel="noopener">https://www.cnblogs.com/LLppdd/p/8428349.html</a></p>
+<li><p>类欧几里得算法(未懂)<br>   <a href="https://www.cnblogs.com/LLppdd/p/8428349.html" target="_blank" rel="noopener">https://www.cnblogs.com/LLppdd/p/8428349.html</a></p>
 </li>
 <li><p>BSGS&amp;&amp;ExBSGS</p>
 </li>
@@ -424,8 +424,8 @@
 <p> $ua+vb = gcd(a,b)$</p>
 <p> $u’b+v’(a mod b) = gcd(a,b)$</p>
 <p> $u’b+v’(a-a/b*b) = gcd(a,b)$</p>
-<p> $v’a+(u’-a/b <em>$ $v’)</em>b = gcd(a,b)$</p>
-<p> 通解:$x_0=x+t<em>b/(a,b) $    $y_0=y-t</em>a/(a,b)$</p>
+<p> $v’a+(u’-a/b *$ $v’) * b = gcd(a,b)$</p>
+<p> 通解:$x_0=x+t * b/(a,b) ​$    $y_0=y-t * a/(a,b)​$</p>
 </li>
 <li><p>一个小性质</p>
 <p> $(k,m)=d$  $且$ $ka \equiv kb \mod m  则 a \equiv b \mod m/d$<br> $Prove:   ka \equiv kb \mod m -&gt; m|(ka-kb) -&gt; m|k(a-b) -&gt; (m/d)|(a-b)$ </p>
@@ -475,7 +475,7 @@
 <li><p>莫比乌斯反演</p>
 <p> 若$f(n)=\sum_{d|n} g(d)$</p>
 <p> 则$g(n)=\sum_{d|n} \mu(d) f(n/d)$</p>
-<p> $Prove:​$</p>
+<p> $Prove:$</p>
 <p> $f = g<em>1$      $\mu</em>1 = e$</p>
 <p> $f  <em>  $$\mu = g </em>$ 1$*\mu$</p>
 <p> $f<em>\mu$ $= g</em>e$</p>
@@ -642,7 +642,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -655,7 +655,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
