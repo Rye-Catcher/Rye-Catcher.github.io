@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379 分析经典的八数码问题,有双向BFS和$IDA$的方法，这里使用的是$A$启发式搜索. 简要介绍一下$A$,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$state$到目">
+<meta name="description" content="学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379 分析经典的八数码问题,有双向BFS和$IDA$  的方法，这里使用的是$A$  启发式搜索. 简要介绍一下$A  $,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$st">
 <meta name="keywords" content="BFS,学习笔记,A*&#x2F;IDA*">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记--八数码问题">
 <meta property="og:url" content="https://rye-catcher.github.io/2018/08/27/学习笔记-八数码问题/index.html">
 <meta property="og:site_name" content="Rye_Catcher">
-<meta property="og:description" content="学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379 分析经典的八数码问题,有双向BFS和$IDA$的方法，这里使用的是$A$启发式搜索. 简要介绍一下$A$,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$state$到目">
+<meta property="og:description" content="学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379 分析经典的八数码问题,有双向BFS和$IDA$  的方法，这里使用的是$A$  启发式搜索. 简要介绍一下$A  $,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$st">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-27T14:52:12.088Z">
+<meta property="og:updated_time" content="2018-08-28T07:52:33.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记--八数码问题">
-<meta name="twitter:description" content="学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379 分析经典的八数码问题,有双向BFS和$IDA$的方法，这里使用的是$A$启发式搜索. 简要介绍一下$A$,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$state$到目">
+<meta name="twitter:description" content="学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379 分析经典的八数码问题,有双向BFS和$IDA$  的方法，这里使用的是$A$  启发式搜索. 简要介绍一下$A  $,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$st">
 
 
 
@@ -378,9 +378,9 @@
 
       
         <h2 id="学习笔记—八数码问题"><a href="#学习笔记—八数码问题" class="headerlink" title="学习笔记—八数码问题"></a>学习笔记—八数码问题</h2><h3 id="先看道题目"><a href="#先看道题目" class="headerlink" title="先看道题目"></a>先看道题目</h3><p><a href="https://www.luogu.org/problemnew/show/P1379" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P1379</a></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>经典的八数码问题,有双向BFS和$IDA<em>$的方法，这里使用的是$A</em>$启发式搜索.</p>
-<p>简要介绍一下$A<em>$,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$state$到目标状态实际需要的最小代价,$A</em>$中必须保证$f(state)&lt;=g(state)$才能确保在目标状态第一次被取出时就是最优解（实际一点,比如最少的步数）并且在搜索中每个状态只需扩展一次，设计的估价函数$f(stste)$越接近$g(state)$效率越高.</p>
-<p>我们这里用曼哈顿距离设计估价函数，也就是$f(state)=$$\sum^9_{i=1} (|posx_i-goalx_i|+|posy_i-goaly_i|) $</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>经典的八数码问题,有双向BFS和$IDA$ <em> 的方法，这里使用的是$A$ </em> 启发式搜索.</p>
+<p>简要介绍一下$A <em> $,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$state$到目标状态实际需要的最小代价,$A </em> $中必须保证$f(state)&lt;=g(state)$才能确保在目标状态第一次被取出时就是最优解（实际一点,比如最少的步数）并且在搜索中每个状态只需扩展一次，设计的估价函数$f(stste)$越接近$g(state)$效率越高.</p>
+<p>我们这里用曼哈顿距离设计估价函数，也就是$f(state)=\sum^9_{i=1} (|posx_i-goalx_i|+|posy_i-goaly_i|) $</p>
 <p>$posx_i$表示$i$这个数字在九宫格中的横坐标,$posy_i$也就类似的。注意,我们不能统计$0$，否则这样$f(state)$可能会大于实际代价</p>
 <p>为了确保每个状态都被拓展一次，我们可以采用康托展开(将$1-n$的全排列映射成$1-n!$中的一个数)或是哈希表(unordered_map/pb_ds::gp_hash_table/map)</p>
 <p>同时还要注意,八数码问题有时候是没有解的,我们将九宫格除空格之外的数按从左到右,再从上到下的顺序排成一列数来表示每一个状态，如果初始状态和目标状态的逆序对个数奇偶性不同的话是无解的,可以提前判断一下是否有解来提高效率</p>
