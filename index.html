@@ -301,6 +301,652 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/11/SPOJ-MobileService-线性DP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/11/SPOJ-MobileService-线性DP/" itemprop="url">SPOJ-MobileService--线性DP</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T15:41:46+08:00">
+                2018-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目链接https://www.luogu.org/problemnew/show/SP703
+方法一分析很显然可以用一个四维的状态$f[n][a][b][c]​$表示完成第i个任务时且三人位置在$a,b,c​$时的答案,枚举那个人到达下个位置来状态转移
+然而,三人之必须有一个人在$pos[n]$,这个位置
+于是我们就枚举前两人的位置$f[n][a][b]$,枚举下谁在$pos[n]$这个位置然后
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/11/SPOJ-MobileService-线性DP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/11/luogu1156垃圾陷阱题解-背包DP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/11/luogu1156垃圾陷阱题解-背包DP/" itemprop="url">luogu1156垃圾陷阱题解--背包DP</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T15:00:57+08:00">
+                2018-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目链接https://www.luogu.org/problemnew/show/P1156
+方法1分析将已经爬的高度看作背包容积,最大剩余血量看作价值,$f[i][j]$表示吃完第$i$个垃圾,爬到$j$高度的最大剩余血量
+$f[i][j+h[i]]=max(f[i][j+h[i]],f[i-1][j]-(t[i]-t[i-1]))$
+$f[i][j]=max(f[i][j],f[i-1][j
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/11/luogu1156垃圾陷阱题解-背包DP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/11/CF336C-Vasily-the-Bear-and-Sequence-贪心/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/11/CF336C-Vasily-the-Bear-and-Sequence-贪心/" itemprop="url">CF336C-Vasily the Bear and Sequence--贪心</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T14:42:15+08:00">
+                2018-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目链接https://www.luogu.org/problemnew/show/CF336C
+分析一个比较妙的贪心
+我们要让最后$and$起来的数被$2^k$整除且$k$最大,我们不妨从后往前枚举$k$,同时运用贪心的思路,对于二进制第$k$为1的数,我们想让最后得到的数除第$k$位外都为0,当然是$and$越多越好
+代码123456789101112131415161718192021222
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/11/CF336C-Vasily-the-Bear-and-Sequence-贪心/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/11/UVA10140PrimeDistance题解-质数-技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/11/UVA10140PrimeDistance题解-质数-技巧/" itemprop="url">UVA10140PrimeDistance题解--质数/技巧</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T11:31:25+08:00">
+                2018-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目链接https://www.luogu.org/problemnew/show/UVA10140
+分析$L,R$都很大,显然不能直接筛出$L,R$区间中的质数,这里需要一个结论
+结论任何一个合数$N$必定含有一个小于等于$\sqrt N$的质因子
+证明反证法,若所有质因子都大于$\sqrt N$,那么无论怎么组合显然都大于$N$
+于是通过这个结论筛出$[2,\sqrt R]$,中的所有素数,把
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/11/UVA10140PrimeDistance题解-质数-技巧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/11/luogu2261余数求和题解-整除分块/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/11/luogu2261余数求和题解-整除分块/" itemprop="url">luogu2261余数求和题解--整除分块</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T11:30:12+08:00">
+                2018-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目链接https://www.luogu.org/problemnew/show/P2261
+分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor  i$,于是我们只需要求$N  k-\sum_{i=1}^N {\lfloor {k/i}\rfloor * i}$
+这里就需要数论分块,也称作整除分块的知识
+结论:$\forall{i} \in [x,\lfloor {k
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/11/luogu2261余数求和题解-整除分块/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/09/luogu1282多米诺骨牌题解-线性DP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -932,659 +1578,11 @@ f[i+1][j+a[i+1]-b[i+1]]=f[i+
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/27/UVA571Jugs题解-数论-其实是乱搞/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/27/UVA571Jugs题解-数论-其实是乱搞/" itemprop="url">UVA571Jugs题解--数论(其实是乱搞)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T22:47:18+08:00">
-                2018-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接https://cn.vjudge.net/problem/UVA-571
-分析刚做了道倒水问题的题想看看能不能水二倍经验,结果发现了这道题
-题意翻译:https://www.cnblogs.com/devymex/archive/2010/08/04/1792288.html
-设A容量$x$,B容量$y$
-我们把将水倒入A视为$+x$,将倒空B视为$-y$,若A满,就倒入B视为$-x$
-
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/27/UVA571Jugs题解-数论-其实是乱搞/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/27/UVA10603Fill题解-BFS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/27/UVA10603Fill题解-BFS/" itemprop="url">UVA10603Fill题解--BFS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T22:46:44+08:00">
-                2018-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接https://cn.vjudge.net/problem/UVA-10603
-分析经典的倒水问题,直接BFS.
-对于喜闻乐见的状态判重,一开始想来个哈希函数把一个三元组映射成一个数，后面发现数据很小直接三维数组，后面又发现总水量是固定值,直接二维$bool$数组就好了
-然后每次取出状态更新下答案,搜索时就是枚举将哪个杯子的水倒入哪个杯子还是很好写的，记得要状态还原
-忽然发现最近只会写写水
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/27/UVA10603Fill题解-BFS/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/27/luogu题解P1032字串变换-string骚操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/27/luogu题解P1032字串变换-string骚操作/" itemprop="url">luogu题解P1032字串变换--string骚操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T22:46:10+08:00">
-                2018-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接https://www.luogu.org/problemnew/show/P1032
-分析这题本来很裸的一个BFS，发现其中的字符串操作好烦啊。然后就翻大佬题解发现用STL中的string居然变得这么简洁！！！
-各种string操作请看另一位大佬博客，写得很全啊：
-https://www.cnblogs.com/rvalue/p/7327293.html#commentform
-其实我们
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/27/luogu题解P1032字串变换-string骚操作/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/27/HDU3085NightmareII题解-双向BFS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/27/HDU3085NightmareII题解-双向BFS/" itemprop="url">HDU3085NightmareII题解--双向BFS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T22:45:41+08:00">
-                2018-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接http://acm.hdu.edu.cn/showproblem.php?pid=3085
-分析大意就是一个男孩和一个女孩在网格里,同时还有两个鬼,男孩每轮走三步，女孩每轮走一步，与鬼曼哈顿距离不超过2*轮数的区域都被鬼占领，问男孩女孩最少多少轮相遇？
-这题显然用双向BFS,男孩每轮拓展3次,女孩每轮拓展1次,一个记录女孩走过哪些地方，另一个记录男孩，有个地方被两人都走过就输出答案
-然后
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/27/HDU3085NightmareII题解-双向BFS/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/27/学习笔记-八数码问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/27/学习笔记-八数码问题/" itemprop="url">学习笔记--八数码问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T22:45:13+08:00">
-                2018-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379
-分析经典的八数码问题,有双向BFS和$IDA$  的方法，这里使用的是$A$  启发式搜索.
-简要介绍一下$A$  ,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$st
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/27/学习笔记-八数码问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1634,7 +1632,7 @@ https://www.cnblogs.com/rvalue/p/7327293.html#commentform
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1647,7 +1645,7 @@ https://www.cnblogs.com/rvalue/p/7327293.html#commentform
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
