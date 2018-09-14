@@ -501,8 +501,8 @@
         
           
           题目链接https://www.luogu.org/problemnew/show/P1313
-分析二项式定理$(a+b)^n=\sum_{k=0}^{n}{C^k_n a^k b^{n-k} \ }$
-于是我们要求的即是$C^k_n   a^n   b^m$,于是直接快速幂，然后按公式$C^k_n=\frac {n!}{(n-k)!  k!}$,化成$\prod_{i=k+1}^{i&lt;=n
+分析二项式定理$(a+b)^n=\sum_{k=0}^{n}{C^k_n a^k b^{n-k} }$
+于是我们要求的即是$C^k_n \times  a^n \times  b^m$,于是直接快速幂，然后按公式$C^k_n=\frac {n!}{(n-k)! \times k!}$,化成$\prod_
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -631,7 +631,9 @@
           题目链接https://cn.vjudge.net/problem/POJ-2773
 题意:
 求第$k$个与$m$互质的数
-分析因为$gcd(a,b)=gcd(a+t  b,b)$,所以在$[1,m-1]$中与$m$互质的个数与在$[k  m+1，(k+1) * m-1]$的互质(把上一个式子的$b$看成$m$一下就明白了)的个数都等于$\phi (m)$，然后直接暴力计算出$[1,m-1]$与其
+分析因为$gcd(a,b)=gcd(a+t * b,b)$
+所以在$[1,m-1]$中与$m$互质的个数与在$[k \times m+1,(k+1) \times m-1]$的互质(把上一个式子的$b$看成$m$一下就明白了)的个数都等于$\phi (m)$
+然后直接暴力计算
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -761,7 +763,7 @@
 分析扩展$CRT$就是解决模数不互质的情况,说是扩展$CRT$,其实都是扩欧…
 先来考虑两个方程的情况:$x \equiv a \mod b$和$x \equiv c \mod d$
 由方程1得$x=tb+a$,代入方程2中得$tb+a \equiv c \mod d$，
-把它变得更像方程:$t  b+
+把它变得更像方程:$t \ti
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1145,7 +1147,7 @@
         
           
           题目链接https://www.luogu.org/problemnew/show/P1731
-分析这题真$\colorbox{Black}{—-} $恶心，加了一堆奇奇怪怪的优化
+分析这题真$\colorbox{Black}{TM} $恶心，加了一堆奇奇怪怪的优化
 首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$
 同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小.
 于是我们可以预处理出搜索到每一层的最小剩余体积

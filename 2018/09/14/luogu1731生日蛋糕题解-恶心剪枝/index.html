@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="题目链接https://www.luogu.org/problemnew/show/P1731 分析这题真$\colorbox{Black}{—-} $恶心，加了一堆奇奇怪怪的优化 首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$ 同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小. 于是我们可以预处理出搜索到每一层的最小剩余体积">
+<meta name="description" content="题目链接https://www.luogu.org/problemnew/show/P1731 分析这题真$\colorbox{Black}{TM} $恶心，加了一堆奇奇怪怪的优化 首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$ 同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小. 于是我们可以预处理出搜索到每一层的最小剩余体积">
 <meta name="keywords" content="题解,DFS,剪枝">
 <meta property="og:type" content="article">
 <meta property="og:title" content="luogu1731生日蛋糕题解--恶心剪枝">
 <meta property="og:url" content="https://rye-catcher.github.io/2018/09/14/luogu1731生日蛋糕题解-恶心剪枝/index.html">
 <meta property="og:site_name" content="Rye_Catcher">
-<meta property="og:description" content="题目链接https://www.luogu.org/problemnew/show/P1731 分析这题真$\colorbox{Black}{—-} $恶心，加了一堆奇奇怪怪的优化 首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$ 同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小. 于是我们可以预处理出搜索到每一层的最小剩余体积">
+<meta property="og:description" content="题目链接https://www.luogu.org/problemnew/show/P1731 分析这题真$\colorbox{Black}{TM} $恶心，加了一堆奇奇怪怪的优化 首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$ 同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小. 于是我们可以预处理出搜索到每一层的最小剩余体积">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-14T09:20:10.984Z">
+<meta property="og:updated_time" content="2018-09-14T09:23:39.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="luogu1731生日蛋糕题解--恶心剪枝">
-<meta name="twitter:description" content="题目链接https://www.luogu.org/problemnew/show/P1731 分析这题真$\colorbox{Black}{—-} $恶心，加了一堆奇奇怪怪的优化 首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$ 同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小. 于是我们可以预处理出搜索到每一层的最小剩余体积">
+<meta name="twitter:description" content="题目链接https://www.luogu.org/problemnew/show/P1731 分析这题真$\colorbox{Black}{TM} $恶心，加了一堆奇奇怪怪的优化 首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$ 同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小. 于是我们可以预处理出搜索到每一层的最小剩余体积">
 
 
 
@@ -378,10 +378,10 @@
 
       
         <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="https://www.luogu.org/problemnew/show/P1731" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P1731</a></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>这题真$\colorbox{Black}{—-} $恶心，加了一堆奇奇怪怪的优化</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>这题真$\colorbox{Black}{TM} $恶心，加了一堆奇奇怪怪的优化</p>
 <p>首先明确一点,半径和高都必须是正整数,意味着它们最小为$1$</p>
 <p>同时我们通过数学公式可以推得:当剩下体积$v$一定时，层数越少面积越小,也就是说, 越趋进一个圆柱面积越小.</p>
-<p>于是我们可以预处理出搜索到每一层的最小剩余体积$miv[i]=miv[i-1]+i <em> i </em> i$</p>
+<p>于是我们可以预处理出搜索到每一层的最小剩余体积$miv[i]=miv[i-1]+i^3i$</p>
 <p>假设我们从下(第m层)往上(第1层)枚举</p>
 <p>那么我们可以列出优化:</p>
 <p>设定初始$r$范围为$[1,\sqrt{n/m}]$,$h$范围$[1,n/(m * m)]$</p>
