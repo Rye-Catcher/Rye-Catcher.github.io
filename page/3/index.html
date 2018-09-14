@@ -301,6 +301,780 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/27/学习笔记-八数码问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/27/学习笔记-八数码问题/" itemprop="url">学习笔记--八数码问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T22:45:13+08:00">
+                2018-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379
+分析经典的八数码问题,有双向BFS和$IDA$  的方法，这里使用的是$A$  启发式搜索.
+简要介绍一下$A$  ,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$st
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/27/学习笔记-八数码问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/11/ZROI17普及23-B-星空题解-图的灵活转化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/11/ZROI17普及23-B-星空题解-图的灵活转化/" itemprop="url">ZROI17普及23-B.星空题解--图的灵活转化</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T23:39:24+08:00">
+                2018-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目链接版权原因不予提供
+分析这题思路很妙啊,虽然已经算半个套路题（因为我太菜了）
+将框视为点,若一个球能放在$x$或$y$框,则$x,y$连一条无向边。有一条非常显然的性质是:在联通块中,若有奇数条边,则经过一定能调整使得最少有一个答案贡献,若有奇数条边,则最少对答案没有贡献
+这个性质其实非常好想,但我想了挺久找不出合适的话来解释，标程用图来解释就比较直观更好处理
+于是我们只要模拟上述过程就好了
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/11/ZROI17普及23-B-星空题解-图的灵活转化/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/11/ZROI17普及23-A-如烟题解-技巧枚举/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/11/ZROI17普及23-A-如烟题解-技巧枚举/" itemprop="url">ZROI17普及23-A.如烟题解--技巧枚举</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T23:36:45+08:00">
+                2018-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目链接因版权原因不予提供
+分析别看这是普及模拟赛,其实基本上是提高难度…像这题做NOIpT1的话也说的过去
+有个很显然的暴力思路就是枚举c,a,b,时间复杂度$O(N^3)$，
+然后正解其实就是改变枚举顺序,我们先枚举a点,然后将所有可作为c点的点存起来,再从那些c点遍历得到可行b点统计答案,这样就不会重复且符合题意
+不过这道题需要仔细读题，像我这种菜B一开始就理解错题意了
+代码12345678
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/11/ZROI17普及23-A-如烟题解-技巧枚举/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/11/ZROIDay4-比赛解题报告/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/11/ZROIDay4-比赛解题报告/" itemprop="url">ZROIDay4-比赛解题报告</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T23:33:33+08:00">
+                2018-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          ZROIDay4-比赛解题报告扯闲话感觉这个出题人的题做起来全都没感觉啊，今天又凉了，T1完全不知道什么意思，T2只会暴力，T3现在还不懂什么意思，真的太菜了
+A题意半天没搞懂爆零GG了,讲了一下才知道什么意思，还是比较有趣的一道题，一位大佬20分钟就切了
+设默认押法国队本金是$v$，则期望收益$pvx$,当$pxv-v&gt;=0$时，即$p*x &gt;= 1$他才会押法国队,克罗地亚队类似。
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/11/ZROIDay4-比赛解题报告/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/11/ZROIDay3-比赛解题报告/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/11/ZROIDay3-比赛解题报告/" itemprop="url">ZROIDay3-比赛解题报告</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T23:32:13+08:00">
+                2018-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          ZROIDay3-比赛解题报告瞎扯从今天开始考试有点不在状态,可能是因为不太适应题目的原因,T1已经接近了思想但是没有想到状态转移，T2思考方向错误，T3不会打LCT,还是太菜了
+A考场上想到要么不用亵渎要么最后用亵渎，如果最后用亵渎就要满足所有随从血量是从1一直到某个数x的不下降连续序列，于是可以状态转移$f[i][j]$表示前i小的数变成$[1,j]$每一个整数的最小代价,那么我们枚举第i-1
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/11/ZROIDay3-比赛解题报告/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/11/ZROIDay2-比赛解题报告/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rye_Catcher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rye_Catcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/11/ZROIDay2-比赛解题报告/" itemprop="url">ZROIDay2-比赛解题报告</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T23:30:35+08:00">
+                2018-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          ZROIDay2-比赛解题报告版权原因不提供题面信息
+
+序 这几天作息有点鬼畜,虽然昨晚很晚睡但是早上精神还不错,看到题发现T1很友好？T2woc这暴力都好难打?T3多项式？！这样下去比赛会不会出现更多高端操作，恐怕凉凉
+A 感谢出题人,暴力好打分又多,正解也不难想,这题基本上部分分都打了一遍
+50pts 对于每一个炮将其所在的所在的交叉行（暂且这么说）$O(1)$ 标记，然后$O(N^2)$遍历
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/11/ZROIDay2-比赛解题报告/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/05/ZROIDay1-比赛解题报告/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -810,783 +1584,6 @@ $Prove:$设$x$取遍$m$的缩系,则$ax$取遍$m$的缩系,即
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/28/学习笔记-数论知识集合/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/28/学习笔记-数论知识集合/" itemprop="url">学习笔记--数论知识集合</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-28T22:22:10+08:00">
-                2018-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          前言   数论在OI中还是比较重要的,这些笔记是在课上匆忙记下的,可能不太美观。
-   一些约定:在这里整数间除法是向下取整;$(a,b)$代表$gcd(a,b)$
-Problems:   小凯的疑惑   $sol$:构造   $ax+by = k(a,b &gt;= 0)$ 使其无解   设一组解$x1 \in [0,b-1] ,y1&gt;=0$   若$k&gt;ab-a-b$   则$y1
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/28/学习笔记-数论知识集合/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/28/学习笔记-简化剩余系与欧拉函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/28/学习笔记-简化剩余系与欧拉函数/" itemprop="url">学习笔记--简化剩余系与欧拉函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-28T22:21:36+08:00">
-                2018-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          什么是简化剩余系？
-_所有$0&lt;n&lt;=m,(n,m)=1$的n构成了模m的简化剩余系，简称缩系_
-
-记这样n的个数为$ \phi(m)$
-相关性质
-如果$(m,m’)=1$,$a$取遍模$m$缩系,$a’$取遍m’缩系那么$am’+a’m$取遍$mm’$缩系
- - $Prove: 已知(a,m)=1,(a&#39;,m&#39;)=1 , (m,m&#39;)=1$
-    $(am&
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/28/学习笔记-简化剩余系与欧拉函数/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/luogu题解P2312解方程-暴力膜-秦九韶/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/27/luogu题解P2312解方程-暴力膜-秦九韶/" itemprop="url">luogu题解P2312解方程--暴力膜+秦九韶</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T22:42:36+08:00">
-                2018-07-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接  https://www.luogu.org/problemnew/show/P2312
-分析  这道题很毒啊,这么大的数。
-  但是如果多项式$\sum_{i=0}^N a[i]X^i=0$则$\sum_{i=0}^N a[i]X^i \mod P=0$
-  于是我们可以暴力膜一模，然后在$[1,m]$中枚举就好了。但是呢，万一这个多项式的值是$P$的倍数,也会变成0，所以保险起见搞几
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/27/luogu题解P2312解方程-暴力膜-秦九韶/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/BZOJ5017炸弹题解-玄学递推/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/27/BZOJ5017炸弹题解-玄学递推/" itemprop="url">BZOJ5017炸弹题解--玄学递推</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T22:41:22+08:00">
-                2018-07-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接   https://www.lydsy.com/JudgeOnline/problem.php?id=5017
-分析   老师讲课谈到了这道题，课上想出了个连边建图然后乱搞的操作，被老师钦定的递推方法枪毙了；晚上回去做了做，好像复杂度是不对。还是学习了下此题递推方法，感觉考场上写这个的是抱着得部分分的心理A了这道题(话说洛谷没有SNOI2017的题目
-   我们用$l[i],r[i]$表
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/27/BZOJ5017炸弹题解-玄学递推/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/luogu题解P3950部落冲突-树链剖分/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/27/luogu题解P3950部落冲突-树链剖分/" itemprop="url">luogu题解P3950部落冲突--树链剖分</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T22:39:13+08:00">
-                2018-07-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接  https://www.luogu.org/problemnew/show/P3950
-分析  大佬都用LCT，我太弱只会树链剖分
-  一个很裸的维护边权树链剖分题.按照套路,对于一条边$(dep(u)&lt;dep(v))$,让它边权加1就在$v$点处+1，将边的问题转化为点的问题
-  然后对于C，U操作，线段树单点修改，Q操作区间查询
-注意
-询问$u,v(dep(u)&gt;dep
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/27/luogu题解P3950部落冲突-树链剖分/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/UVA11987Almost-Union-Find题解-并查集的删除/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rye_Catcher">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rye_Catcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/27/UVA11987Almost-Union-Find题解-并查集的删除/" itemprop="url">UVA11987Almost Union-Find题解--并查集的删除</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T22:37:38+08:00">
-                2018-07-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          题目链接 https://www.luogu.org/problemnew/show/UVA11987
-分析 分析下操作发现就是加了个删除操作的并查集,怎么做删除操作呢.
- 我们用一个$id[]$记录每个数字在并查集中的编号,$tot=n$,一开始$id[i]=i$,当将$p$从原集合中删除时,让原来的$id[p]$变成一个虚点,$id[p]=++tot$,这样就完成了删除操作，当然我们查找祖先时
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/27/UVA11987Almost-Union-Find题解-并查集的删除/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1641,7 +1638,7 @@ _所有$0&lt;n&lt;=m,(n,m)=1$的n构成了模m的简化剩余系，简称缩系_
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1654,7 +1651,7 @@ _所有$0&lt;n&lt;=m,(n,m)=1$的n构成了模m的简化剩余系，简称缩系_
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

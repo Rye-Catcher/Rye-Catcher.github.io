@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="题目链接https://www.luogu.org/problemnew/show/P2261 分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor  i$,于是我们只需要求$N  k-\sum_{i=1}^N {\lfloor {k/i}\rfloor * i}$ 这里就需要数论分块,也称作整除分块的知识 结论:$\forall{i} \in [x,\lfloor {k">
+<meta name="description" content="题目链接https://www.luogu.org/problemnew/show/P2261 分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor$ $\times$ $i$,于是我们只需要求$N * k-\sum_{i=1}^N {\lfloor {k/i}\rfloor\times  i}$ 这里就需要数论分块,也称作整除分块的知识 结论:$\forall{i} \">
 <meta name="keywords" content="题解,数论,数论分块">
 <meta property="og:type" content="article">
 <meta property="og:title" content="luogu2261余数求和题解--整除分块">
 <meta property="og:url" content="https://rye-catcher.github.io/2018/09/11/luogu2261余数求和题解-整除分块/index.html">
 <meta property="og:site_name" content="Rye_Catcher">
-<meta property="og:description" content="题目链接https://www.luogu.org/problemnew/show/P2261 分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor  i$,于是我们只需要求$N  k-\sum_{i=1}^N {\lfloor {k/i}\rfloor * i}$ 这里就需要数论分块,也称作整除分块的知识 结论:$\forall{i} \in [x,\lfloor {k">
+<meta property="og:description" content="题目链接https://www.luogu.org/problemnew/show/P2261 分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor$ $\times$ $i$,于是我们只需要求$N * k-\sum_{i=1}^N {\lfloor {k/i}\rfloor\times  i}$ 这里就需要数论分块,也称作整除分块的知识 结论:$\forall{i} \">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T06:39:02.577Z">
+<meta property="og:updated_time" content="2018-09-11T08:02:29.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="luogu2261余数求和题解--整除分块">
-<meta name="twitter:description" content="题目链接https://www.luogu.org/problemnew/show/P2261 分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor  i$,于是我们只需要求$N  k-\sum_{i=1}^N {\lfloor {k/i}\rfloor * i}$ 这里就需要数论分块,也称作整除分块的知识 结论:$\forall{i} \in [x,\lfloor {k">
+<meta name="twitter:description" content="题目链接https://www.luogu.org/problemnew/show/P2261 分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor$ $\times$ $i$,于是我们只需要求$N * k-\sum_{i=1}^N {\lfloor {k/i}\rfloor\times  i}$ 这里就需要数论分块,也称作整除分块的知识 结论:$\forall{i} \">
 
 
 
@@ -378,7 +378,7 @@
 
       
         <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="https://www.luogu.org/problemnew/show/P2261" target="_blank" rel="noopener">https://www.luogu.org/problemnew/show/P2261</a></p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor <em> i$,于是我们只需要求$N </em> k-\sum_{i=1}^N {\lfloor {k/i}\rfloor * i}$</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor$ $\times$ $i$,于是我们只需要求$N * k-\sum_{i=1}^N {\lfloor {k/i}\rfloor\times  i}$</p>
 <p>这里就需要数论分块,也称作整除分块的知识</p>
 <h4 id="结论"><a href="#结论" class="headerlink" title="结论:"></a>结论:</h4><p>$\forall{i} \in [x,\lfloor {k/{\lfloor {k/x}\rfloor }}\rfloor]$,$\lfloor k/i \rfloor$的值都相等</p>
 <h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>先咕了….</p>
@@ -546,7 +546,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -559,7 +559,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
