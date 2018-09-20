@@ -18,8 +18,8 @@ pre code {
   border-radius: 5px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
   font-size: 13px;
-  color: #333;
-  background: #f7f8f8;
+  color: #f7f8f8;
+  background: #333;
 }
 figure.highlight,
 .codeblock {
@@ -63,7 +63,7 @@ figure.highlight .code,
 .codeblock .code,
 figure.highlight .tag,
 .codeblock .tag {
-  background-color: inherit;
+  background-color: #242424;
   font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace;
   border: none;
   padding: 0;
@@ -82,22 +82,23 @@ figure.highlight.plain .gutter,
 }
 figure.highlight .gutter,
 .codeblock .gutter {
-  background: #f7f8f8;
+  background: #333;
   border-right: 1px solid #e6e6e6;
   padding: 0.3em 15px;
 }
 figure.highlight .gutter .line,
 .codeblock .gutter .line {
-  color: #aaa;
+  color: #f7f8f8;
 }
 figure.highlight .line,
 .codeblock .line {
   font-size: 13px;
-  color: #333;
+  color: #f7f8f8;
+  tab-size: 4;
 }
 figure.highlight .line.marked,
 .codeblock .line.marked {
-  background: #f5e3de;
+  background: #333;
 }
 figure.highlight .code,
 .codeblock .code {
@@ -113,11 +114,11 @@ figure.highlight .code,
 /* code highlight color*/
 .highlight .comment,
 .highlight .title {
-  color: #888;
+  color: #ee0;
 }
 .highlight .meta,
 .highlight .tag {
-  color: #324977;
+  color: #9932cc;
 }
 .highlight .attr {
   color: #118a04;
@@ -128,11 +129,11 @@ figure.highlight .code,
 .highlight .header,
 .highlight .ruby .symbol,
 .highlight .xml .cdatabody {
-  color: #920000;
+  color: #00cd66;
 }
 .highlight .keyword,
 .highlight .javascript .function {
-  color: #ec25ec;
+  color: #4876ff;
 }
 .highlight .number,
 .highlight .preprocessor,
@@ -191,7 +192,7 @@ figure.highlight .code,
 .highlight.c .code .number,
 .highlight.cpp .code .built_in,
 .highlight.c .code .built_in {
-  color: #0086b3;
+  color: #9932cc;
 }
 .highlight.cpp .code .preprocessor,
 .highlight.c .code .preprocessor {
@@ -199,7 +200,7 @@ figure.highlight .code,
 }
 .highlight.cpp .code .title,
 .highlight.c .code .title {
-  color: #795da3;
+  color: #4876ff;
 }
 .highlight.cpp .code .meta-keyword,
 .highlight.c .code .meta-keyword {
