@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo, RyeCatcher, OI">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Rye_Catcher" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    <script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    });
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += " has-jax";
+      }
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">复制</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">复制</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "已复制";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "复制";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>23rd江西省SM2项目RyeCatcher面试经历 | Rye_Catcher - Stay Young,Stay Simple</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Rye_Catcher</a></h1>
+        <h2 class="subtitle">Stay Young,Stay Simple</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2019/05/27/23rd江西省SM2项目RyeCatcher面试经历/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="Rye_Catcher">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">23rd江西省SM2项目RyeCatcher面试经历</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-05-27T22:36:06+08:00">2019-05-27 22:36:06</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SM2/" itemprop="url" rel="index"><span itemprop="name">SM2</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SM2/面经/" itemprop="url" rel="index"><span itemprop="name">面经</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>$23^{rd}$ 江西 $RyeCatcher_{A \ Crow  \ In \ the \ Rye}$</p>
+<h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>面试完那天下午就回校上课,晚自习边写作业边玩手机,虽然在竞赛生涯已经见过大风大浪,心情还是有点小紧张</p>
+<p>最后在22:06时,dsb学长在群里说三人全过有点惊讶,打电话确认后就跑路回家了</p>
+<p>今天领完协议又赶回学校考会考，回到家时已经累成狗了,开始写面经没多久，结果又被告知第二天要参加学校的颁奖仪式，还要发表一个讲话，于是又开始码演讲稿，终于在ddl前搞完了。</p>
+<p>第二天颁奖仪式为什么要戴大红花啊喂！但是虽然是第一次在台上对着全校师生讲话，觉得还蛮成功。</p>
+<p>然后就每天都写一点面筋，想起什么就写什么，因为记性不好，只记得一些问题，<strong>具体流程有遗漏,细节忘了一些,问题顺序也可能不对</strong>，文笔很烂，扯得废话还多，请见谅</p>
+<h3 id="Before-The-Interview"><a href="#Before-The-Interview" class="headerlink" title="Before The Interview"></a>Before The Interview</h3><p>今年面试是在南昌市外国语九龙湖校区，面试时有五个人在里面，包括一位打字员姐姐(笔试时见过)，两位MOE官员，一位来自NTU的蔡教授(口音略重。。。他的问题我都是一知半”解”)，一位来自NUS教授CS(Computer Science)的黄教授(中文英文都超好，人也很好!!!)。由于某学校两人缺考，省教育厅的人催我们赶紧来怕面试提前，但是新方还是人性化的按原计划进行，于是在那里等了蛮久。说实话等的时候还是蛮紧张的，快到我的时候就不断喝水，哼歌抖腿（真的有效！！！），哼的是NeckDeep的_Where Do We Go When We Go_</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=500392402&auto=1&height=66"></iframe>
+
+<p>新方是按铃叫人，轮到叫我的铃响起时，心态其实还好，班主任zgf老师陪我走到门前，我敲了两下门（谭老师的教诲），说了句”May I come in?”，但 并无应门，就试着把门打开。尴尬的是我左边拉了两下门把，又右边拉了两下门把都毫无反应，最后还是打字员姐姐帮我开的门（-_-感觉自己太憨了。进门后先跟教授打个招呼，然后就按打字员姐姐指示把包放在门边的一把椅子上，然后MOE大妈说”Take a seat please”,于是就在他们对面椅子上坐下，面试就开始啦</p>
+<h3 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h3><p>面试时的情形是这样的</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">打字员姐姐T</th>
+<th>NTU口音大爷Prof.蔡Cai</th>
+<th style="text-align:right">MOE大妈黄司长Huang</th>
+<th>MOE胡姓官员Hu</th>
+<th>NUS教CS的Prof.黄Huang</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td></td>
+<td style="text-align:right"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td></td>
+<td style="text-align:right">我L</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>中间隔了张又长又宽的木桌</p>
+<p>刚坐下没多久，Prof.蔡就问我了”So do you prefer to put your shirt out than put in?”</p>
+<p>L(懵逼):”Ahh…Yes”</p>
+<p>Huang大妈:”Do your school allow you to do so?”</p>
+<p>L:”Yes,actually,a lot of students put their shirts out”</p>
+<p>Prof.Huang:”That makes them more cool~”</p>
+<p>L(笑):”Yeah,I think so”</p>
+<p>众人大笑,我也不紧张了</p>
+<p>然后问了一些个人问题我忘了。。。</p>
+<p>MOE Huang:”Where is your hometown?”</p>
+<p>L:”My hometown is Shangrao,a city not far way from Nanchang.”</p>
+<p>MOE Huang:”How far?”</p>
+<p>L:”I guess it takes about an hour or so to get there by train.”</p>
+<p>MOE Huang:”You live in the school,right?(应该是看了那张老师写的评语)So did you go home every week by train?”</p>
+<p>L(笑):”Well…now my parents have moved to Nanchang so actually I can go home every week.”</p>
+<p>MOE Huang:”Do you play computer games?”</p>
+<p>L(笑):”Yes.”</p>
+<p>MOE Huang:”What kind of computer games do you like?”</p>
+<p>L:”Shooting games,I think.”</p>
+<p>众人自言自语:”Ahh…shooting games.”</p>
+<p>Prof.Cai:”How often do you play computer games.”</p>
+<p>L:”About one or two hours a week at home.”</p>
+<p>Prof.Huang:”You have a lot of time at home,why do you play it only for one or two hours?”</p>
+<p>L(有点慌了):”Because I also have many tasks to do at home.So my time for playing video games is limited.”</p>
+<p>Prof.Cai:”So you don’t play computer games at school,right?”</p>
+<p>L:”Yes,of course.My school don’t allow me to play computer games there.”</p>
+<p>Prof.Huang:”You mean you are not allowed to use computers at school?”</p>
+<p>L:”No,no,no.I can use computers at school since I am in the school team of Olympics of Informatics.But I don’t play computer games at school because at school computers are tools for studying.”</p>
+<p>然后又问了我一些信息学竞赛内容,可能比较特殊不具参考性就不写了,其中Prof.Cai问我这个一等奖只是”province level”吗。我说是的，但是我也参加过”national level final contest but did bad because I made a stupid mistake and missed a medal.”接着就问我有什么感受又如何解决这种trivial的问题。。。大致就是自己反思总结，向同学老师寻找并帮助之类的</p>
+<p>MOE Huang:”OK,We know you are interested in computer.Your major choices are all about computers,so what do you want to do in six years”</p>
+<p>L:”Well,I want to be a teacher.”</p>
+<p>(众人惊)然后问了什么我忘了QAQ,大致就是问为什么,然后我就说对当teacher很感兴趣，当时准备信息学奥赛时互相教学算法和数据结构的.Prof.Huang这时候就说他是NUS教CS的</p>
+<p>然后Prof.Huang就问了一个面膜时常见的问题啦0^0——“So what do you think is most important to be a teacher?”</p>
+<p>L(我突然脑抽了):”In my view.First,I think a teacher should be patient,he should be patient with students if they have any problems.Second,a teacher also need to be inspiring.Teachers,I think,are facilitators of the study,rather than directors of the students’ study(手动@Liam).They should inspire their students to get the knowledge they want,not just simply teach them knowledge.And third,a teacher must be devoted to this career.”第三点还说了一些但是忘记了</p>
+<p>Prof.Huang(笑):”OK,then what do you think is the most important.”</p>
+<p>L(意识到之前脑抽了):”Emm…I think is inspiring.”</p>
+<p>然后我记得他接着还问了我一个教学相关的问题。。。忘了问的是什么了，只记得回答是”Well,when I was preparing for the Olympics of Informatics,I taught my teammates graph theories problem.And I used illustrations to let them understand how the Prim Algorithm works.”</p>
+<p>Prof.蔡:”#%*&amp;@#inspiring&amp;%#teaching?”</p>
+<p>L(微笑变得略微尴尬):”May I beg you pardon?”</p>
+<p>尴尬的是我pardon三连后才知道他想问的是在我的教学过程中有没有inspiring的例子,就是有没有inspiring的老师</p>
+<p>L(嗦泡开始):”To prepare for the competition,I have to go to other schools for better training.And I remember when I was taking courses in Beijing,there was a teacher who taught us Dijkstra Algorithm.But at first he explain the algorithm of Prim and the way to generate a Minimum Spanning Tree.Then he let us to think of a similar way to solve the Single Source Shortest Path problem by generating a spanning tree.And I think it’s a inspiring way to teach us the Dijkstra algorithm.”</p>
+<p>教授点头</p>
+<p>Prof.蔡:”It seems that you often go to other province to take courses,right?”</p>
+<p>L:”Yes,that’s right.”</p>
+<p>Prof.蔡(追问):”So…$%#how often&amp;*?And did you go there with your parents,or your teammates you mentioned?”</p>
+<p>L:”Emm…(想了会)I think when I was preparing for the Olympics of Informatics,I want out for training about once every two months on average.And I went there with my teammates so we often help each other and take care of ourselves.”</p>
+<p>MOE Hu:”So which provinces have you been?”</p>
+<p>L:”Beijing,Guangdong and Hu’nan”(脑抽忘说还去过浙江了)</p>
+<p>Hu:”So do you think there is difference between Beijing and Guangdong?”</p>
+<p>L(懵逼？为啥问这种无厘头问题啊，只好微笑硬着头皮答):”OK,First,environment in Guangdong is better than it in Beijing.The air there is clean and the sky is always blue and there are more trees in Guangdong.Second,Guangdong is hotter than Beijing and not so that dry like Beijing.Third,I think people in Guangdong are more friendly because the students there are willing to help us and explain the solutions very carefully and with patience.”</p>
+<p>然后后面我感觉自己就没说什么话了。。。基本都是Prof.Huang自己说了</p>
+<p>记得他讲了到时我可以在community里叫他们计算机,然后Prof.Cai开玩笑说要先教老年人怎么用智能机，然后他们又大笑起来，我也跟着笑hhh。后面黄教授又讲了好多相关内容，我就记得他说一个自闭症患者（他是用中文讲的）在计算机这块特别专心。他讲这些话我就点点头说一话附和一下。</p>
+<p>接着MOE黄大妈就问我平时体育锻炼嘛?</p>
+<p>L(终于是个正常对话了):”I play bedminton with my friends about four times a week,and I always take jogging on weekdays.”</p>
+<p>众人点头，Prof.Cai:He does need more exercise(看我这么瘦).</p>
+<p>接下来Prof.Huang就问了我关于羽毛球的问题，细节忘了，记得扯了一下团队配合的，幸好之前准备了一些关于羽毛球的</p>
+<p>最后问我有什么问题,我问了能不能在预科参加ICPC contest.Prof.Huang说NUS确实每年会准备这样的比赛，还给我介绍了一下流程，但是他说NUS在World Final成绩不太好，然后众人笑，我也笑了（今年好像是并列62名）。但是预科的时候好像不能</p>
+<p>第二个问题我就问了有没有philosophy之类的，他们说有这样的专业，也有club。问我看过什么哲学方面的书，我说只是最近比较感兴趣，没看多少,看了两本哲学随笔by Zhou Lian,a professor of Renming University,还有_A brief history of philosophy_ by Bertrand Russel.然后一个人问我为什么对philosophy感兴趣，我回答:”It can help me understand this world better and it can help us to find a solution to many problems.” Prof.Cai就叫我举个例子,我就说我们的意识到底是不是真实存在的</p>
+<p>MOE黄大妈就开玩笑告诉我到了新加坡不要整天钻研chicken and egg which is first这样的问题，我也笑着说肯定不会.</p>
+<p>面试就这么顺利结束了！个人感觉是不错的。</p>
+<p>一出来跟家长还有老师聊了一下就自己一个人到楼下放松了</p>
+<p>感觉我给Prof.Huang留下印象比较深刻。。。颁奖仪式上肯定了我当老师的想法，跟我唠嗑几句，问我要不要加他微信还说希望在NUS见到我</p>
+<h3 id="Some-Words"><a href="#Some-Words" class="headerlink" title="Some Words"></a>Some Words</h3><ul>
+<li><p>面试难免会紧张，自己想办法调节吧，面试官真的很nice，你就想象跟陌生朋友说话就好了</p>
+<p>就像颁奖仪式后一位萍乡大佬对Prof.Huang说的：聊着聊着就忘了自己其实在面试</p>
+</li>
+<li><p>面试中最重要的是做自己，但是除非你特别会嗦泡，能张口就来，建议还是要做很多准备</p>
+</li>
+<li><p>准备的问题从自身的方面不断拓展，而且一定要能够凸显出你的特点，这也是很关键的</p>
+<p>记得22届有个EXIA学长写的面经提了许多，可以参考一下</p>
+</li>
+<li><p>面膜也是很重要的，还可以找个人用英语聊天来锻炼</p>
+<p>平时也可以自言自语，或是假想有个人问你问题你来回答</p>
+</li>
+<li><p>老师写的评语比较关键，他们会事先看，对你有个大概的了解，像我提到的住在学校，信息学竞赛，体育锻炼全问到了</p>
+</li>
+<li><p>最后，心态放宽吧，这一次机会能够改变你的人生，但它并不是你的全部。最后无论成功与否，它都没有否定你的可能性，最重要的是，脚踏实地地走好脚下的路</p>
+</li>
+</ul>
+<h3 id="SPECIAL-THANKS-TO"><a href="#SPECIAL-THANKS-TO" class="headerlink" title="SPECIAL THANKS TO"></a>SPECIAL THANKS TO</h3><p>江科<script type="math/tex">cxy,dsb,ab,ljw</script>学长们 </p>
+<p>我的室友<script type="math/tex">jyh,djc</script></p>
+<p>高二信息组成员:<script type="math/tex">hzw</script>老师,<script type="math/tex">jyh,ljy</script></p>
+<p>食堂思想家主席,蒋公</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/SM2/" rel="tag"><i class="fas fa-tags"></i>SM2</a>
+        
+        <a class="post-tag button" href="/tags/面经/" rel="tag"><i class="fas fa-tags"></i>面经</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/05/10/省选前模板复习/" rel="next" title="省选前模板复习"><i class="fas fa-angle-left"></i><span class="nav-title">省选前模板复习</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "Rye-Catcher",
+      "repo": "Rye-Catcher.github.io",
+      "client_id": "4c6c0291b3cb182b3186",
+      "client_secret": "921158f9b8df233286104390fd95eb8ebde38fd4",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "23rd江西省SM2项目RyeCatcher面试经历",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="https://s1.ax1x.com/2018/08/11/PcnGYn.png" alt="Rye_Catcher">
+  
+  <h1 class="author-name">Rye_Catcher</h1>
+  <h2 class="author-description"></h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">119</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">3</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">70</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Preface"><span class="toc-text">Preface</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Before-The-Interview"><span class="toc-text">Before The Interview</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Interview"><span class="toc-text">Interview</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Some-Words"><span class="toc-text">Some Words</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#SPECIAL-THANKS-TO"><span class="toc-text">SPECIAL THANKS TO</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:2427367956@qq.com" target="_blank">Mail</a></li>
+        
+        <li><i class="fas fa-code"></i><a href="https://www.luogu.org/space/show?uid=61382" target="_blank">Luogu</a></li>
+        
+        <li><i class="fas fa-book"></i><a href="https://www.zhihu.com/people/ryecatcher-16/activities" target="_blank">Zhihu</a></li>
+        
+        <li><i class="fas fa-coffee"></i><a href="https://www.douban.com/people/178862274/" target="_blank">Douban</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/Rye-Catcher" target="_blank">GitHub</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.cnblogs.com/Rye-Catcher/" target="_blank">旧博客</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.cnblogs.com/xxzh/" target="_blank">巨佬同学-星星之火-JX</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.wjyyy.top/" target="_blank">wjyyy-HB</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.cnblogs.com/ppprseter/" target="_blank">Dew-HB</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://oi.logey.cn/" target="_blank">Logey-SD</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://ouuan.github.io/" target="_blank">Ouuan-HB</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://acfunction.github.io/" target="_blank">AcFunciton-BJ</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://bubbleioa.top/" target="_blank">冒泡ioa-JX</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://cnblogs.com/huyufeifei/" target="_blank">huyufeifei</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://mayflyyh.com" target="_blank">额冻豆腐</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">Rye_Catcher</span><span class="year"><i class="far fa-copyright"></i>2018 - 2019</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
