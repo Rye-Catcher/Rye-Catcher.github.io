@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rye-catcher.github.io/"/>
-  <updated>2019-05-28T03:03:59.392Z</updated>
+  <updated>2019-06-14T15:25:45.607Z</updated>
   <id>https://rye-catcher.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Stillness Of The Wind</title>
+    <link href="https://rye-catcher.github.io/2019/06/14/The-Stillness-Of-The-Wind/"/>
+    <id>https://rye-catcher.github.io/2019/06/14/The-Stillness-Of-The-Wind/</id>
+    <published>2019-06-14T14:47:25.000Z</published>
+    <updated>2019-06-14T15:25:45.607Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我的假期过的这将近二十天中，总有一种隐隐约约的奇怪感觉，感觉心中十分的空虚，感觉生活十分的乏味，感觉整个人跟坏掉了一样。我被这种感觉侵蚀着，也正是因为如此，在家中的情绪一直很糟糕。终于在前几天，我下定决心不能这样下去了，索性再次返校学习，白天在信息教室，晚上回寝室睡。。。感
+        
+      
+    
+    </summary>
+    
+      <category term="最后的时光" scheme="https://rye-catcher.github.io/categories/%E6%9C%80%E5%90%8E%E7%9A%84%E6%97%B6%E5%85%89/"/>
+    
+      <category term="随笔" scheme="https://rye-catcher.github.io/categories/%E6%9C%80%E5%90%8E%E7%9A%84%E6%97%B6%E5%85%89/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="杂感" scheme="https://rye-catcher.github.io/tags/%E6%9D%82%E6%84%9F/"/>
+    
+      <category term="随笔" scheme="https://rye-catcher.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端入坑#1-PHP入门</title>
+    <link href="https://rye-catcher.github.io/2019/06/12/%E5%89%8D%E7%AB%AF%E5%85%A5%E5%9D%91-1-PHP%E5%85%A5%E9%97%A8/"/>
+    <id>https://rye-catcher.github.io/2019/06/12/前端入坑-1-PHP入门/</id>
+    <published>2019-06-12T14:16:21.000Z</published>
+    <updated>2019-06-14T15:27:00.517Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;PREFACE&quot;&gt;&lt;a href=&quot;#PREFACE&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://rye-catcher.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="PHP" scheme="https://rye-catcher.github.io/categories/%E5%89%8D%E7%AB%AF/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://rye-catcher.github.io/tags/PHP/"/>
+    
+      <category term="前端" scheme="https://rye-catcher.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>23rd江西省SM2项目RyeCatcher面试经历</title>
@@ -496,60 +556,6 @@
       <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
     
       <category term="倍增" scheme="https://rye-catcher.github.io/tags/%E5%80%8D%E5%A2%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[JZOI4307]喝喝喝--枚举</title>
-    <link href="https://rye-catcher.github.io/2018/10/17/JZOI4307-%E5%96%9D%E5%96%9D%E5%96%9D-%E6%9E%9A%E4%B8%BE/"/>
-    <id>https://rye-catcher.github.io/2018/10/17/JZOI4307-喝喝喝-枚举/</id>
-    <published>2018-10-17T14:30:29.000Z</published>
-    <updated>2018-10-17T14:32:14.626Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;JZOJ4307-喝喝喝—枚举&quot;&gt;&lt;a href=&quot;#JZOJ4307-喝喝喝—枚举&quot; class=&quot;headerlink&quot; title=&quot;[JZOJ4307]喝喝喝—枚举&quot;&gt;&lt;/a&gt;[JZOJ4307]喝喝喝—枚举&lt;/h2&gt;&lt;h3 id=&quot;题目链接&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-      <category term="枚举" scheme="https://rye-catcher.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[NOIP2018模拟赛10.16]手残报告</title>
-    <link href="https://rye-catcher.github.io/2018/10/16/NOIP2018%E6%A8%A1%E6%8B%9F%E8%B5%9B10-16-%E6%89%8B%E6%AE%8B%E6%8A%A5%E5%91%8A/"/>
-    <id>https://rye-catcher.github.io/2018/10/16/NOIP2018模拟赛10-16-手残报告/</id>
-    <published>2018-10-16T15:32:20.000Z</published>
-    <updated>2018-10-16T15:35:23.954Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;NOIP2018模拟赛10-16-手残报告&quot;&gt;&lt;a href=&quot;#NOIP2018模拟赛10-16-手残报告&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   
