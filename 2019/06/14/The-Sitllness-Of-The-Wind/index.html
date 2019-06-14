@@ -156,7 +156,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>配置UOJ数据的正确姿势 | Rye_Catcher - Stay Young,Stay Simple</title>
+    <title>The Stillness Of The Wind | Rye_Catcher - Stay Young,Stay Simple</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -198,7 +198,7 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/17/配置UOJ数据的正确姿势/">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2019/06/14/The-Sitllness-Of-The-Wind/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="Rye_Catcher">
        <meta itemprop="description" content="">
@@ -209,13 +209,21 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">配置UOJ数据的正确姿势</h1>
+      <h1 class="post-title" itemprop="name headline">The Stillness Of The Wind</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-17T23:01:31+08:00">2018-09-17 23:01:31</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-06-14T22:47:25+08:00">2019-06-14 22:47:25</time></span>
         </span>
         
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/最后的时光/" itemprop="url" rel="index"><span itemprop="name">最后的时光</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/最后的时光/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
+        </span>
         
         
         
@@ -223,30 +231,20 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <p>最近瞎搞用开源UOJ搭了个OJ,在题目配置方面搞了挺久,一开始看vfleaking的文档还折腾了SVN,特意写下这篇文章为后来人少走弯路</p>
-<h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>拥有管理权限并设置好题面,支持$LaTex$和Markdown</p>
-<h3 id="Step-2-设置数据"><a href="#Step-2-设置数据" class="headerlink" title="Step 2 设置数据"></a>Step 2 设置数据</h3><h4 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h4><p><a href="https://vfleaking.github.io/uoj/problem/" target="_blank" rel="noopener">https://vfleaking.github.io/uoj/problem/</a></p>
-<p><a href="https://universaloj.github.io/post/%E9%A2%98%E7%9B%AE%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0.html" target="_blank" rel="noopener">https://universaloj.github.io/post/%E9%A2%98%E7%9B%AE%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0.html</a></p>
-<h4 id="传统题上传数据格式"><a href="#传统题上传数据格式" class="headerlink" title="传统题上传数据格式"></a>传统题上传数据格式</h4><p>假如输入输出文件名是<code>abc.in/out</code>,那么您的.zip压缩包需要这些东西（不要建子目录!!!)</p>
-<ul>
-<li>所有<code>abc1.in/out</code>,<code>abc2.in/out</code>…</li>
-<li>一个<code>problem.conf</code>,格式:</li>
-</ul>
-  <figure class="hljs highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c++">use_builtin_judger on<br>use_builtin_checker ncmp  <span class="hljs-comment">//如果是字符串或浮点数等比较方式(第二个参数)请阅读参考网站相关资料</span><br>n_tests <span class="hljs-number">10</span><br>n_ex_tests <span class="hljs-number">0</span><br>n_sample_tests <span class="hljs-number">0</span>  <span class="hljs-comment">//一般的如果我们不需要样例数据(1_sample_test.in/out)和额外数据(ex_abc1.in/out)的话,把那两个参数置为0就好了</span><br>input_pre abc    <span class="hljs-comment">//输入文件前缀,比如"abc"</span><br>input_suf in<br>output_pre abc   <span class="hljs-comment">//输出文件前缀,比如"abc"</span><br>output_suf out<br>time_limit <span class="hljs-number">1</span><br>memory_limit <span class="hljs-number">512</span><br>output_limit <span class="hljs-number">64</span>  <span class="hljs-comment">//time_limit单位是秒,memory_limit单位是MB,output_limit是输出文件限制,单位是MB</span><br></code></pre></td></tr></table></figure>
-<p>  上述参数代表什么意思请看参考网站</p>
-<ul>
-<li>一份<code>std.cpp</code>,需要文件输入输出</li>
-<li>一份<code>val.cpp</code>,检验hack数据是否合法,但是现在我也不会用,你可以随意写但是不能为空也不能编译错误,以后会补上怎么认真写<code>val.cpp</code>这个坑</li>
-</ul>
-<h4 id="非传统题上传数据格式"><a href="#非传统题上传数据格式" class="headerlink" title="非传统题上传数据格式"></a>非传统题上传数据格式</h4><p>  坑,待填</p>
-<h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h3><p>上传数据等待完成后点击与SVN仓库同步即可,如果您没有认真地写<code>val.cpp</code>的话请在右边取消Hack</p>
+      <p>我的假期过的这将近二十天中，总有一种隐隐约约的奇怪感觉，感觉心中十分的空虚，感觉生活十分的乏味，感觉整个人跟坏掉了一样。我被这种感觉侵蚀着，也正是因为如此，在家中的情绪一直很糟糕。终于在前几天，我下定决心不能这样下去了，索性再次返校学习，白天在信息教室，晚上回寝室睡。。。感觉有点像当时听课时的生活，但是现在只有我只身一人。</p>
+<p>返校后收获了很多惊喜：第一天中午的邂逅和那一段话，身边人写的同学录。。。当读着同学录上写着话，刚从嘴角挤出的一丝微笑转瞬又化成了心中的伤感。是啊，离别真的不远了，我却还是一副傻乎乎的样子，没有做好一点准备，离别就这么来了，伴随着夏日的风。有时我在机房里做了太久，就下楼在空旷的操场上走走，回忆发生在这片校园里的往事，真后悔我没有记日记的习惯，虽然脑海里有着许许多多回忆，但是总感觉有更多更多美好的瞬间被遗忘在这儿，这处让我笑，让我哭，让我成长，让我回忆的校园。</p>
+<p>想来我一直是一个不擅长告别的人，印象中的告别无一不是带着仓促与遗憾，徒留愧疚与伤感。希望这流动的风停下，让我好好地学会一次告别。</p>
+<p><img src="https://i.loli.net/2019/06/14/5d03bbe67840b24015.jpg" alt="操场一角"></p>
+<p><img src="https://i.loli.net/2019/06/14/5d03bbe70357189879.jpg" alt="通往食堂的长长斜坡"></p>
 
     </main>
     <footer class="post-footer">
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="/tags/开源UOJ教程/" rel="tag"><i class="fas fa-tags"></i>开源UOJ教程</a>
+        <a class="post-tag button" href="/tags/杂感/" rel="tag"><i class="fas fa-tags"></i>杂感</a>
+        
+        <a class="post-tag button" href="/tags/随笔/" rel="tag"><i class="fas fa-tags"></i>随笔</a>
         
       </div>
       
@@ -257,12 +255,12 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2018/09/15/CF340B-MaximalAreaQuadrilateral-思维-计算几何/" rel="next" title="CF340B-MaximalAreaQuadrilateral-思维&计算几何"><i class="fas fa-angle-left"></i><span class="nav-title">CF340B-MaximalAreaQuadrilateral-思维&计算几何</span></a>
+      <a href="/2019/06/12/前端入坑-1-PHP入门/" rel="next" title="前端入坑#1-PHP入门"><i class="fas fa-angle-left"></i><span class="nav-title">前端入坑#1-PHP入门</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2018/09/18/luogu1352没有上司的舞会-树形DP/" rel="prev" title="luogu1352没有上司的舞会--树形DP"><span class="nav-title">luogu1352没有上司的舞会--树形DP</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/06/14/The-Stillness-Of-The-Wind/" rel="prev" title="The Stillness Of The Wind"><span class="nav-title">The Stillness Of The Wind</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -289,7 +287,7 @@
       "client_secret": "921158f9b8df233286104390fd95eb8ebde38fd4",
       "no_comment": "这个页面还没有评论，现在就去评论吧！",
       "go_to_comment": "去评论",
-      "issue_title": "配置UOJ数据的正确姿势",
+      "issue_title": "The Stillness Of The Wind",
       "btn_class": "button",
       "comments_target": "#comment-thread"
     });
@@ -380,12 +378,6 @@
     
     
     
-    
-    <hr>
-    <div class="post-toc sidebar-item" id="toc-div">
-      <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step-1"><span class="toc-text">Step 1</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step-2-设置数据"><span class="toc-text">Step 2 设置数据</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#参考网站"><span class="toc-text">参考网站</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#传统题上传数据格式"><span class="toc-text">传统题上传数据格式</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#非传统题上传数据格式"><span class="toc-text">非传统题上传数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step-3"><span class="toc-text">Step 3</span></a></li></ol></div>
-    </div>
     
     
     
