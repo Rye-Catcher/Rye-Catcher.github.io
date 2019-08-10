@@ -180,6 +180,53 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/UVA11987Almost-Union-Find题解-并查集的删除/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rye_Catcher">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/07/27/UVA11987Almost-Union-Find题解-并查集的删除/" itemprop="url">UVA11987Almost Union-Find题解--并查集的删除</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-27T22:37:38+08:00">2018-07-27 22:37:38</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      题目链接 https://www.luogu.org/problemnew/show/UVA11987 分析 分析下操作发现就是加了个删除操作的并查集,怎么做删除操作呢. 我们用一个$id[]$记录每个数字在并查集中的编号,$tot=n$,一开始$id[i]=i$,当将$p$从原集合中删除时,让原来的$id[p]$变成一个虚点,$id[p]=++tot$,这样就完成了删除操作，当然我们查找祖先时需
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
+        
+        <a class="post-tag button" href="/tags/并查集/" rel="tag"><i class="fas fa-tags"></i>并查集</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/BZOJ4887可乐题解-矩阵运算/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Rye_Catcher">
@@ -601,51 +648,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/07/错误笔记/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Rye_Catcher">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Rye_Catcher">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/07/07/错误笔记/" itemprop="url">错误笔记</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-07T19:50:47+08:00">2018-07-07 19:50:47</time></span>
-        </span>
-        
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      inf值要设大但不要溢出 vis之类的数组使用前都memset一下 memset一些除0外的奇怪的数字时，最好老老实实写for循环（谁叫我脸黑） edge数组不要设小了 C++ 11 不要用register int 手写堆中$heap[]$最好不用结构体，若用，手写swap函数 $bool$ $flag$一定要赋初值！！！！ 树链剖分注意https://www.cnblogs.com/Rye-Ca
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/错误笔记/" rel="tag"><i class="fas fa-tags"></i>错误笔记</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/11/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -692,21 +694,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">123</a></div>
+      <div><a href="/archives/">124</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">9</a></div>
+      <div><a href="/categories/">10</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">73</a></div>
+      <div><a href="/tags/">74</a></div>
     </div>
     
     

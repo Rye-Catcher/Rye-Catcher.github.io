@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rye-catcher.github.io/"/>
-  <updated>2019-07-21T03:23:54.274Z</updated>
+  <updated>2019-08-10T16:12:07.006Z</updated>
   <id>https://rye-catcher.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Homesick or Heartsick</title>
+    <link href="https://rye-catcher.github.io/2019/08/10/Homesick-or-Heartsick/"/>
+    <id>https://rye-catcher.github.io/2019/08/10/Homesick-or-Heartsick/</id>
+    <published>2019-08-10T13:34:30.000Z</published>
+    <updated>2019-08-10T16:12:07.006Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;七月二十二日我坐着飞机，飞过了故乡，跨过了汪洋来到了这座陌生的城市——新加坡&lt;/p&gt;
+&lt;p&gt;数着日历上的数字，我才发现已经在这里生活了19天，闭上眼睛回想，当时坐上MOE大巴时的懵懂，好奇的感受还萦绕在脑海&lt;/p&gt;
+&lt;p&gt;新加坡的气候与离乡时江西的气候相比除了更潮，并无多大
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://rye-catcher.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="杂感" scheme="https://rye-catcher.github.io/tags/%E6%9D%82%E6%84%9F/"/>
+    
+      <category term="狮城生活" scheme="https://rye-catcher.github.io/tags/%E7%8B%AE%E5%9F%8E%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Farewell,Fare thee well</title>
@@ -340,11 +370,11 @@
     </summary>
     
     
-      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
+      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   
@@ -368,11 +398,11 @@
     </summary>
     
     
-      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
+      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   
@@ -396,9 +426,9 @@
     </summary>
     
     
-      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
-    
       <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   
@@ -449,9 +479,9 @@
     </summary>
     
     
-      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
-    
       <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   
@@ -475,11 +505,11 @@
     </summary>
     
     
-      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
+      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   
@@ -530,35 +560,9 @@
     </summary>
     
     
-      <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
-    
       <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
-  </entry>
-  
-  <entry>
-    <title>[NOIP2018模拟赛10.18]自闭报告</title>
-    <link href="https://rye-catcher.github.io/2018/10/18/NOIP2018%E6%A8%A1%E6%8B%9F%E8%B5%9B10-18-%E8%87%AA%E9%97%AD%E6%8A%A5%E5%91%8A/"/>
-    <id>https://rye-catcher.github.io/2018/10/18/NOIP2018模拟赛10-18-自闭报告/</id>
-    <published>2018-10-18T14:57:10.000Z</published>
-    <updated>2018-10-19T14:38:48.170Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;闲扯&quot;&gt;&lt;a href=&quot;#闲扯&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
       <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
   </entry>
   
