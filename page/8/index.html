@@ -180,6 +180,53 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/14/luogu1313计算系数题解-二项式定理/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rye_Catcher">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/09/14/luogu1313计算系数题解-二项式定理/" itemprop="url">luogu1313计算系数题解--二项式定理</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-14T11:04:09+08:00">2018-09-14 11:04:09</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      题目链接https://www.luogu.org/problemnew/show/P1313 分析二项式定理$(a+b)^n=\sum_{k=0}^{n}{C^k_n a^k b^{n-k} }$ 于是我们要求的即是$C^k_n \times a^n \times b^m$,于是直接快速幂，然后按公式$C^k_n=\frac {n!}{(n-k)! \times k!}$,化成$\prod_{i
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
+        
+        <a class="post-tag button" href="/tags/组合数学/" rel="tag"><i class="fas fa-tags"></i>组合数学</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/14/POJ2773Happy2006题解-数论好题/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Rye_Catcher">
@@ -595,53 +642,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/13/luogu4677山区建小学题解-区间DP/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Rye_Catcher">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Rye_Catcher">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/09/13/luogu4677山区建小学题解-区间DP/" itemprop="url">luogu4677山区建小学题解--区间DP</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-13T22:02:26+08:00">2018-09-13 22:02:26</time></span>
-        </span>
-        
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      题目链接https://www.luogu.org/problemnew/show/P4677 分析这道题方法跟之前题不一样,我们相当于枚举一个左右端点来线性扩展,同时划分断点进行决策 $f[i][j]$表示在前$i$个村庄中建立$j$个小学的最小距离总和 我们将枚举到第$i$个村庄作为阶段,修了$j$所小学作为状态,通过枚举断点$k$来分割第$j$所小学与前$j-1$所小学 也就是说我们判断$f
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
-        
-        <a class="post-tag button" href="/tags/区间DP/" rel="tag"><i class="fas fa-tags"></i>区间DP</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/7/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/9/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -688,7 +688,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">124</a></div>
+      <div><a href="/archives/">125</a></div>
     </div>
     
     

@@ -84,25 +84,6 @@
     
     
     
-    <script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ["$","$"], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ["script", "noscript", "style", "textarea", "pre", "code"]
-      }
-    });
-    </script>
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += " has-jax";
-      }
-    });
-    </script>
-    
     
     <script defer type="text/javascript" src="/js/index.js"></script>
     <script type="text/javascript">
@@ -156,7 +137,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>在开源UOJ的导航栏中添加新页面链接 | Rye_Catcher - Stay Young,Stay Simple</title>
+    <title>Paper rings , Onion rings | Rye_Catcher - Stay Young,Stay Simple</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -198,7 +179,7 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/10/11/在开源UOJ的导航栏中添加新页面链接/">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2019/08/25/Paper-rings-Onion-rings/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="Rye_Catcher">
        <meta itemprop="description" content="">
@@ -209,13 +190,21 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">在开源UOJ的导航栏中添加新页面链接</h1>
+      <h1 class="post-title" itemprop="name headline">Paper rings , Onion rings</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-10-11T16:37:22+08:00">2018-10-11 16:37:22</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-08-25T22:14:56+08:00">2019-08-25 22:14:56</time></span>
         </span>
         
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
+        </span>
         
         
         
@@ -223,45 +212,26 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>刚用开源UOJ搭建OJ成功时就想在导航栏那里添加一个站内页面链接,无奈当时乱搞水平低,网上也没有教程,不晓得怎么弄</p>
-<p>今天突然来了闲情乱搞一通,结果还真乱搞成了…特意写下为后来人少走点弯路</p>
-<p>前置技能点 </p>
-<ul>
-<li>Linux基本命令行操作</li>
-</ul>
-<p>如果您觉得这篇文章很naiive，请谅解,因为我对前端一无所知,也是以这样的视角写一份教程</p>
-<p>假设我们要在导航栏加一个叫<code>NCOD</code>的站内链接,并创建一个叫<code>NCOD</code>的站内页面</p>
-<h3 id="Step1"><a href="#Step1" class="headerlink" title="Step1"></a>Step1</h3><p>先找个地方把当前版本用SVN检出,如果您不知道这是什么船新操作,建议您仔细阅读<a href="https://universaloj.github.io/" target="_blank" rel="noopener">文档</a>中对SVN的介绍</p>
-<p>注意在这里SVN地址后还要加<code>/uoj</code>,例如<code>svn co svn://xxx.xxx.x.x/uoj ...</code></p>
-<p>然后<code>cd uoj/1/app</code></p>
-<h3 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h3><p>首先<code>cd views</code>,然后看到一个叫<code>main-nav.php</code>的玩意没,<code>sudo gedit main-nav.php</code>(如果你是V党请自便)</p>
-<p>然后你就会看到一大串导航栏中已经有的链接名字的英文,比如<code>hack</code>,<code>contests</code>之类的,你只要仿造格式复制一句话加在后面就好了,比如</p>
-<p><code>&lt;li&gt;&lt;a href=&quot;/NCOD&quot;&gt;&lt;?= UOJLocalde::get(&#39;NCOD&#39;) ?&gt;&lt;/a&gt;&lt;/li&gt;</code></p>
-<p>这时候你把文件提交到SVN仓库（如果您不知道这是什么,请您还是阅读<a href="https://universaloj.github.io/" target="_blank" rel="noopener">文档</a> 中对SVN的介绍），会发现导航栏多了个叫<code>NCOD</code>的链接,但是点进去却是404,接下来我们就要创建一个叫<code>NCOD</code>的界面</p>
-<h3 id="Step3"><a href="#Step3" class="headerlink" title="Step3"></a>Step3</h3><p><code>cd ..</code>回<code>\app</code>目录,再<code>cd controllers</code>,会发现有一大堆php,这时候只要在这里新建个php文件就行了,例如</p>
-<p><code>gedit NCOD.php</code>,里面的内容也是有讲究的,例如</p>
-<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs php+HTML">&lt;?php echoUOJPageHeader(UOJLocale::(get(&apos;NCOD&apos;)))?&gt;<br>&lt;article&gt;<br>  &lt;header&gt;<br>    &lt;h2 class=&quot;page-header&quot;&gt;National Coming Out Day&lt;/h2&gt;<br>  &lt;header&gt;<br>  ...<br>&lt;article&gt;<br>&lt;?php echoUOJPageFooter() ?&gt;<br></code></pre></td></tr></table></figure>
-<p>注意第一行中括号内容要一致,如果您没有把握,您可以复制<code>faq.php</code>的格式看一看</p>
-<p>保存修改后你需要将这个文件加到<code>SVN</code>仓库</p>
-<p>例如<code>svn add NCOD.php</code></p>
-<h3 id="Step4"><a href="#Step4" class="headerlink" title="Step4"></a>Step4</h3><p>创建<code>php</code>文件后再<code>cd ..</code>回<code>\app</code>目录</p>
-<p>看到一个叫<code>route.php</code>的玩意没?<code>sudo gedit route.php</code></p>
-<p>仿照格式加一句话就好了,例如</p>
-<p><code>Route::any(&#39;/NCOD&#39;,&#39;NCOD.php&#39;);</code></p>
-<p>然后保存修改后再<code>cd /locale/basic</code>,修改<code>zh-cn.php</code>,仿照格式在其中加上导航栏中你想要的中文名字</p>
-<p>例如<code>&#39;NCOD&#39; =&gt; &#39;出柜日&#39;,</code></p>
-<h3 id="Step5"><a href="#Step5" class="headerlink" title="Step5"></a>Step5</h3><p>最后回到<code>\app</code>文件夹,将这个版本提交上仓库即可</p>
-<p><code>svn commit -m &quot;...&quot; *</code></p>
-<p>话说距离初赛还有2天还在搞这个幺蛾子,怕是要凉了</p>
+      <p>标题只是乱起的 , 我这天马行空的脑袋不知怎么同时蹦出Taylor超好听的新歌Paper rings和Super Snacks里的洋葱圈.</p>
+<p>“七月二十二日我坐着飞机，飞过了故乡，跨过了汪洋来到了这座陌生的城市——新加坡</p>
+<p>数着日历上的数字，我才发现已经在这里生活了一个多月，闭上眼睛回想，坐上。。。”</p>
+<p>打住！这不是你的上一篇博客吗？？？</p>
+<p>Anyway,我已经在这里生活了一个多月，所谓cultural shock并没有在我身上有明显的体现，除了想念我妈做的米粉肉，红烧肉和我爸亲手做的馒头，花卷——-也许舌尖的味道是最难以忘怀的，就像很早之前不知在哪看过的情节:一对情侣亲吻时女生总是含上一颗草莓，她解释说这样他就能记住和她的草莓味的吻。</p>
+<p>味蕾的充实也许可以一时冲淡乡愁，却无法消除心中的空荡。幸运地是，我在这里交到了不少朋友，从最开始和我一同从南昌来的xpz , 慢慢到来自河北，湖北，浙江。。。等祖国各省来的伙伴，他们操着不同的口音，有时拿着自个的家乡话开着玩笑，吹着家乡的美食，骨子里已经被烙上了故乡的痕迹。和他们在一起，心里的愁绪也便突然消失了，也是和他们，我走过了这在狮城的第一月。</p>
+<p>还记得最早的Orientation Weeks中，和我的蓝组伙伴们一起探索，一起游玩，一起努力。有着许多心事，也被日常的活动占据。</p>
+<p>正式开学之后，发现数学并没有那么难，C programming更是划水，英文的lecture作好预习其实一点也不难懂，唯独在英语上发现了自己深深的不足和性格上的腼腆</p>
+<p>除了收获新知识之外，我也和这里的许多人一样，也许摆脱了各种各样的束缚，开始改变自己，突破心中的高墙：</p>
+<p>在英语课上勇敢地举起了手当上了Group的monitor；战胜心中的胆怯去追求自己的想法；开始戒掉电脑游戏转为日常学习。。。</p>
+<p>总而言之，这一个月我活着体面，充实，欢乐甚至甜蜜。低落的时刻不要忘记你要变得tough , 膨胀的时候不要忘记be simple &amp; humble ，这是我这一个月来的体验。期待新的一月！</p>
 
     </main>
     <footer class="post-footer">
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="/tags/开源UOJ教程/" rel="tag"><i class="fas fa-tags"></i>开源UOJ教程</a>
+        <a class="post-tag button" href="/tags/杂感/" rel="tag"><i class="fas fa-tags"></i>杂感</a>
         
-        <a class="post-tag button" href="/tags/瞎搞/" rel="tag"><i class="fas fa-tags"></i>瞎搞</a>
+        <a class="post-tag button" href="/tags/狮城生活/" rel="tag"><i class="fas fa-tags"></i>狮城生活</a>
         
       </div>
       
@@ -272,12 +242,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2018/10/10/学习笔记-有向图的强连通分量/" rel="next" title="学习笔记--有向图的强连通分量"><i class="fas fa-angle-left"></i><span class="nav-title">学习笔记--有向图的强连通分量</span></a>
+      <a href="/2019/08/10/Homesick-or-Heartsick/" rel="next" title="Homesick or Heartsick"><i class="fas fa-angle-left"></i><span class="nav-title">Homesick or Heartsick</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2018/10/15/NOIP2018模拟10-15-比赛报告/" rel="prev" title="[NOIP2018模拟10.15]比赛报告"><span class="nav-title">[NOIP2018模拟10.15]比赛报告</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -304,7 +272,7 @@
       "client_secret": "921158f9b8df233286104390fd95eb8ebde38fd4",
       "no_comment": "这个页面还没有评论，现在就去评论吧！",
       "go_to_comment": "去评论",
-      "issue_title": "在开源UOJ的导航栏中添加新页面链接",
+      "issue_title": "Paper rings , Onion rings",
       "btn_class": "button",
       "comments_target": "#comment-thread"
     });
@@ -395,12 +363,6 @@
     
     
     
-    
-    <hr>
-    <div class="post-toc sidebar-item" id="toc-div">
-      <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step1"><span class="toc-text">Step1</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step2"><span class="toc-text">Step2</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step3"><span class="toc-text">Step3</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step4"><span class="toc-text">Step4</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Step5"><span class="toc-text">Step5</span></a></li></ol></div>
-    </div>
     
     
     
