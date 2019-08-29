@@ -242,56 +242,42 @@
 <ul>
 <li><p>证明</p>
 <p>  首先我们需要记住定义式$f[x_0,x_1…x_{k-1},x_{k}]=\frac{f[x_0,x_1…x_{k-1}]-f[x_1,x_2…x_k]}{x_0-x_k}$，接着我们使用数学归纳法验证这条性质的正确性:</p>
+<p>  <1>当$n=1$时,即一阶均差,根据定义$f[x_0,x_1]=\frac{f(x_0)-f(x_1)}{x_0-x_1}$</1></p>
+<p>  此时根据性质$1$,$f[x_0,x_1]=\frac{f(x_0)}{(x_0-x_1)}+\frac{f(x_1)}{(x_1-x_0)}=\frac{f(x_0)-f(x_1)}{x_0-x_1}$,等式成立</p>
+<p>  <2>设$n=k$阶均差时 (*)式成立</2></p>
+<p>  则当$n=k+1$时</p>
+<ul>
+<li><p>等式左边记为(1)式$f[x_0…x_{k+1}]=\frac{f[x_0…x_k]-f[x_1..x_{k+1}]}{x_0-x_{k+1}}=\frac{\sum_{i=0}^{k}\frac{f(x_i)}{(x_i-x_0)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_{k})}-\sum_{i=1}^{k+1}\frac{f(x_i)}{(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_{k+1})}}{x_0-x_{k+1}}$</p>
+</li>
+<li><p>等式右边记为(2)式 </p>
+<p>$f[x_0…x_{k+1}]=\sum_{i=0}^{k+1} \frac{f(x_i)}{(x_i-x_0)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_k)}$</p>
+<p>观察<strong>(1)式</strong>中的的两个和式,分成三个部分解决证明其与(2)式相等</p>
+</li>
+<li><p>对于$i=0$时, 此时只有左边的和式有$\frac{f(x_0)}{(x_0-x_1)…(x_0-x_k)(x_0-x_{k+1})}$(已经把大分母$x_0-x_{k+1}$除下来)。显然等于(2)式 $i=0$时的式子</p>
+</li>
+<li><p>对于$i=k+1$时，此时只有右边的和式中有$-\frac{f(x_{k+1})}{(x_0-x_{k+1})(x_{k+1}-x_{1})…(x_{k+1}-x_{k})}=\frac{f(x_{k+1})}{(x_{k+1}-x_0)(x_{k+1}-x_{1})…(x_{k+1}-x_{k})}$</p>
+<p>(也是已经把大分母除下来了)。显然等于(2)式$i=k+1$时的式子</p>
+</li>
+<li><p>对于$1&lt;=i&lt;=k$时，我们对于其中的<strong>任意一项</strong>进行考虑，</p>
+<p>左边和式$(\frac{f(x_i)}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_k)}-\frac{f(x_i)}{(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})..(x_i-x_k)(x_i-x_{k+1})})(\frac{1}{x_0-x_{k+1}})$</p>
+<p>$=(\frac{f(x_i)((x_i-x_{k+1})-(x_i-x_0))}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_k)(x_i-x_{k+1})})(\frac{1}{x_0-x_{k+1}})$</p>
+<p>$=\frac{f(x_i)}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{i+1})…(x_i-x_k)(x_i-x_{k+1})}$ </p>
+<p>显然对于(2)式中和式任意的第$i$项($1&lt;=i&lt;=k$)</p>
+<p>因此$k+1$阶均差依旧满足此性质</p>
+<p>由<1><2>知该性质成立</2></1></p>
 </li>
 </ul>
-<pre><code>&lt;1&gt;当$n=1$时,即一阶均差,根据定义$f[x_0,x_1]=\frac{f(x_0)-f(x_1)}{x_0-x_1}$
-
-此时根据性质$1$,$f[x_0,x_1]=\frac{f(x_0)}{(x_0-x_1)}+\frac{f(x_1)}{(x_1-x_0)}=\frac{f(x_0)-f(x_1)}{x_0-x_1}$,等式成立
-
-&lt;2&gt;设$n=k$阶均差时 (*)式成立
-
-则当$n=k+1$时
-
-- 等式左边记为(1)式$f[x_0...x_{k+1}]=\frac{f[x_0...x_k]-f[x_1..x_{k+1}]}{x_0-x_{k+1}}=\frac{\sum_{i=0}^{k}\frac{f(x_i)}{(x_i-x_0)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_{k})}-\sum_{i=1}^{k+1}\frac{f(x_i)}{(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_{k+1})}}{x_0-x_{k+1}}$
-
-- 等式右边记为(2)式
-
-        $f[x_0...x_{k+1}]=\sum_{i=0}^{k+1} \frac{f(x_i)}{(x_i-x_0)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)}$
-
-
-
-观察**(1)式**中的的两个和式,分成三个部分解决证明其与(2)式相等
-
-  - 对于$i=0$时, 此时只有左边的和式有$\frac{f(x_0)}{(x_0-x_1)...(x_0-x_k)(x_0-x_{k+1})}$(已经把大分母$x_0-x_{k+1}$除下来)。显然等于(2)式 $i=0$时的式子
-
-  - 对于$i=k+1$时，此时只有右边的和式中有$-\frac{f(x_{k+1})}{(x_0-x_{k+1})(x_{k+1}-x_{1})...(x_{k+1}-x_{k})}=\frac{f(x_{k+1})}{(x_{k+1}-x_0)(x_{k+1}-x_{1})...(x_{k+1}-x_{k})}$
-
-    (也是已经把大分母除下来了)。显然等于(2)式$i=k+1$时的式子
-
-  - 对于$1&lt;=i&lt;=k$时，我们对于其中的**任意一项**进行考虑，
-
-    左边和式$(\frac{f(x_i)}{(x_i-x_0)(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)}-\frac{f(x_i)}{(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})..(x_i-x_k)(x_i-x_{k+1})})(\frac{1}{x_0-x_{k+1}})$
-
-    $=(\frac{f(x_i)((x_i-x_{k+1})-(x_i-x_0))}{(x_i-x_0)(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)(x_i-x_{k+1})})(\frac{1}{x_0-x_{k+1}})$
-
-    $=\frac{f(x_i)}{(x_i-x_0)(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)(x_i-x_{k+1})}$ 
-
-    显然对于(2)式中和式任意的第$i$项($1&lt;=i&lt;=k$)
-
-因此$k+1$阶均差依旧满足此性质
-
-
-
-由&lt;1&gt;&lt;2&gt;知该性质成立
-</code></pre><h4 id="性质2"><a href="#性质2" class="headerlink" title="性质2"></a>性质2</h4><p>调整点的顺序,均差不会改变。称其具有轮换对称性 (Chang, 2014)</p>
+</li>
+</ul>
+<h4 id="性质2"><a href="#性质2" class="headerlink" title="性质2"></a>性质2</h4><p>调整点的顺序,均差不会改变。称其具有轮换对称性 (Chang, 2014)</p>
 <p>$e.g.$  $f[x_0,x_1,x_2]=f[x_1,f_2,x_0]$</p>
 <h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol>
 <li><p>维基百科, <em>均差</em> , from 维基百科 on website,</p>
-<pre><code>                 retrieved from April/04/2019, https://zh.wikipedia.org/wiki/%E5%9D%87%E5%B7%AE
-</code></pre></li>
+<p> ​                retrieved from April/04/2019, <a href="https://zh.wikipedia.org/wiki/%E5%9D%87%E5%B7%AE" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%9D%87%E5%B7%AE</a></p>
+</li>
 <li><p>Leon Chang (2014) , <em>Newton插值法</em> , from Leon’s Blog on website, </p>
-<pre><code>             retrieved from Dec/06/2014, http://leonfocus.github.io/newton-interpolation/ 
-</code></pre></li>
+<p>​                retrieved from Dec/06/2014, <a href="http://leonfocus.github.io/newton-interpolation/" target="_blank" rel="noopener">http://leonfocus.github.io/newton-interpolation/</a> </p>
+</li>
 </ol>
 <h2 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h2><p>咕</p>
 

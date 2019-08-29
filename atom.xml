@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rye-catcher.github.io/"/>
-  <updated>2019-08-29T12:22:00.334Z</updated>
+  <updated>2019-08-29T12:29:11.570Z</updated>
   <id>https://rye-catcher.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rye-catcher.github.io/2019/08/29/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9D%87%E5%B7%AE%E5%8F%8A%E5%B7%AE%E5%88%86/"/>
     <id>https://rye-catcher.github.io/2019/08/29/学习笔记-均差及差分/</id>
     <published>2019-08-29T12:20:38.000Z</published>
-    <updated>2019-08-29T12:22:00.334Z</updated>
+    <updated>2019-08-29T12:29:11.570Z</updated>
     
     <summary type="html">
     
@@ -514,9 +514,9 @@
     </summary>
     
     
-      <category term="二分图匹配" scheme="https://rye-catcher.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/"/>
-    
       <category term="学习笔记" scheme="https://rye-catcher.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="二分图匹配" scheme="https://rye-catcher.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/"/>
     
   </entry>
   
