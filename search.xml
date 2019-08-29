@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>学习笔记--均差及差分</title>
+      <link href="/2019/08/29/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9D%87%E5%B7%AE%E5%8F%8A%E5%B7%AE%E5%88%86/"/>
+      <url>/2019/08/29/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9D%87%E5%B7%AE%E5%8F%8A%E5%B7%AE%E5%88%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="均差"><a href="#均差" class="headerlink" title="均差"></a>均差</h2><blockquote><p><strong>均差</strong>（Divided differences）是<a href="https://zh.wikipedia.org/wiki/递归" target="_blank" rel="noopener">递归</a><a href="https://zh.wikipedia.org/wiki/除法" target="_blank" rel="noopener">除法</a>过程。在<a href="https://zh.wikipedia.org/wiki/数值分析" target="_blank" rel="noopener">数值分析</a>中，可用于计算<a href="https://zh.wikipedia.org/wiki/牛顿多项式" target="_blank" rel="noopener">牛顿多项式</a>形式的<a href="https://zh.wikipedia.org/wiki/多项式插值" target="_blank" rel="noopener">多项式插值</a>的系数。在<a href="https://zh.wikipedia.org/wiki/微积分" target="_blank" rel="noopener">微积分</a>中，均差与<a href="https://zh.wikipedia.org/wiki/导数" target="_blank" rel="noopener">导数</a>一起合称<a href="https://zh.wikipedia.org/wiki/差商" target="_blank" rel="noopener">差商</a>，是对<a href="https://zh.wikipedia.org/wiki/函数" target="_blank" rel="noopener">函数</a>在一个<a href="https://zh.wikipedia.org/wiki/区间" target="_blank" rel="noopener">区间</a>内的<a href="https://zh.wikipedia.org/wiki/平均" target="_blank" rel="noopener">平均</a>变化率的测量<a href="https://zh.wikipedia.org/wiki/均差#cite_note-WilsonAdamson2008-1" target="_blank" rel="noopener">[1]</a><a href="https://zh.wikipedia.org/wiki/均差#cite_note-RubySellers2014-2" target="_blank" rel="noopener">[2]</a><a href="https://zh.wikipedia.org/wiki/均差#cite_note-HungerfordShaw2008-3" target="_blank" rel="noopener">[3]</a>.                                                                                                                                                                       (维基百科)</p></blockquote><p>说实话我不知道为什么除维基百科外其他地方都是直接称为差商,在这里我还是采用维基百科的说法”均差”</p><p>给出经过若干个数据点$(xi,f(x_i))$的函数$f(x)$，对于两个数据点$x_i,x_j$，其一阶均差$f[x_i,x_j]=\frac{f(x_i)-f(x_j)}{x_i-x_j}$；对于三个数据点，其二阶均差$f[x_0,x_1,x_2]=\frac{f[x_0,x_1]-f[x_1,x_2]}{x_0-x_2}$…对于$(n+1)$个数据点,其$n$阶均差$f[x_0,x_1…x_{n-1},x_{n}]=\frac{f[x_0,x_1…x_{n-1}]-f[x_1,x_2…x_n]}{x_0-x_n}$(Chang, 2014).</p><p>在这里我们默认均差都为<strong>前向均差</strong>，所以我们需要注意减法的方向</p><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><h4 id="性质1"><a href="#性质1" class="headerlink" title="性质1:"></a>性质1:</h4><p>$f[x_0,x_1…x_k]= \sum_{i=0}^k \frac{f(x_i)}{(x_i-x_0)(x_i-x_1)…(x_i-x_{i-1})(x_i-x_{x+1})…(x-x_k)}$      $(*)$</p><p>这个性质可以对高阶均差进行更方便的计算，在牛顿插值法中就可以运用这种计算</p><ul><li><p>证明</p><p>  首先我们需要记住定义式$f[x_0,x_1…x_{k-1},x_{k}]=\frac{f[x_0,x_1…x_{k-1}]-f[x_1,x_2…x_k]}{x_0-x_k}$，接着我们使用数学归纳法验证这条性质的正确性:</p></li></ul><pre><code>&lt;1&gt;当$n=1$时,即一阶均差,根据定义$f[x_0,x_1]=\frac{f(x_0)-f(x_1)}{x_0-x_1}$此时根据性质$1$,$f[x_0,x_1]=\frac{f(x_0)}{(x_0-x_1)}+\frac{f(x_1)}{(x_1-x_0)}=\frac{f(x_0)-f(x_1)}{x_0-x_1}$,等式成立&lt;2&gt;设$n=k$阶均差时 (*)式成立则当$n=k+1$时- 等式左边记为(1)式$f[x_0...x_{k+1}]=\frac{f[x_0...x_k]-f[x_1..x_{k+1}]}{x_0-x_{k+1}}=\frac{\sum_{i=0}^{k}\frac{f(x_i)}{(x_i-x_0)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_{k})}-\sum_{i=1}^{k+1}\frac{f(x_i)}{(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_{k+1})}}{x_0-x_{k+1}}$- 等式右边记为(2)式        $f[x_0...x_{k+1}]=\sum_{i=0}^{k+1} \frac{f(x_i)}{(x_i-x_0)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)}$观察**(1)式**中的的两个和式,分成三个部分解决证明其与(2)式相等  - 对于$i=0$时, 此时只有左边的和式有$\frac{f(x_0)}{(x_0-x_1)...(x_0-x_k)(x_0-x_{k+1})}$(已经把大分母$x_0-x_{k+1}$除下来)。显然等于(2)式 $i=0$时的式子  - 对于$i=k+1$时，此时只有右边的和式中有$-\frac{f(x_{k+1})}{(x_0-x_{k+1})(x_{k+1}-x_{1})...(x_{k+1}-x_{k})}=\frac{f(x_{k+1})}{(x_{k+1}-x_0)(x_{k+1}-x_{1})...(x_{k+1}-x_{k})}$    (也是已经把大分母除下来了)。显然等于(2)式$i=k+1$时的式子  - 对于$1&lt;=i&lt;=k$时，我们对于其中的**任意一项**进行考虑，    左边和式$(\frac{f(x_i)}{(x_i-x_0)(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)}-\frac{f(x_i)}{(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})..(x_i-x_k)(x_i-x_{k+1})})(\frac{1}{x_0-x_{k+1}})$    $=(\frac{f(x_i)((x_i-x_{k+1})-(x_i-x_0))}{(x_i-x_0)(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)(x_i-x_{k+1})})(\frac{1}{x_0-x_{k+1}})$    $=\frac{f(x_i)}{(x_i-x_0)(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_k)(x_i-x_{k+1})}$     显然对于(2)式中和式任意的第$i$项($1&lt;=i&lt;=k$)因此$k+1$阶均差依旧满足此性质由&lt;1&gt;&lt;2&gt;知该性质成立</code></pre><h4 id="性质2"><a href="#性质2" class="headerlink" title="性质2"></a>性质2</h4><p>调整点的顺序,均差不会改变。称其具有轮换对称性 (Chang, 2014)</p><p>$e.g.$  $f[x_0,x_1,x_2]=f[x_1,f_2,x_0]$</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ol><li><p>维基百科, <em>均差</em> , from 维基百科 on website,</p><pre><code>                 retrieved from April/04/2019, https://zh.wikipedia.org/wiki/%E5%9D%87%E5%B7%AE</code></pre></li><li><p>Leon Chang (2014) , <em>Newton插值法</em> , from Leon’s Blog on website, </p><pre><code>             retrieved from Dec/06/2014, http://leonfocus.github.io/newton-interpolation/ </code></pre></li></ol><h2 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h2><p>咕</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> calculus </category>
+          
+          <category> maths </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> 插值 </tag>
+            
+            <tag> calculus </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Paper rings , Onion rings</title>
       <link href="/2019/08/25/Paper-rings-Onion-rings/"/>
       <url>/2019/08/25/Paper-rings-Onion-rings/</url>
@@ -335,11 +366,11 @@
       
         <tags>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -358,11 +389,11 @@
       
         <tags>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -381,9 +412,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 比赛解题报告 </tag>
+            
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -402,9 +433,9 @@
       
         <tags>
             
-            <tag> 学习笔记 </tag>
-            
             <tag> 二分图匹配 </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
       
@@ -423,9 +454,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 比赛解题报告 </tag>
+            
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -444,11 +475,11 @@
       
         <tags>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -488,9 +519,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 比赛解题报告 </tag>
+            
+            <tag> 题解 </tag>
             
         </tags>
       
@@ -509,9 +540,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 比赛解题报告 </tag>
+            
+            <tag> 题解 </tag>
             
         </tags>
       
@@ -530,9 +561,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 扫描线 </tag>
             
@@ -595,11 +626,11 @@
       
         <tags>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -618,9 +649,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 比赛解题报告 </tag>
+            
+            <tag> 题解 </tag>
             
         </tags>
       
@@ -729,9 +760,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> C++STL </tag>
             
@@ -754,9 +785,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 二分 </tag>
             
@@ -798,9 +829,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -842,9 +873,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -863,9 +894,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 计数 </tag>
             
@@ -890,9 +921,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 树形DP </tag>
             
@@ -913,9 +944,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 线段树 </tag>
             
@@ -978,9 +1009,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 蛤 </tag>
             
@@ -1142,7 +1173,7 @@
       <link href="/2018/09/23/%E8%8B%9F%E6%B4%BB%E8%80%85%E7%9A%84%E6%97%A5%E8%AE%B0/"/>
       <url>/2018/09/23/%E8%8B%9F%E6%B4%BB%E8%80%85%E7%9A%84%E6%97%A5%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Enter the password" />    <label for="pass">Enter the password</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Enter the password" />    <label for="pass">Enter the password</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       
@@ -1161,7 +1192,7 @@
       <link href="/2018/09/22/%E4%B8%80%E4%BA%9BHexo%E6%89%A9%E5%B1%95%E5%8F%8A%E6%8F%92%E4%BB%B6/"/>
       <url>/2018/09/22/%E4%B8%80%E4%BA%9BHexo%E6%89%A9%E5%B1%95%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Welcome,password is "test" (without quote)" />    <label for="pass">Welcome,password is "test" (without quote)</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Welcome,password is "test" (without quote)" />    <label for="pass">Welcome,password is "test" (without quote)</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       
@@ -1252,9 +1283,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 树链剖分 </tag>
             
@@ -1470,9 +1501,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 思维 </tag>
             
             <tag> 计算几何 </tag>
             
@@ -2724,9 +2755,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>category</title>
+      <link href="/category/index.html"/>
+      <url>/category/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -2735,9 +2766,9 @@
     
     
     <entry>
-      <title>category</title>
-      <link href="/category/index.html"/>
-      <url>/category/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
