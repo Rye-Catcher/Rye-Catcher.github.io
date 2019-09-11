@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rye-catcher.github.io/"/>
-  <updated>2019-08-29T12:29:11.570Z</updated>
+  <updated>2019-09-11T14:10:12.745Z</updated>
   <id>https://rye-catcher.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FFT--快速傅里叶变换入门</title>
+    <link href="https://rye-catcher.github.io/2019/09/11/FFT-%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%85%A5%E9%97%A8/"/>
+    <id>https://rye-catcher.github.io/2019/09/11/FFT-快速傅里叶变换入门/</id>
+    <published>2019-09-11T14:02:06.000Z</published>
+    <updated>2019-09-11T14:10:12.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;FFT—快速傅里叶变换入门&quot;&gt;&lt;a href=&quot;#FFT—快速傅里叶变换入门&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="https://rye-catcher.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="多项式" scheme="https://rye-catcher.github.io/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/"/>
+    
+      <category term="快速傅里叶变换" scheme="https://rye-catcher.github.io/tags/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>学习笔记--均差及差分</title>
@@ -541,34 +569,6 @@
     
     
       <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[NOIP2018模拟赛10.20A]挂分报告</title>
-    <link href="https://rye-catcher.github.io/2018/10/20/NOIP2018%E6%A8%A1%E6%8B%9F%E8%B5%9B10-20A-%E6%8C%82%E5%88%86%E6%8A%A5%E5%91%8A/"/>
-    <id>https://rye-catcher.github.io/2018/10/20/NOIP2018模拟赛10-20A-挂分报告/</id>
-    <published>2018-10-20T15:10:39.000Z</published>
-    <updated>2018-10-20T15:54:36.285Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;闲扯&quot;&gt;&lt;a href=&quot;#闲扯&quot; class=&quot;headerlink&quot; title=&quot;闲扯&quot;&gt;&lt;/a&gt;闲扯&lt;/h3&gt;&lt;p&gt;先看看了B组,T1 ZROI刚好讲过一个性质原根一般很小的,直接枚举;T2一眼二分然后似乎状压
-        
-      
-    
-    </summary>
-    
-    
-      <category term="比赛解题报告" scheme="https://rye-catcher.github.io/tags/%E6%AF%94%E8%B5%9B%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
     
       <category term="思维" scheme="https://rye-catcher.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
     

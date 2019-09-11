@@ -180,6 +180,53 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/luogu题解P2312解方程-暴力膜-秦九韶/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rye_Catcher">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/07/27/luogu题解P2312解方程-暴力膜-秦九韶/" itemprop="url">luogu题解P2312解方程--暴力膜+秦九韶</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-27T22:42:36+08:00">2018-07-27 22:42:36</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      题目链接 https://www.luogu.org/problemnew/show/P2312 分析 这道题很毒啊,这么大的数。 但是如果多项式$\sum_{i=0}^N a[i]X^i=0$则$\sum_{i=0}^N a[i]X^i \mod P=0$ 于是我们可以暴力膜一模，然后在$[1,m]$中枚举就好了。但是呢，万一这个多项式的值是$P$的倍数,也会变成0，所以保险起见搞几个又大又质的
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
+        
+        <a class="post-tag button" href="/tags/乱搞/" rel="tag"><i class="fas fa-tags"></i>乱搞</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/27/BZOJ5017炸弹题解-玄学递推/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Rye_Catcher">
@@ -603,53 +650,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/07/07/学习笔记-树上差分/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Rye_Catcher">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Rye_Catcher">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/07/07/学习笔记-树上差分/" itemprop="url">学习笔记--树上差分</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-07T23:13:34+08:00">2018-07-07 23:13:34</time></span>
-        </span>
-        
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      前言 在做一些树上路径修改&amp;查询相关题目时，有时我们用不着树链剖分，类比于序列上的差分，我们可以进行树上差分，不过情况稍有些不同，分为点值上的差分和边权上的差分两种 点值差分 对树上路径$path(x,y)$进行点值差分方法： $tag[x]++,tag[y]++,tag[lca(x,y)]-=2$ 询问$x$被多少个标记覆盖时进行$dfs$,将$x$所有子树节点$tag[]$之和加上$t
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/学习笔记/" rel="tag"><i class="fas fa-tags"></i>学习笔记</a>
-        
-        <a class="post-tag button" href="/tags/差分/" rel="tag"><i class="fas fa-tags"></i>差分</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/11/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/13/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -696,21 +696,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">126</a></div>
+      <div><a href="/archives/">127</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">12</a></div>
+      <div><a href="/categories/">13</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">76</a></div>
+      <div><a href="/tags/">78</a></div>
     </div>
     
     
