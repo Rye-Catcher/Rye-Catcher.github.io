@@ -180,6 +180,53 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/27/luogu1879玉米田题解-状压DP/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rye_Catcher">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/09/27/luogu1879玉米田题解-状压DP/" itemprop="url">luogu1879玉米田题解--状压DP</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-27T07:56:20+08:00">2018-09-27 07:56:20</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      题目链接https://www.luogu.org/problemnew/show/P1879 分析一类状压DP套路,将每一行视为一个阶段,通过状态可行性来由一行更新到另一行 那么我们先预处理出所有状态本身是否合法(即有没有相邻的两块草地)。如果第$i$行状态为$x$,第$i+1$行为$y$,那么显然x&amp;y为0时,这两行才是合法的。同时若题目给出的第$i$行田地的状态为$s$,那么$x|s
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
+        
+        <a class="post-tag button" href="/tags/状压DP/" rel="tag"><i class="fas fa-tags"></i>状压DP</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/27/HDU5418VictorAndWorld题解-最长哈密顿回路/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Rye_Catcher">
@@ -579,53 +626,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/18/luogu4092-HEOI2016-树题解-树链剖分/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Rye_Catcher">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Rye_Catcher">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/09/18/luogu4092-HEOI2016-树题解-树链剖分/" itemprop="url">luogu4092[HEOI2016]树题解--树链剖分</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-18T22:45:49+08:00">2018-09-18 22:45:49</time></span>
-        </span>
-        
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      题目链接： https://www.luogu.org/problemnew/show/P4092 分析瞎扯—$O(Q \log^3 N)$解法 这道先yy出了一个$O(Q \log^3 N)$,的做法，先树链剖分。 对于加标记操作，找到那个点所在的链，将其$top$标记一下，然后该点到根节点区间和+1. 对于查询操作，先看这个点所在链有没有标记，如果没有，就一直向上跳直到找到一条标记了的链，然后
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
-        
-        <a class="post-tag button" href="/tags/树链剖分/" rel="tag"><i class="fas fa-tags"></i>树链剖分</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/5/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/7/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -672,21 +672,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">127</a></div>
+      <div><a href="/archives/">128</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">13</a></div>
+      <div><a href="/categories/">15</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">78</a></div>
+      <div><a href="/tags/">82</a></div>
     </div>
     
     

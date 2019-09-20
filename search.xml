@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>搭建SM2 Wiki之路</title>
+      <link href="/2019/09/20/%E6%90%AD%E5%BB%BASM2-Wiki%E4%B9%8B%E8%B7%AF/"/>
+      <url>/2019/09/20/%E6%90%AD%E5%BB%BASM2-Wiki%E4%B9%8B%E8%B7%AF/</url>
+      
+        <content type="html"><![CDATA[<h2 id="搭建SM2-Wiki之路"><a href="#搭建SM2-Wiki之路" class="headerlink" title="搭建SM2 Wiki之路"></a>搭建SM2 Wiki之路</h2><h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>想不到什么好标题就用这个了。这篇文章记录了我搭建<a href="https://rye-catcher.github.io/SM2-wiki/">SM2 Wiki</a>的大致经历，在这个过程中遇到的许多问题以及最后的解决方式。希望能给大家，尤其是也想通过<a href="https://www.mkdocs.org" target="_blank" rel="noopener">Mkdocs</a>搭建的人一些参考。但是本文也是个人理解，无法保证没有错误，恳请谅解。</p><p>在这里先致谢<a href="https://github.com/mkdocs/mkdocs/" target="_blank" rel="noopener">mkdocs</a>和所有网络上参考资料的编辑者</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先我使用了阿里云学生优惠的服务器，100+RMB 每年，选择安装的是<strong>Ubuntu 16.04</strong>系统</p><p>开机后升级一下源。但是我发现这个云主机的默认软件源是阿里云的，不知道怎么才能换成NUS的</p><h3 id="安装Mkdocs"><a href="#安装Mkdocs" class="headerlink" title="安装Mkdocs"></a>安装Mkdocs</h3><p>中文文档:<a href="https://markdown-docs-zh.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">https://markdown-docs-zh.readthedocs.io/zh_CN/latest/</a></p><p>英文文档:<a href="https://www.mkdocs.org/" target="_blank" rel="noopener">https://www.mkdocs.org/</a></p><p>按照上面步骤来先看一下<strong>python</strong>版本,结果是<strong>2.7.12</strong>的…似乎有点低，不过文档说资瓷的话就不管了</p><p>按照文档<code>pip install mkdocs</code>后，查看<strong>mkdocs</strong>时神奇的报错了就发生了，而且似乎是因为<strong>python</strong>版本太低不兼容造成的 :(</p><p>安装<strong>python3</strong>后发现版本还是没有变，于是上网找到了这篇博客:<a href="https://blog.csdn.net/CYM_LMY/article/details/78315139" target="_blank" rel="noopener">Ubuntu16.04下完美切换Python版本</a>，完美解决问题</p><p>结果再次<strong>pip</strong>时又报错了，搜索错误信息找到了<a href="https://www.cnblogs.com/chax/p/9409353.html" target="_blank" rel="noopener">Stackoverflow上的这个问题</a></p><p>按照其中一个方法重装<strong>pip</strong>就好了</p><h3 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h3><p>还是按照官方文档中的步骤</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">mkdocs new SM2-wiki<br>cd SM2-wiki<br></code></pre></td></tr></table></figure><p>此时文件夹里的<code>mkdocs.yml</code>是配置信息，关于更多配置信息的编辑可以参考<a href="https://s0www0mkdocs0org.icopy.site/user-guide/configuration/" target="_blank" rel="noopener">这里</a></p><p>当然这里只是你服务器本地的文件，我们这里使用<a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>托管</p><p>怎么做呢？</p><p>先在<strong>Github</strong>中创建一个新<strong>repo</strong>，例如创了一个叫<strong>SM2-wiki</strong>的<strong>repo</strong></p><p>然后我们将它<strong>clone</strong>到本地</p><p><code>git clone https://github.com/&lt;user-name&gt;/SM2-wiki &lt;本地目录名&gt;</code></p><p>如果你不熟悉<strong>Git</strong>指令强烈推荐阅读这篇文章:<a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2014/06/git_remote.html</a></p><p>接下来把<strong>mkdocs</strong>创立的<strong>SM2-wiki</strong>里的文件比如<strong>mkdocs.yml</strong>,<strong>/docs</strong>全都复制到<strong>clone</strong>到的那个<strong>repo</strong>里</p><p>完成后同时<strong>cd</strong>到<strong>clone</strong>到的<strong>repo</strong>中，接下来所有的本地文件操作都在那里进行</p><p>此时文件夹应该用这几样东西:<code>/docs</code>,<code>mkdocs.yml</code>,<code>LICENSE</code>（如果你在创建<strong>repo</strong>时有选的话）,<code>README.md</code></p><p>然后输入指令<code>mkdocs gh-deploy</code>,开始部署</p><p>它会要求输入你的<strong>Github</strong>上的用户名和密码.</p><p>如果成功后就可以在<code>https://&lt;user-name&gt;.github.io/SM2-wiki</code>这里看到你的网页了</p><p>但是这时候有一个很不方便的是我们这时只能在本地修改<code>/docs</code>和<code>mkdocs.yml</code>,怎么把它们与<strong>repo</strong>中的<strong>master</strong>分支关联使得我们可以在<strong>Github</strong>上编辑呢？</p><p>其实几行<strong>Git</strong>指令就好了,但是首先我们先保证不把部署后生成的<code>/site</code>也给送到<strong>master</strong>分支</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs undefined">echo &quot;site/&quot; &gt;&gt; .gitignore<br>git add /docs mkdocs.yml .gitignore<br>git commit -m &quot;add /docs mkdocs.yml .gitignore&quot;<br>git push origin master<br></code></pre></td></tr></table></figure><p>这样的话就建立起关联了，我们假如在<strong>Github</strong>上修改了<strong>master</strong>分支里的文件，只需要</p><p><code>git pull origin</code></p><p>就把远程分支的更新与我们本地的合并了，然后再次<code>mkdocs gh-deploy</code>部署后就完成了更新这个过程</p><h3 id="更多操作"><a href="#更多操作" class="headerlink" title="更多操作"></a>更多操作</h3><p>官方<strong>mkdocs</strong>的主题我觉得太丑了,于是才用和<strong>OI-wiki</strong>一样的<code>mkdocs-material</code>主题</p><p>官方文档: <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">https://squidfunk.github.io/mkdocs-material/</a></p><p>但是安装时出了个大坑</p><p>修改主题后部署时报错，原因是本地<strong>markdown</strong>版本太低了</p><p>结果用<strong>pip</strong>更新<strong>markdown</strong>时又给我报错了,错误信息</p><p><code>ERROR: Cannot uninstall &#39;Markdown&#39;. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.</code></p><p>谷歌了一下发现这个相关<strong>issues</strong>:<a href="https://github.com/pypa/pip/issues/5247" target="_blank" rel="noopener">https://github.com/pypa/pip/issues/5247</a></p><p>发现了一个非常好的方法，完美解决了问题:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs undefined">#Reduced version,<br>pip install --upgrade --force-reinstall pip==9.0.3<br>#Tried to re-install package<br>pip upgrade markdown --disable-pip-version-check<br>#At last, recover the latest version for pip<br>pip install --upgrade pip<br></code></pre></td></tr></table></figure><p>关于更多配置，这里推荐几个地方:</p><ul><li><p><code>mkdocs.yml</code>配置信息:</p><ul><li>中文: <a href="https://s0www0mkdocs0org.icopy.site/user-guide/configuration/" target="_blank" rel="noopener">https://s0www0mkdocs0org.icopy.site/user-guide/configuration/</a></li><li>English: <a href="https://www.mkdocs.org/user-guide/configuration/" target="_blank" rel="noopener">https://www.mkdocs.org/user-guide/configuration/</a></li></ul></li><li><p>自定义主题: </p><ul><li><p>中文: <a href="https://s0www0mkdocs0org.icopy.site/user-guide/custom-themes/" target="_blank" rel="noopener">https://s0www0mkdocs0org.icopy.site/user-guide/custom-themes/</a></p></li><li><p>English: <a href="https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme" target="_blank" rel="noopener">https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme</a></p></li></ul></li><li><p><strong>Markdown</strong>相关扩展(可以在<code>mkdocs.yml</code>中配置使用)</p><ul><li>中文: <a href="http://s0squidfunk0github0io.icopy.site/mkdocs-material/extensions/pymdown/" target="_blank" rel="noopener">http://s0squidfunk0github0io.icopy.site/mkdocs-material/extensions/pymdown/</a></li></ul></li><li><p>一个含有许多相关信息尤其是<strong>markdown</strong>方面的网站: <a href="https://cyent.github.io/markdown-with-mkdocs-material/" target="_blank" rel="noopener">https://cyent.github.io/markdown-with-mkdocs-material/</a></p></li><li><p>OI-wiki@github: <a href="https://github.com/OI-wiki/OI-wiki/" target="_blank" rel="noopener">https://github.com/OI-wiki/OI-wiki/</a></p></li></ul><p>…</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SM2 Wiki </category>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目 </tag>
+            
+            <tag> SM2 Wiki </tag>
+            
+            <tag> Github </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FFT--快速傅里叶变换入门</title>
       <link href="/2019/09/11/FFT-%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%85%A5%E9%97%A8/"/>
       <url>/2019/09/11/FFT-%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%85%A5%E9%97%A8/</url>
@@ -393,9 +426,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
             <tag> 思维 </tag>
             
@@ -416,9 +449,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
             <tag> 思维 </tag>
             
@@ -502,9 +535,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
             <tag> 思维 </tag>
             
@@ -546,9 +579,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -567,9 +600,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -653,9 +686,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
             <tag> 思维 </tag>
             
@@ -676,9 +709,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -1200,7 +1233,7 @@
       <link href="/2018/09/23/%E8%8B%9F%E6%B4%BB%E8%80%85%E7%9A%84%E6%97%A5%E8%AE%B0/"/>
       <url>/2018/09/23/%E8%8B%9F%E6%B4%BB%E8%80%85%E7%9A%84%E6%97%A5%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Enter the password" />    <label for="pass">Enter the password</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Enter the password" />    <label for="pass">Enter the password</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       
@@ -1219,7 +1252,7 @@
       <link href="/2018/09/22/%E4%B8%80%E4%BA%9BHexo%E6%89%A9%E5%B1%95%E5%8F%8A%E6%8F%92%E4%BB%B6/"/>
       <url>/2018/09/22/%E4%B8%80%E4%BA%9BHexo%E6%89%A9%E5%B1%95%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Welcome,password is "test" (without quote)" />    <label for="pass">Welcome,password is "test" (without quote)</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Welcome,password is "test" (without quote)" />    <label for="pass">Welcome,password is "test" (without quote)</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX18tMoj6MkSI3iq5KbtnbLJbCR2YlW2WqbKySJjx1hBIFCcGmuN7zgJTsLkSele1Klo8sk3tZsogIv6qXkgao38Y4yrxJOveUBiI53Uxy7vaxfyvej2ggEOEssuNVQVBaneOrOQcEQ0vPQ1Sm3XjMEfdifeuRZ3aT2MpmgIyn/dKCseGxipglNaoKG07sniHSzFAJgnWA1uufEFssvWzDb1/oZmMbCQvcwd0oi54JLbiMeB7DVN3SwBQLHSXB4B4Yqef5L9T3yVxgwUeVgyYk2UOSRoU3OcXWKPD7S0vENaQnJIEAVCwU6jFrm1LXl7zetxirEmd4NqHD42VQEBBQL5LOoM4NUlfoYzupUxTEINEP5gNae98qSMIa9uZzMRyiR0nCBdI4cwt7rzKuNz/lqxJACVFfD3umjVXzIDUCgYggzd3fjWb10HfgrJ7msoQdbxOvEinCzxEjQMMDQeecCq7yslOH4KHJW1+WjkYZp9MYgKtm8IgCekQmXpU30T2sNDpALqWPe0RTVSqzGsUXOO8y/iiIOifxmBXuN/tIeFk0uJcUNAjQ8oB5vXtWPq96WPCdZalZ0QttsBUTVozYcrrlpP9kadZyAd/3jm99J/VZPkDFL2eyoD82CQ2KXLwQQ9/roIyvIXaAZv42qThjdpze91Vp8IeXjhs4oVMbVwIxZ755j4TgAiAZufwtWrQHRziU4dFmQO0Tt37S0c5LnmxSicM5P1YKRWLmcLXyntymKv7CnKc3QLGIHC+A5066Wc/Ro8TWtLlQUI6cyC2HZ47odvpt19rKKR692T7Jcf5HSnSzZR61tz/JMtGLVZIFPb4EYXcEeIv6HU4jV1nCC5UzLj6jm7q+ay8R6s2RuvZhLZaoUI1jxLA7A7FqrA2+suhIClHaOhVswcroF1y1hLKqBY3G0vxrL6J636yVNpQJYW06U+cZmyYH8vLU/qu0ka4FYnKMVK2N0G8AjBngJIpy/OmiT3mSaDMYVjuJK+zW2vVXNLkI88H87gKaXe/2m84LYApSiAyAyYSb7cIy7NWK3B4d1wv29qDQzRFng4YzMWJpUlO+CzuzUaYzWw/8yxhLdGeiq2TacFxtQKPx0N4hIb8dlAK4SITgHnc+1081NMgfSEtNoVVzO+6qdz9+vVqoQXli7wgsVMW69XJwbUmNmByc4TGkNBsJR73Y9YszmaOUZ5oBmJ0QGsb1hBzwAGgXimieQKHaJnxhIQ5PYEtWyOtwUDBm5JgtCSjLzaEuY2z273FoIGEU/woiZ129E+0CXw+FGXbBMN7cTPaUERKqLqBwAy+adu2fCyT+SF7RHMU0+Jtzb20bQB2AC2t7kehh4Yu5NweRXgrjPFhHHg+FL/Tdr7e0NhFYEDvSXL1reT28OJNm7Q53Pit53r8Yufpg1jJRp3fYmeR4wyExOx74Y6yjyGM2Xm/SzevG3SUCbuxyXKKWTwAlwAqFtCPexCxb9cJtxmp6qZP8sVwiklVEzsH3s8KAw7ooKsRCzRrkWGUo8+SnknsOTz/uQJ9Ri5+4YjXjXSznUrTruwHLZqPP098paQjxAx3RfA/G0DLzMZ9bb5kFgEfN1yB0GhwNKbUsG30Ff+e1TcuoApNq7PMhOLd5jfviSudhQ66ysNjs4m/OXrgpTiuotxPnEPMftl+srby5fdf4vjaImH8nMjAsqihK4pgOJJquaClhTAXnspKHDvrBEEcJIRfmga9Ir54CQUojuRec+wRwlVilUWR4PLrqO15Eyke38QuQ3M6vqsvMeWJ61XHUHLwLGAn7/DKOyLUMqQc8ilc7Sv4uAzvtMS4u2dw/6jMnXUcprwL+JG74JAkRqbKLuNmmjyKHw9ruPIaBO2yblvQ7teG6+Q09CuAsyRqix3jcHyENX3lj5iSvUcvDmnft28KT/mvegGFAuAK9C1/jAbTsT1p+EXWsKjDV5m2ZcL4pD7orfnDAH0Y9ozoyUuZ53T8zkoAztGcuMjiPFr1VWj7r6Wcq4CSZJ6ocADU3WgrckaMsxYdsrSaMGQFFuXfEFgQXsnxs+XNWE6UAtHu3t9vZCERVWRIFOG/M+h8AFXk+SQ/CUvnUU1u5tnvR0igwjM5S9nEfEQnRipHFurq6+4jDZPhrUVC418myy25jHW0X70NpQ2fBl/6VnWSvLN2aHXyuIQYW6ovtHZ+0yCKKQRqo0bdV6H3i0A1uzyAf4H2TRFCgOiHO8M5//kUgt1XIr+3I90zzqGGEmzDvLrvFMTKoVY/7dMrveMMHfP82wlwz8NwakGMjyMaooHTpgCfhILliIrsdJJ1uZzLMzIwAvMPmoKYArBQmoUnNYHp/aUZg56Jkvq1AHN5HPqmfnhr9pCfrhU7ZmIhWCAoUqOPQlzx8IiDubZ4LVQiIb6X60EWq0iU5MioNkGruMeh+SpzRWjrMV32tD6a0xWpAh5/5tWl9+uQxkP0L0CtMhmIJyU=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       
@@ -2771,17 +2804,6 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>About Me</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -2804,9 +2826,20 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>留言板GuestBook</title>
+      <link href="/guestbook/index.html"/>
+      <url>/guestbook/index.html</url>
+      
+        <content type="html"><![CDATA[<p>想对我说点什么?</p><script type="math/tex; mode=display">\mathcal{Enjoy \ Your \ Reading}</script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -2815,11 +2848,11 @@
     
     
     <entry>
-      <title>留言板GuestBook</title>
-      <link href="/guestbook/index.html"/>
-      <url>/guestbook/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[<p>想对我说点什么?</p><script type="math/tex; mode=display">\mathcal{Enjoy \ Your \ Reading}</script>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
