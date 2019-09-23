@@ -180,6 +180,55 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/11/luogu2261余数求和题解-整除分块/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rye_Catcher">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/09/11/luogu2261余数求和题解-整除分块/" itemprop="url">luogu2261余数求和题解--整除分块</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-11T11:30:12+08:00">2018-09-11 11:30:12</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      题目链接https://www.luogu.org/problemnew/show/P2261 分析显然$k$ $mod$ $i=k-\lfloor {k/i}\rfloor$ $\times$ $i$,于是我们只需要求$N * k-\sum_{i=1}^N {\lfloor {k/i}\rfloor\times i}$ 这里就需要数论分块,也称作整除分块的知识 结论:$\forall{i} \i
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
+        
+        <a class="post-tag button" href="/tags/数论/" rel="tag"><i class="fas fa-tags"></i>数论</a>
+        
+        <a class="post-tag button" href="/tags/数论分块/" rel="tag"><i class="fas fa-tags"></i>数论分块</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/09/luogu1282多米诺骨牌题解-线性DP/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Rye_Catcher">
@@ -605,55 +654,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/27/学习笔记-八数码问题/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Rye_Catcher">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="https://s1.ax1x.com/2018/08/11/PcnGYn.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Rye_Catcher">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/08/27/学习笔记-八数码问题/" itemprop="url">学习笔记--八数码问题</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-08-27T22:45:13+08:00">2018-08-27 22:45:13</time></span>
-        </span>
-        
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      学习笔记—八数码问题先看道题目https://www.luogu.org/problemnew/show/P1379 分析经典的八数码问题,有双向BFS和$IDA$ 的方法，这里使用的是$A$ 启发式搜索. 简要介绍一下$A$ ,就是对于搜索的每一个状态设计一个评估函数$f(state)$,表示当前状态$state$到目标状态所需代价的估计值;还有一个$g(state)$,表示当前状态$state
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/BFS/" rel="tag"><i class="fas fa-tags"></i>BFS</a>
-        
-        <a class="post-tag button" href="/tags/学习笔记/" rel="tag"><i class="fas fa-tags"></i>学习笔记</a>
-        
-        <a class="post-tag button" href="/tags/A-IDA/" rel="tag"><i class="fas fa-tags"></i>A*/IDA*</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/9/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -700,21 +700,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">128</a></div>
+      <div><a href="/archives/">129</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">15</a></div>
+      <div><a href="/categories/">16</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">82</a></div>
+      <div><a href="/tags/">84</a></div>
     </div>
     
     
