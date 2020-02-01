@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rye-catcher.github.io/"/>
-  <updated>2020-02-01T16:01:25.893Z</updated>
+  <updated>2020-02-01T17:27:15.618Z</updated>
   <id>https://rye-catcher.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一道remedial-2中的力学题</title>
+    <link href="https://rye-catcher.github.io/2020/02/02/%E8%AE%B0%E4%B8%80%E9%81%93remedial-2%E4%B8%AD%E7%9A%84%E5%8A%9B%E5%AD%A6%E9%A2%98/"/>
+    <id>https://rye-catcher.github.io/2020/02/02/记一道remedial-2中的力学题/</id>
+    <published>2020-02-01T16:37:07.000Z</published>
+    <updated>2020-02-01T17:27:15.618Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Preface&quot;&gt;&lt;a href=&quot;#Preface&quot; class=&quot;headerlink&quot; title=&quot;Preface&quot;&gt;&lt;/a&gt;Preface&lt;/h3&gt;&lt;p&gt;Physics Remedial
+        
+      
+    
+    </summary>
+    
+      <category term="题解" scheme="https://rye-catcher.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+      <category term="题解" scheme="https://rye-catcher.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+      <category term="物理" scheme="https://rye-catcher.github.io/tags/%E7%89%A9%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>当我们在谈论理性时，我们在谈论什么</title>
@@ -558,30 +586,6 @@
     
     
       <category term="AFO" scheme="https://rye-catcher.github.io/tags/AFO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写在NOIP2018前</title>
-    <link href="https://rye-catcher.github.io/2018/11/08/%E5%86%99%E5%9C%A8NOIP2018%E5%89%8D/"/>
-    <id>https://rye-catcher.github.io/2018/11/08/写在NOIP2018前/</id>
-    <published>2018-11-08T14:27:04.000Z</published>
-    <updated>2018-11-08T14:44:21.722Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;embed src=&quot;//music.163.com/style/swf/widget.swf?sid=33777309&amp;type=2&amp;auto=1&amp;width=320&amp;height=66&quot; width=&quot;340&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="杂谈" scheme="https://rye-catcher.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
