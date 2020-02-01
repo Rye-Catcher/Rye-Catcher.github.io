@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo, RyeCatcher, OI">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Rye_Catcher" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.lug.ustc.edu.cn/css?family=Lato|Roboto+Condensed|Skranji|Ubuntu|Ubuntu+Mono">
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    <script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    });
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += " has-jax";
+      }
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">复制</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">复制</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "已复制";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "复制";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>当我们在谈论理性时，我们在谈论什么 | Rye_Catcher - Stay Young,Stay Simple</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Rye_Catcher</a></h1>
+        <h2 class="subtitle">Stay Young,Stay Simple</h2>
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+        <li role="menuitem"><a href="/slides/"><i class="fas fa-share"></i><span class="menu-text">slides</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2020/02/01/当我们在谈论理性时，我们在谈论什么/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="Rye_Catcher">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="https://s2.ax1x.com/2019/10/22/K32J5n.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">当我们在谈论理性时，我们在谈论什么</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-02-01T23:52:16+08:00">2020-02-01 23:52:16</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="当我们在谈论理性时，我们在谈论什么"><a href="#当我们在谈论理性时，我们在谈论什么" class="headerlink" title="当我们在谈论理性时，我们在谈论什么"></a>当我们在谈论理性时，我们在谈论什么</h1><h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>今天上英语课，有这样两个情景:</p>
+<p>Context 1: 同学小F上台做一个 self-learning report. 她介绍了一本行为经济学家的书。书中称人们总是做一些非理性 (irrational) 的行为: 比如，相对于向一个遭受旱灾的地区捐款，人们更愿意将援手伸向一个挨饿的小孩。</p>
+<p>Context 2: 同学L说他不会相信杂志中那些误导性的“科学”内容，因为他可以通过科学知识推理出它们是错误的。Tutor夸赞他是一个理性 (rational) 的人</p>
+<p>两则语境中都出现了同一个词: <b>rational (理性的)</b>。前一段时间正好读到关于英国哲学家大卫·休谟 (David Hume) 的相关内容，其中也出现了不少关于理性的内容。于是对此我产生了不少困惑，上网一查发现原来是语言的问题 !!! 休谟所谈的理性是 <b>reason</b>, 而这里的理性是 <b>rationality</b>. 两者的中文翻译在很多处都同为理性，但是英文中的意思却不相同！</p>
+<p>于是就写下此文，权当对误区的一个辨识，以及对休谟观点的一些笔记。此文标题是 “当我们在谈论理性时，我们在谈论什么”, 但大部分内容都是基于休谟经验主义的思想，请不要将它误认为一篇从各个哲学角度介绍理性的文章。</p>
+<h3 id="“Reason”-amp-“Rationality”"><a href="#“Reason”-amp-“Rationality”" class="headerlink" title="“Reason” &amp; “Rationality”"></a>“Reason” &amp; “Rationality”</h3><p>我认为理性(reason)是人们依据<strong>先验 (priori) 知识</strong>的推理而做出判断的能力</p>
+<p>在哲学中，一般是将理性(reason)与经验对立而言的。</p>
+<p>而理性(rationality)则是与感性对立而言的，是指人们运用逻辑推理来思考或做决定的一种品质</p>
+<p>但是这时我不禁想到休谟对于因果论的看法：我们真的在用理性进行推理吗？</p>
+<h3 id="我们真的在用理性-reason-进行推理吗"><a href="#我们真的在用理性-reason-进行推理吗" class="headerlink" title="我们真的在用理性(reason)进行推理吗"></a>我们真的在用理性(reason)进行推理吗</h3><blockquote>
+<p><strong>接下来的理性均为 “reason”</strong></p>
+</blockquote>
+<p>休谟将理性的研究对象分为两类: “<strong>观念之间的关系(relationship of ideas)和事实(matters of facts)”</strong>。</p>
+<p>若我们按照罗素在 _Principle of Mathematics_ 的观点将数学与逻辑看成等同的话，在我的理解下观念之间的关系即逻辑 (或数学)， 它包含的是抽象的命题，是可以完全使用理性判断它的真假。</p>
+<p>第二个对象则是关于实际之物的命题，只能通过经验来判断命题的真假；比如：LXT至少单身了十七年零七个月六天四小时。你可以通过经验观察（比如亲自去问LXT）得到命题的真假。</p>
+<p>这时，休谟说”一切关于事实的推理，似乎都建立在因果关系上面“。他继续说道:””an expectation that a particular event (a ‘cause’) will be followed by another event (an ‘effect’) previously and constantly associated with it.”, 也就是这种因果关系是<strong>习惯</strong>而非理性的结果。</p>
+<p>这什么意思呢？也就是你在生活中的大部分知识，包括自然科学，都是基于经验的习惯而非理性。</p>
+<p>一个很经典的例子：一个黑球撞击一个白球后会发生什么。你肯定会轻松地答出来：白球也会被撞动。也就是说黑球撞白球这个因，导致了白球也被撞动了的这个果。</p>
+<p>看上去你是在用理性推理而得的因果关系，但事实上这种关系并不同数学定理一样有<strong>必然性</strong>，而只是你的<strong>“习惯性联想”</strong>.</p>
+<p>我们再对刚刚的例子解构一下：</p>
+<p>因:</p>
+<ol>
+<li>黑球撞击了白球</li>
+<li>每一次白球也被撞动</li>
+</ol>
+<p>果：</p>
+<ol>
+<li>这次白球也会被撞动</li>
+</ol>
+<p>这两个因能推出这一个果吗？逻辑上显然不行！只是因为经验告诉我们这些因与果是<strong>恒常组合</strong>(“constantly associated”)的，我们才这么推理出了这样的一个因果关系。</p>
+<p>当然你肯定会对我进行反驳：我可以根据经典力学推理出这个因果关系是对的啊。但是你仔细想想，牛顿三定律难道不也是根据”习惯性联想”得到的因果关系吗?</p>
+<p>如此看来，我们的生活大几乎是没有在用理性(reason)进行推理的，而自然科学的正确性也打上了一个问号：我们常常将自然科学视为真理，但是在这里休谟告诉我们自然科学也只是我们使用习惯性联想出的因果关系得到一套体系而已，我们认为它正确是因为它符合我们的习惯，或者说，因为我们的经验，而非因为理性上的推理。</p>
+<p>我们有人在批判中医时常说这只是经验罢了，并不能用科学解释。但是按照休谟的理论，难道我们的自然科学不也是经验吗？我们将自然科学视为真理，难道也不是一种迷信呢？为什么我们要坚信科学，而非“伪科学”？既然习惯是无法保证必然性的，凭什么我们说符合习惯的经验就是正确的，不符合习惯的经验就是错误的？对于中医而言，很多药方在习惯上确实可以达到功效，我们为什么不选择相信它？这在我看来实在是一个很大的挑战。</p>
+<h3 id="理性战胜激情"><a href="#理性战胜激情" class="headerlink" title="理性战胜激情?"></a>理性战胜激情?</h3><p>休谟在因果论方面提出了一个棘手的问题之后并不罢休，在道德方面，他说了一句名言:”理性是激情的奴隶”(“Reason is, and ought only to be the slave of the passions, and can never pretend to any other office than to serve and obey them.”).</p>
+<p>许多传统的观点都认为用理性去克制自己的激情才是正确的。但是休谟提出了一些看法：</p>
+<ol>
+<li><p>没有情感那么道德无法被判断：理性只能判断事实的真或假，但是道德的正确与否由我们的情感判断。例如：有一天小I从厨房冰箱偷吃了别人的西瓜。我们的理性只能告诉我们这个事实是否是真的，而关于这个偷吃行为的价值判断，却只能由我们的情感决定；假如我们失去了所有的情感, 那么偷吃这件事对我们而言和”我是男生”这样的事实没有任何价值上的区别。</p>
+<p>这里我还有一些想法，我们的这些情感也都是一种事实上的因果关系。譬如，我可能会对小I同情，因为他是忍受不了强制餐而饿的发慌；也可能因为他的不正义行为感到 resentment。但是这些因果关系也并非理性的，而是前文所提到的习惯性联想。</p>
+</li>
+<li><p>情感决定了我们的最终目的。如果失去了情感偏好，我们将不知如何做选择。</p>
+</li>
+<li><p>道德判断往往是凭借直觉在瞬间做出来的，而非推理</p>
+</li>
+</ol>
+<p>周濂在这之后说因此我们在尝试说服别人相信违背他们直觉的东西时，不仅应该动之以理，也要晓之以情。从目前我在Twitter，知乎等处的经验来看，确实是这样的。</p>
+<h3 id="一些杂想"><a href="#一些杂想" class="headerlink" title="一些杂想"></a>一些杂想</h3><p>再回到”rationality”上来, 它与感性的区别可能就在于感性是凭借情感的直觉思考和做出决定，而 rationality 则会在事实的因果关系上思考和做出决定。但它们两者都不是建立在 reason 之上的。</p>
+<p>值得一提是，常读 _The Economist_ 的S博学告诉我经济学下的理性是指利益最大化。</p>
+<p>最后一点感想，很多词语在语义上都是模糊的，想要讨论问题又往往不得不直面它们的定义，实在有点难受。</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li>说说休谟, Jia Yiliu, <a href="https://medium.com/@jiayiliu_14421/说说休谟-b682e5385f40" target="_blank" rel="noopener">https://medium.com/@jiayiliu_14421/%E8%AF%B4%E8%AF%B4%E4%BC%91%E8%B0%9F-b682e5385f40</a></li>
+<li>《打开|周濂的100堂西方哲学课》，周濂，上海三联书店</li>
+<li>Wikipedia-David Hume, <a href="https://en.wikipedia.org/wiki/David_Hume" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/David_Hume</a></li>
+</ul>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/杂项/" rel="tag"><i class="fas fa-tags"></i>杂项</a>
+        
+        <a class="post-tag button" href="/tags/哲学/" rel="tag"><i class="fas fa-tags"></i>哲学</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/12/20/POJ2411-铺地砖计数题解-状压DP/" rel="next" title="POJ2411-铺地砖计数题解-状压DP教学"><i class="fas fa-angle-left"></i><span class="nav-title">POJ2411-铺地砖计数题解-状压DP教学</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "Rye-Catcher",
+      "repo": "Rye-Catcher.github.io",
+      "client_id": "4c6c0291b3cb182b3186",
+      "client_secret": "921158f9b8df233286104390fd95eb8ebde38fd4",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "当我们在谈论理性时，我们在谈论什么",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="https://s2.ax1x.com/2019/10/22/K32J5n.png" alt="Rye_Catcher">
+  
+  <h1 class="author-name">Rye_Catcher</h1>
+  <h2 class="author-description"></h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">132</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">18</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">87</a></div>
+    </div>
+    
+    
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#当我们在谈论理性时，我们在谈论什么"><span class="toc-text">当我们在谈论理性时，我们在谈论什么</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Preface"><span class="toc-text">Preface</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#“Reason”-amp-“Rationality”"><span class="toc-text">“Reason” &amp; “Rationality”</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#我们真的在用理性-reason-进行推理吗"><span class="toc-text">我们真的在用理性(reason)进行推理吗</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#理性战胜激情"><span class="toc-text">理性战胜激情?</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一些杂想"><span class="toc-text">一些杂想</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:2427367956@qq.com" target="_blank">Mail</a></li>
+        
+        <li><i class="fas fa-code"></i><a href="https://www.luogu.org/space/show?uid=61382" target="_blank">Luogu</a></li>
+        
+        <li><i class="fas fa-book"></i><a href="https://www.zhihu.com/people/ryecatcher-16/activities" target="_blank">Zhihu</a></li>
+        
+        <li><i class="fas fa-coffee"></i><a href="https://www.douban.com/people/178862274/" target="_blank">Douban</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/Rye-Catcher" target="_blank">GitHub</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.cnblogs.com/Rye-Catcher/" target="_blank">旧博客</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.cnblogs.com/xxzh/" target="_blank">巨佬同学-星星之火-JX</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.wjyyy.top/" target="_blank">wjyyy-HB</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.cnblogs.com/ppprseter/" target="_blank">Dew-HB</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://oi.logey.cn/" target="_blank">Logey-SD</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://ouuan.github.io/" target="_blank">Ouuan-HB</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://acfunction.github.io/" target="_blank">AcFunciton-BJ</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://bubbleioa.top/" target="_blank">冒泡ioa-JX</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://cnblogs.com/huyufeifei/" target="_blank">huyufeifei</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://mayflyyh.com" target="_blank">额冻豆腐</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">Rye_Catcher</span><span class="year"><i class="far fa-copyright"></i>2018 - 2020</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
