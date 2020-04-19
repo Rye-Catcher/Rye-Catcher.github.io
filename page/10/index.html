@@ -182,53 +182,6 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/13/luogu4677山区建小学题解-区间DP/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Rye_Catcher">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="https://s2.ax1x.com/2019/10/22/K32J5n.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Rye_Catcher">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/09/13/luogu4677山区建小学题解-区间DP/" itemprop="url">luogu4677山区建小学题解--区间DP</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-13T22:02:26+08:00">2018-09-13 22:02:26</time></span>
-        </span>
-        
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      题目链接https://www.luogu.org/problemnew/show/P4677 分析这道题方法跟之前题不一样,我们相当于枚举一个左右端点来线性扩展,同时划分断点进行决策 $f[i][j]$表示在前$i$个村庄中建立$j$个小学的最小距离总和 我们将枚举到第$i$个村庄作为阶段,修了$j$所小学作为状态,通过枚举断点$k$来分割第$j$所小学与前$j-1$所小学 也就是说我们判断$f
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
-        
-        <a class="post-tag button" href="/tags/区间DP/" rel="tag"><i class="fas fa-tags"></i>区间DP</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/13/luogu2858奶牛零食题解-区间DP/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Rye_Catcher">
@@ -656,6 +609,53 @@
     </footer>
   </article>
   
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/03/CF10D-LCIS题解-线性DP/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rye_Catcher">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="https://s2.ax1x.com/2019/10/22/K32J5n.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/09/03/CF10D-LCIS题解-线性DP/" itemprop="url">CF10D-LCIS题解--线性DP</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-03T16:59:51+08:00">2018-09-03 16:59:51</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      题目链接:https://www.luogu.org/problemnew/show/CF10D 方法一分析$LCS​$和$LIS​$已经成烂大街的知识了,可是当这两个合并起来成为$LCIS​$,解决的方式方法也多了起来. 首先有种最朴素的$O(N^4)$方法,$f[i][j]$表示A串第$i$个字母和B串第$j$个字母结尾的状态中$LCIS$的长度,那么 那么如果$a[i]==b[j]$,$f[
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
+        
+        <a class="post-tag button" href="/tags/线性DP/" rel="tag"><i class="fas fa-tags"></i>线性DP</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/9/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -702,7 +702,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">135</a></div>
+      <div><a href="/archives/">134</a></div>
     </div>
     
     
@@ -716,7 +716,7 @@
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">90</a></div>
+      <div><a href="/tags/">89</a></div>
     </div>
     
     
