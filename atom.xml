@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rye-catcher.github.io/"/>
-  <updated>2020-04-19T11:12:29.557Z</updated>
+  <updated>2020-05-22T08:30:46.088Z</updated>
   <id>https://rye-catcher.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS1010 Advanced Placement Test 注意事项</title>
+    <link href="https://rye-catcher.github.io/2020/05/22/CS1010-Advanced-Placement-Test-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>https://rye-catcher.github.io/2020/05/22/CS1010-Advanced-Placement-Test-注意事项/</id>
+    <published>2020-05-22T08:24:27.000Z</published>
+    <updated>2020-05-22T08:30:46.088Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Preface&quot;&gt;&lt;a href=&quot;#Preface&quot; class=&quot;headerlink&quot; title=&quot;Preface&quot;&gt;&lt;/a&gt;Preface&lt;/h3&gt;&lt;p&gt;其实就是一些 C 里面容易犯的错误&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://rye-catcher.github.io/tags/C/"/>
+    
+      <category term="programming language" scheme="https://rye-catcher.github.io/tags/programming-language/"/>
+    
+  </entry>
   
   <entry>
     <title>小房间里的夜晚</title>
@@ -565,34 +592,6 @@
     
     
       <category term="数学" scheme="https://rye-catcher.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>匆匆四月</title>
-    <link href="https://rye-catcher.github.io/2019/05/01/%E5%8C%86%E5%8C%86%E5%9B%9B%E6%9C%88/"/>
-    <id>https://rye-catcher.github.io/2019/05/01/匆匆四月/</id>
-    <published>2019-05-01T15:44:54.000Z</published>
-    <updated>2019-05-16T11:56:58.993Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;不知不觉四月就过去了呢&lt;/p&gt;
-&lt;p&gt;它就好像一场梦似的，感觉绚幻多彩，终究却是一片空虚与幻想&lt;/p&gt;
-&lt;p&gt;想用手去抓住那些记忆中的笑容或是眼泪，却无力地看着它们从指尖流逝&lt;/p&gt;
-&lt;p&gt;那些深刻入心扉的叹息与痛苦，现在看来不过是中二幼稚的傻事&lt;/p&gt;
-&lt;p&gt;想奋力击破屏
-        
-      
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="https://rye-catcher.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
