@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>Discrete Maths. with Applications-Chapter 4-Note</title>
+      <link href="/2020/05/27/Discrete-Maths-with-Applications-Chapter-4-Note/"/>
+      <url>/2020/05/27/Discrete-Maths-with-Applications-Chapter-4-Note/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>Something worth taking notes from <em>Discrete Mathematics with Applications, 4th edition, Susanna S. Epp</em></p><p>This is my reading notes of <em>Chapter 4: Elementary Number Theory and Methods of Proof</em></p><h3 id="4-1-Direct-Proof-and-Counterexample-I-Introduction"><a href="#4-1-Direct-Proof-and-Counterexample-I-Introduction" class="headerlink" title="4.1 Direct Proof and Counterexample I: Introduction"></a>4.1 Direct Proof and Counterexample I: Introduction</h3><ul><li><p>prime number/composite number:</p><blockquote><p>An integer $n$ is prime if, and only if, $n&gt;1$ and for all positive integers $r$ and $s$, if $n = rs$, then either $r$ or $s$ equals $n$ </p></blockquote></li><li><p>proving existential statements</p><p>constructive proofs of existence 构造?</p></li><li><p>disproving universal statements</p><p>counterexample 反例</p></li><li><p>proving universal statements</p><p>the method of exhaustion 穷举法</p><p>Method of Generalizing from the Genetic Particular: a particular but arbitrarily chosen $x$ from the set</p><p>generic: “sharing all the common characteristics of a group or class”</p></li></ul><h3 id="4-2-Direct-Proof-and-Counterexample-II-Rational-Numbers"><a href="#4-2-Direct-Proof-and-Counterexample-II-Rational-Numbers" class="headerlink" title="4.2 Direct Proof and Counterexample II: Rational Numbers"></a>4.2 Direct Proof and Counterexample II: Rational Numbers</h3><h3 id="4-3-Direct-Proof-and-Counterexample-III-Divisibility"><a href="#4-3-Direct-Proof-and-Counterexample-III-Divisibility" class="headerlink" title="4.3 Direct Proof and Counterexample III: Divisibility"></a>4.3 Direct Proof and Counterexample III: Divisibility</h3><ul><li><p>the notion of divisibility</p><p>$d \mid n$ is read “$d$ divides $n$”. We can also say: $d$ is a factor/divisor of $n$; $n$ is divisible by $d$</p></li><li><p>Theorem 4.3.4: divisibility by a Prime</p><blockquote><p>Any integer $n&gt;1$ is divisible by a prime number</p></blockquote><p>Proof omitted here</p></li><li><p>Theorem 4.3.5: The Unique Factorization of Integers Theorem</p><p>also called the fundamental theorem of arithmetic (算术基本定理)</p><blockquote><p>Given any integers $n&gt;1$ , there exist a positive integer $k$, distinct prime numbers $p_1, p_2, p_3…p_k$, and positive integers $e_1, e_2, e_3…e_k$ such that:</p><script type="math/tex; mode=display">n = {p_1}^{e_1}{p_2}^{e_2}{p_3}^{e_3}...{p_k}^{e_k}</script></blockquote></li><li><p>Exercise 47/48</p><p>To prove that for any nonnegative integer $n$, if the the sum of the digits of $n$ is divisible by $9$ (or $3$), then $n$ is divisible by $9$ (or $3$)</p><p><br></p><p>A very simple proof:</p><script type="math/tex; mode=display">\begin{equation}\begin{aligned}& n = a_k \cdot 10^k ...+a_1 \cdot 10^1 +a_0 \cdot 10^0 \\& = a_k \cdot (999...9 +1)+ ...+a_1 \cdot (9+1) +a_0 \cdot 1 \\& = 9 \cdot (a_k \cdot 111...1 +...+a_1 \cdot 1) +(a_k+...+a_1+a_0)\end{aligned}\end{equation}</script></li></ul><ul><li><p>Exercise 49</p><p>To prove that for any nonnegative integer $n$, if the the <strong>alternating sum</strong> of the digits of $n$ is divisible by $11$, then $n$ is divisible by $11$</p><p>the alternating sum of $19260817$ is $7-1+8-0+6-2+9-1$</p><p><br></p><p>A very simple proof:</p><p>At first we need a <strong>lemma</strong>:</p><ul><li><p>If $n = 10^k +1$ and $k$ is <strong>odd</strong>, then $11 \mid n$</p></li><li><p>If $n = 10^k-1$ and $k$ is <strong>even</strong>, then $11 \mid n$</p><p> we can derive this by <strong>Mathematical Induction (数学归纳法)</strong> </p><p> (I have not come out a strict direct proof other than it. If you have a brilliant idea, hope you can tell me :D)</p></li></ul><p>Break the proof into two cases: the total number of digits is <strong>even or odd</strong></p><ul><li>Case 1: even<br>$$<br>\begin{equation}<br>\begin{aligned}<br>&amp; n = a_k \cdot 10^k + a_{k-1} \cdot 10^{k-1}+…+a_1 \cdot 10^1 +a_0 \cdot 10^0 \\<br>&amp; = a_k \cdot (10^{k+1} +1)+  a_{k-1} \cdot (10^{k-1}-1)+…+a_1 \cdot (10^1+1) +a_0 \cdot(10^0-1) + \text{altenating sum}\\</li></ul></li></ul><pre><code>\end{aligned}\end{equation}$$From our lemma we can deduce the conclusion</code></pre><ul><li><p>Case 2: odd</p><p>Similar to Case 1(I told you it’s a very simple proof)</p></li></ul><h3 id="4-4-Direct-Proof-and-Counterexample-IV-Division-into-Cases-and-the-Quotient-Remainder-Theorem"><a href="#4-4-Direct-Proof-and-Counterexample-IV-Division-into-Cases-and-the-Quotient-Remainder-Theorem" class="headerlink" title="4.4 Direct Proof and Counterexample IV: Division into Cases and the Quotient -Remainder Theorem"></a>4.4 Direct Proof and Counterexample IV: Division into Cases and the Quotient -Remainder Theorem</h3><ul><li><p>Theorem 4.4.1 The Quotient -Remainder Theorem</p><blockquote><p>Given any integer $n$ and positive integer $d$, there exist unique integers $q$ and $r$ such that</p><script type="math/tex; mode=display">n = dq+r \ \text{and} \ 0 \leq r \leq d</script></blockquote></li><li><p>Parity property (sounds very profound but extremely simple)</p><blockquote><p>Any integer is either even or odd</p></blockquote></li><li><p>Example 4.4.7 </p><blockquote><p>The square of any odd integer has the form $8m+1$ for some integer $m$</p></blockquote><p>The proof in the book is kind of interesting. Each integer is represent in the following forms:</p><script type="math/tex; mode=display">n = 4q \ \text{or} \ n=4q+1 \ \text{or} \ n=4q+2 \ \text{or} \ n=4q+3</script><p>And it is easy to prove that.</p></li><li><p>Theorem 4.4.6 Triangle Inequality</p><blockquote><p>For all real numbers $x$ and $y$, $|x+y| \leq |x|+|y|$</p></blockquote></li><li><p>Exercise 49&amp;50</p><script type="math/tex; mode=display">m \mod d = n \mod d \Leftrightarrow (m-n) \mod d</script></li><li><p>Exercise 51&amp;52</p><p>$d&gt;0$</p><p>$m \mod d = a$  and $n \mod d = b$  $\Rightarrow$ $(m+n) \mod d = (a+b) \mod d$</p><p>$m \mod d = a$  and $n \mod d = b$  $\Rightarrow$ $(mn) \mod d = ab \mod d$</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 离散数学 </tag>
+            
+            <tag> 读书笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CS1010 Advanced Placement Test 注意事项</title>
       <link href="/2020/05/22/CS1010-Advanced-Placement-Test-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
       <url>/2020/05/22/CS1010-Advanced-Placement-Test-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
       
-        <content type="html"><![CDATA[<h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>其实就是一些 C 里面容易犯的错误</p><h3 id="Case-1-对未初始化的结构体指针里的成员进行操作"><a href="#Case-1-对未初始化的结构体指针里的成员进行操作" class="headerlink" title="Case 1: 对未初始化的结构体指针里的成员进行操作"></a>Case 1: 对未初始化的结构体指针里的成员进行操作</h3><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Customer</span>&#123;</span><br>    <span class="hljs-keyword">int</span> id;<br>    <span class="hljs-keyword">char</span> lname[<span class="hljs-number">25</span>];<br>&#125;customer;<br><br>customer *this1;<br></code></pre></td></tr></table></figure><p>假设我们有这么一段代码，那么以下代码段是错误的</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">this1-&gt;id = <span class="hljs-number">19260817</span>;<br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, this1-&gt;lname);<br></code></pre></td></tr></table></figure><p>原因是我们还没有给结构体指针变量赋予一个有效的结构体变量地址，相当于一个野指针</p><p>下列代码是正确的:</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">customer tmp;<br>customer *this1 = &amp;tmp;<br>...<br>this1-&gt;id = <span class="hljs-number">19260817</span>;<br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, this1-&gt;lname);<br></code></pre></td></tr></table></figure><h3 id="Case-2-指针作为函数参数"><a href="#Case-2-指针作为函数参数" class="headerlink" title="Case 2: 指针作为函数参数"></a>Case 2: 指针作为函数参数</h3><p>下面一段代码</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>str = <span class="hljs-string">"lbwnb"</span>;<br><span class="hljs-keyword">return</span> ;<br>&#125;<br>...<br><span class="hljs-keyword">char</span> *p = <span class="hljs-literal">NULL</span>;<br>foo(p);<br></code></pre></td></tr></table></figure><p>函数调用之后如果输出<code>p</code> ,我们会发现它依旧是 <code>NULL</code> 而不是 <code>lbwnb</code> </p><p>因为这个指针是作为函数形参，它原本指向的内存地址不会受函数的影响</p><p>如果我们想修改 <code>*p</code> 的值呢？有两种方法</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">char</span> *<span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>    str = <span class="hljs-string">"lbwnb"</span>;<br>    <span class="hljs-keyword">return</span> str;<br>&#125;<br>...<br><span class="hljs-keyword">char</span> *p = <span class="hljs-literal">NULL</span>;<br>p = foo(p);<br></code></pre></td></tr></table></figure><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> **str)</span></span>&#123;<br>    *str = <span class="hljs-string">"lbwnb"</span>;<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-keyword">char</span> *p = <span class="hljs-literal">NULL</span>;<br>foo(&amp;p);<br></code></pre></td></tr></table></figure><p>第二种方法可能理解起来有点抽象，我们可以这么想，<code>p</code> 是一个指针，它指向的值是<code>NULL</code>的地址，而它（也就是这个指针 <code>p</code>）的内存地址假设是 <code>1926</code>. 然后我们把一个指向这个内存地址 <code>1926</code> 的指针 <code>str</code> 传进一个函数里，然后 <code>*str = &quot;lbwnb&quot;</code> 也就是说，这个内存地址( <code>1926</code> )指向的值的地址变成 <code>lbwnb</code> 的地址。</p><p>这时函数调用结束, <code>p</code> 的内存地址还是<code>1926</code>, 但是它指向的地址已经变成 <code>lbwnb</code> 的地址，所以 <code>*p = &quot;lbwnb&quot;</code></p><h3 id="Case-3-字符指针与字符数组区别"><a href="#Case-3-字符指针与字符数组区别" class="headerlink" title="Case 3: 字符指针与字符数组区别"></a>Case 3: 字符指针与字符数组区别</h3><p>字符数组并不能等于一个字符指针（反之亦然）；只是在一些情况下能认为是一样的，比如他们作为函数参数进行传递时。但是还是有很多不同</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/*声明赋值方式不一样*/</span><br><span class="hljs-keyword">char</span> a[] = <span class="hljs-string">"abc"</span>;<br><br><span class="hljs-keyword">char</span> *a;<br>a = <span class="hljs-string">"abc“</span><br></code></pre></td></tr></table></figure><p>上面代码所展现是正确的方法，并不能在声明 <code>char a[]</code> 之后利用 <code>a = &quot;abc&quot;</code> 来进行赋值 </p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">char</span> a[] = <span class="hljs-string">"abc"</span>;<br><span class="hljs-keyword">char</span> b[] = <span class="hljs-string">"cde"</span>;<br>a=b;<br></code></pre></td></tr></table></figure><p>上面的代码是错误的，数组作为<code>l-value</code> 不能进行这样的运算</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">char</span> *a = <span class="hljs-string">"abc"</span>;<br><span class="hljs-keyword">char</span> *b;<br>b = a;<br></code></pre></td></tr></table></figure><p>上面的代码是正确的</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/*这是正确的*/</span><br><span class="hljs-keyword">char</span> a[] = <span class="hljs-string">"abc"</span>;<br><span class="hljs-keyword">char</span> *b;<br>b = a;<br><br><span class="hljs-comment">/*这是错误的*/</span><br><span class="hljs-keyword">char</span> a[<span class="hljs-number">5</span>];<br><span class="hljs-keyword">char</span> *b = <span class="hljs-string">"abcde"</span>;<br>a = b;<br></code></pre></td></tr></table></figure><p>在 <a href="https://blog.csdn.net/qq_33706673/article/details/84669784" target="_blank" rel="noopener">这篇博客</a> 还看到了一个之前没有注意过的细节 </p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>    *(str) = <span class="hljs-string">'d'</span>;<br>    <span class="hljs-built_in">strcpy</span>(str, <span class="hljs-string">"def"</span>);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">char</span> p[] = <span class="hljs-string">"abc"</span>;<br>    foo(p);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, p);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br></code></pre></td></tr></table></figure><p>这段代码编译运行没有任何问题 (本地环境 <code>gcc 4.8.1</code>)  奇怪的是在 <code>ideone.com</code> 里运行虽然会有运行结果但显示 <code>Runtime Error</code></p><p>但是下面的代码无论是本地还是 <code>ideone.com</code> 都不会输出运行结果并且显示运行时错误</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>    *(str) = <span class="hljs-string">'d'</span>;<br>    <span class="hljs-built_in">strcpy</span>(str, <span class="hljs-string">"def"</span>);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">char</span> *p = <span class="hljs-string">"abc"</span>;<br>    foo(p);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, p);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br></code></pre></td></tr></table></figure><p>原因是“ 字符指针指向的是一个<strong>常量存储区地址</strong>，是不允许修改的 ”。函数的参数是 <code>const</code> 类型的</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>其实就是一些 C 里面容易犯的错误或者细节</p><h3 id="Case-1-对未初始化的结构体指针里的成员进行操作"><a href="#Case-1-对未初始化的结构体指针里的成员进行操作" class="headerlink" title="Case 1: 对未初始化的结构体指针里的成员进行操作"></a>Case 1: 对未初始化的结构体指针里的成员进行操作</h3><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Customer</span>&#123;</span><br>    <span class="hljs-keyword">int</span> id;<br>    <span class="hljs-keyword">char</span> lname[<span class="hljs-number">25</span>];<br>&#125;customer;<br><br>customer *this1;<br></code></pre></td></tr></table></figure><p>假设我们有这么一段代码，那么以下代码段是错误的</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">this1-&gt;id = <span class="hljs-number">19260817</span>;<br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, this1-&gt;lname);<br></code></pre></td></tr></table></figure><p>原因是我们还没有给结构体指针变量赋予一个有效的结构体变量地址，相当于一个野指针</p><p>下列代码是正确的:</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">customer tmp;<br>customer *this1 = &amp;tmp;<br>...<br>this1-&gt;id = <span class="hljs-number">19260817</span>;<br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, this1-&gt;lname);<br></code></pre></td></tr></table></figure><h3 id="Case-2-指针作为函数参数"><a href="#Case-2-指针作为函数参数" class="headerlink" title="Case 2: 指针作为函数参数"></a>Case 2: 指针作为函数参数</h3><p>下面一段代码</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>str = <span class="hljs-string">"lbwnb"</span>;<br><span class="hljs-keyword">return</span> ;<br>&#125;<br>...<br><span class="hljs-keyword">char</span> *p = <span class="hljs-literal">NULL</span>;<br>foo(p);<br></code></pre></td></tr></table></figure><p>函数调用之后如果输出<code>p</code> ,我们会发现它依旧是 <code>NULL</code> 而不是 <code>lbwnb</code> </p><p>因为这个指针是作为函数形参，它原本指向的内存地址不会受函数的影响</p><p>如果我们想修改 <code>*p</code> 的值呢？有两种方法</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">char</span> *<span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>    str = <span class="hljs-string">"lbwnb"</span>;<br>    <span class="hljs-keyword">return</span> str;<br>&#125;<br>...<br><span class="hljs-keyword">char</span> *p = <span class="hljs-literal">NULL</span>;<br>p = foo(p);<br></code></pre></td></tr></table></figure><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> **str)</span></span>&#123;<br>    *str = <span class="hljs-string">"lbwnb"</span>;<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-keyword">char</span> *p = <span class="hljs-literal">NULL</span>;<br>foo(&amp;p);<br></code></pre></td></tr></table></figure><p>第二种方法可能理解起来有点抽象，我们可以这么想，<code>p</code> 是一个指针，它指向的值是<code>NULL</code>的地址，而它（也就是这个指针 <code>p</code>）的内存地址假设是 <code>1926</code>. 然后我们把一个指向这个内存地址 <code>1926</code> 的指针 <code>str</code> 传进一个函数里，然后 <code>*str = &quot;lbwnb&quot;</code> 也就是说，这个内存地址( <code>1926</code> )指向的值的地址变成 <code>lbwnb</code> 的地址。</p><p>这时函数调用结束, <code>p</code> 的内存地址还是<code>1926</code>, 但是它指向的地址已经变成 <code>lbwnb</code> 的地址，所以 <code>*p = &quot;lbwnb&quot;</code></p><h3 id="Case-3-字符指针与字符数组区别"><a href="#Case-3-字符指针与字符数组区别" class="headerlink" title="Case 3: 字符指针与字符数组区别"></a>Case 3: 字符指针与字符数组区别</h3><p>字符数组并不能等于一个字符指针（反之亦然）；只是在一些情况下能认为是一样的，比如他们作为函数参数进行传递时。但是还是有很多不同</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/*声明赋值方式不一样*/</span><br><span class="hljs-keyword">char</span> a[] = <span class="hljs-string">"abc"</span>;<br><br><span class="hljs-keyword">char</span> *a;<br>a = <span class="hljs-string">"abc“</span><br></code></pre></td></tr></table></figure><p>上面代码所展现是正确的方法，并不能在声明 <code>char a[]</code> 之后利用 <code>a = &quot;abc&quot;</code> 来进行赋值 </p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">char</span> a[] = <span class="hljs-string">"abc"</span>;<br><span class="hljs-keyword">char</span> b[] = <span class="hljs-string">"cde"</span>;<br>a=b;<br></code></pre></td></tr></table></figure><p>上面的代码是错误的，数组作为<code>l-value</code> 不能进行这样的运算</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">char</span> *a = <span class="hljs-string">"abc"</span>;<br><span class="hljs-keyword">char</span> *b;<br>b = a;<br></code></pre></td></tr></table></figure><p>上面的代码是正确的</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/*这是正确的*/</span><br><span class="hljs-keyword">char</span> a[] = <span class="hljs-string">"abc"</span>;<br><span class="hljs-keyword">char</span> *b;<br>b = a;<br><br><span class="hljs-comment">/*这是错误的*/</span><br><span class="hljs-keyword">char</span> a[<span class="hljs-number">5</span>];<br><span class="hljs-keyword">char</span> *b = <span class="hljs-string">"abcde"</span>;<br>a = b;<br></code></pre></td></tr></table></figure><p>在 <a href="https://blog.csdn.net/qq_33706673/article/details/84669784" target="_blank" rel="noopener">这篇博客</a> 还看到了一个之前没有注意过的细节 </p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>    *(str) = <span class="hljs-string">'d'</span>;<br>    <span class="hljs-built_in">strcpy</span>(str, <span class="hljs-string">"def"</span>);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">char</span> p[] = <span class="hljs-string">"abc"</span>;<br>    foo(p);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, p);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br></code></pre></td></tr></table></figure><p>这段代码编译运行没有任何问题 (本地环境 <code>gcc 4.8.1</code>)  奇怪的是在 <code>ideone.com</code> 里运行虽然会有运行结果但显示 <code>Runtime Error</code></p><p>但是下面的代码无论是本地还是 <code>ideone.com</code> 都不会输出运行结果并且显示运行时错误</p><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span></span>&#123;<br>    *(str) = <span class="hljs-string">'d'</span>;<br>    <span class="hljs-built_in">strcpy</span>(str, <span class="hljs-string">"def"</span>);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">char</span> *p = <span class="hljs-string">"abc"</span>;<br>    foo(p);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, p);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br></code></pre></td></tr></table></figure><p>原因是“ 字符指针指向的是一个<strong>常量存储区地址</strong>，是不允许修改的 ”。函数的参数是 <code>const</code> 类型的</p>]]></content>
       
       
       
@@ -626,11 +653,11 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -649,11 +676,11 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -672,9 +699,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -714,9 +741,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -735,11 +762,11 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -779,9 +806,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -800,9 +827,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -821,9 +848,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 扫描线 </tag>
             
@@ -886,11 +913,11 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
+            <tag> 思维 </tag>
             
             <tag> 题解 </tag>
             
-            <tag> 思维 </tag>
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -909,9 +936,9 @@
       
         <tags>
             
-            <tag> 比赛解题报告 </tag>
-            
             <tag> 题解 </tag>
+            
+            <tag> 比赛解题报告 </tag>
             
         </tags>
       
@@ -1020,9 +1047,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> C++STL </tag>
             
@@ -1045,9 +1072,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 二分 </tag>
             
@@ -1089,9 +1116,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
         </tags>
       
@@ -1133,9 +1160,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
         </tags>
       
@@ -1154,9 +1181,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 计数 </tag>
             
@@ -1181,9 +1208,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 树形DP </tag>
             
@@ -1204,9 +1231,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 线段树 </tag>
             
@@ -1269,9 +1296,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 蛤 </tag>
             
@@ -1433,7 +1460,7 @@
       <link href="/2018/09/23/%E8%8B%9F%E6%B4%BB%E8%80%85%E7%9A%84%E6%97%A5%E8%AE%B0/"/>
       <url>/2018/09/23/%E8%8B%9F%E6%B4%BB%E8%80%85%E7%9A%84%E6%97%A5%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Enter the password" />    <label for="pass">Enter the password</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Enter the password" />    <label for="pass">Enter the password</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       
@@ -1452,7 +1479,7 @@
       <link href="/2018/09/22/%E4%B8%80%E4%BA%9BHexo%E6%89%A9%E5%B1%95%E5%8F%8A%E6%8F%92%E4%BB%B6/"/>
       <url>/2018/09/22/%E4%B8%80%E4%BA%9BHexo%E6%89%A9%E5%B1%95%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Welcome,password is "test" (without quote)" />    <label for="pass">Welcome,password is "test" (without quote)</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Welcome,password is "test" (without quote)" />    <label for="pass">Welcome,password is "test" (without quote)</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       
@@ -1543,9 +1570,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 树链剖分 </tag>
             
@@ -1761,9 +1788,9 @@
       
         <tags>
             
-            <tag> 题解 </tag>
-            
             <tag> 思维 </tag>
+            
+            <tag> 题解 </tag>
             
             <tag> 计算几何 </tag>
             
@@ -2993,11 +3020,22 @@
     
     
     <entry>
-      <title>category</title>
-      <link href="/category/index.html"/>
-      <url>/category/index.html</url>
+      <title>小伙伴们</title>
+      <link href="/Friend-Links/index.html"/>
+      <url>/Friend-Links/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<ul><li>旧博客: <a href="https://www.cnblogs.com/Rye-Catcher/" target="_blank" rel="noopener">https://www.cnblogs.com/Rye-Catcher/</a></li></ul><h3 id="吊打我的同学"><a href="#吊打我的同学" class="headerlink" title="吊打我的同学:"></a>吊打我的同学:</h3><ul><li><a href="https://www.cnblogs.com/xxzh/" target="_blank" rel="noopener">星星之火</a> in JX</li></ul><h3 id="有幸认识的大佬"><a href="#有幸认识的大佬" class="headerlink" title="有幸认识的大佬:"></a>有幸认识的大佬:</h3><ul><li><p><a href="http://cnblogs.com/huyufeifei/" target="_blank" rel="noopener">huyufeifei</a>  </p></li><li><p><a href="http://mayflyyh.com" target="_blank" rel="noopener">额冻豆腐</a></p></li><li><p><a href="http://www.cnblogs.com/ppprseter/" target="_blank" rel="noopener">威慑▲本人露迭月</a> in HB</p></li><li><p><a href="https://www.cnblogs.com/ouuan/" target="_blank" rel="noopener">yyfouuan</a> in HB</p></li><li><p><a href="http://www.wjyyy.top/" target="_blank" rel="noopener">wjyyy</a> in HB</p></li><li><p><a href="https://oi.logey.cn/" target="_blank" rel="noopener">Logey</a> in SD </p></li><li><p><a href="https://acfunction.github.io/" target="_blank" rel="noopener">AcFunction</a> in BJ</p></li><li><p><a href="http://bubbleioa.top/" target="_blank" rel="noopener">冒泡ioa</a> in JX</p></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>About Me</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[ <center>一位很菜的退役OIer,曾经的文化课划水能手</center> <center>23rd SM2 Scholars,NUS预科在读,在坡城生活<center> <center>爱好读书,电影,弹吉他;玩过不少游戏;Principle of Mathematics研究中</center> <center>To be the world's toughest 17-year-old但依旧naive</center><center> 涉猎广泛，乐于瞎搞研究，但是太懒~</center><center> 欢迎各位交友,把这里看成留言板也无所谓</center><p><br></p><p><center>稍顷，叫乌鸦的少年把手轻轻放在我肩上。沙尘暴立即消失。而我仍闭目合眼</center></p><p><center>“这往下你必须成为世界上最坚强的十五岁少年，不管怎么样</center></p><p><center>因为除此之外这世界上没有你赖以存活之路</center></p><p><center>为此你自己一定要理解真正的顽强是怎么回事”</center></p><p align="right">村上春树,《海边的卡夫卡》,林少华译</p>                                                    </center></center>]]></content>
       
     </entry>
     
@@ -3015,11 +3053,11 @@
     
     
     <entry>
-      <title>小伙伴们</title>
-      <link href="/Friend-Links/index.html"/>
-      <url>/Friend-Links/index.html</url>
+      <title>category</title>
+      <link href="/category/index.html"/>
+      <url>/category/index.html</url>
       
-        <content type="html"><![CDATA[<ul><li>旧博客: <a href="https://www.cnblogs.com/Rye-Catcher/" target="_blank" rel="noopener">https://www.cnblogs.com/Rye-Catcher/</a></li></ul><h3 id="吊打我的同学"><a href="#吊打我的同学" class="headerlink" title="吊打我的同学:"></a>吊打我的同学:</h3><ul><li><a href="https://www.cnblogs.com/xxzh/" target="_blank" rel="noopener">星星之火</a> in JX</li></ul><h3 id="有幸认识的大佬"><a href="#有幸认识的大佬" class="headerlink" title="有幸认识的大佬:"></a>有幸认识的大佬:</h3><ul><li><p><a href="http://cnblogs.com/huyufeifei/" target="_blank" rel="noopener">huyufeifei</a>  </p></li><li><p><a href="http://mayflyyh.com" target="_blank" rel="noopener">额冻豆腐</a></p></li><li><p><a href="http://www.cnblogs.com/ppprseter/" target="_blank" rel="noopener">威慑▲本人露迭月</a> in HB</p></li><li><p><a href="https://www.cnblogs.com/ouuan/" target="_blank" rel="noopener">yyfouuan</a> in HB</p></li><li><p><a href="http://www.wjyyy.top/" target="_blank" rel="noopener">wjyyy</a> in HB</p></li><li><p><a href="https://oi.logey.cn/" target="_blank" rel="noopener">Logey</a> in SD </p></li><li><p><a href="https://acfunction.github.io/" target="_blank" rel="noopener">AcFunction</a> in BJ</p></li><li><p><a href="http://bubbleioa.top/" target="_blank" rel="noopener">冒泡ioa</a> in JX</p></li></ul>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -3042,17 +3080,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>About Me</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[ <center>一位很菜的退役OIer,曾经的文化课划水能手</center> <center>23rd SM2 Scholars,NUS预科在读,在坡城生活<center> <center>爱好读书,电影,弹吉他;玩过不少游戏;Principle of Mathematics研究中</center> <center>To be the world's toughest 17-year-old但依旧naive</center><center> 涉猎广泛，乐于瞎搞研究，但是太懒~</center><center> 欢迎各位交友,把这里看成留言板也无所谓</center><p><br></p><p><center>稍顷，叫乌鸦的少年把手轻轻放在我肩上。沙尘暴立即消失。而我仍闭目合眼</center></p><p><center>“这往下你必须成为世界上最坚强的十五岁少年，不管怎么样</center></p><p><center>因为除此之外这世界上没有你赖以存活之路</center></p><p><center>为此你自己一定要理解真正的顽强是怎么回事”</center></p><p align="right">村上春树,《海边的卡夫卡》,林少华译</p>                                                    </center></center>]]></content>
       
     </entry>
     

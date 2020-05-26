@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rye-catcher.github.io/"/>
-  <updated>2020-05-26T19:12:13.356Z</updated>
+  <updated>2020-05-26T21:11:35.809Z</updated>
   <id>https://rye-catcher.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CS1010 Advanced Placement Test 注意事项</title>
-    <link href="https://rye-catcher.github.io/2020/05/22/CS1010-Advanced-Placement-Test-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>https://rye-catcher.github.io/2020/05/22/CS1010-Advanced-Placement-Test-注意事项/</id>
-    <published>2020-05-22T08:24:27.000Z</published>
-    <updated>2020-05-26T19:12:13.356Z</updated>
+    <title>Discrete Maths. with Applications-Chapter 4-Note</title>
+    <link href="https://rye-catcher.github.io/2020/05/27/Discrete-Maths-with-Applications-Chapter-4-Note/"/>
+    <id>https://rye-catcher.github.io/2020/05/27/Discrete-Maths-with-Applications-Chapter-4-Note/</id>
+    <published>2020-05-26T19:21:17.000Z</published>
+    <updated>2020-05-26T21:11:35.809Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,35 @@
       
         
         
-          &lt;h3 id=&quot;Preface&quot;&gt;&lt;a href=&quot;#Preface&quot; class=&quot;headerlink&quot; title=&quot;Preface&quot;&gt;&lt;/a&gt;Preface&lt;/h3&gt;&lt;p&gt;其实就是一些 C 里面容易犯的错误&lt;/p&gt;
+          &lt;h3 id=&quot;Preface&quot;&gt;&lt;a href=&quot;#Preface&quot; class=&quot;headerlink&quot; title=&quot;Preface&quot;&gt;&lt;/a&gt;Preface&lt;/h3&gt;&lt;p&gt;Something worth taking notes from &lt;em&gt;Discrete
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="https://rye-catcher.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="离散数学" scheme="https://rye-catcher.github.io/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="读书笔记" scheme="https://rye-catcher.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS1010 Advanced Placement Test 注意事项</title>
+    <link href="https://rye-catcher.github.io/2020/05/22/CS1010-Advanced-Placement-Test-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>https://rye-catcher.github.io/2020/05/22/CS1010-Advanced-Placement-Test-注意事项/</id>
+    <published>2020-05-22T08:24:27.000Z</published>
+    <updated>2020-05-26T19:14:28.774Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Preface&quot;&gt;&lt;a href=&quot;#Preface&quot; class=&quot;headerlink&quot; title=&quot;Preface&quot;&gt;&lt;/a&gt;Preface&lt;/h3&gt;&lt;p&gt;其实就是一些 C 里面容易犯的错误或者细节&lt;/p&gt;
 &lt;h3
         
       
@@ -568,30 +596,6 @@
       <category term="SM2" scheme="https://rye-catcher.github.io/tags/SM2/"/>
     
       <category term="模板" scheme="https://rye-catcher.github.io/tags/%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数学知识小结#1</title>
-    <link href="https://rye-catcher.github.io/2019/05/09/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E5%B0%8F%E7%BB%93-1/"/>
-    <id>https://rye-catcher.github.io/2019/05/09/数学知识小结-1/</id>
-    <published>2019-05-09T03:42:24.000Z</published>
-    <updated>2019-05-09T23:49:08.827Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;PREFACE&quot;&gt;&lt;a href=&quot;#PREFACE&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数学" scheme="https://rye-catcher.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   

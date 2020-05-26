@@ -225,7 +225,7 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>其实就是一些 C 里面容易犯的错误</p>
+      <h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>其实就是一些 C 里面容易犯的错误或者细节</p>
 <h3 id="Case-1-对未初始化的结构体指针里的成员进行操作"><a href="#Case-1-对未初始化的结构体指针里的成员进行操作" class="headerlink" title="Case 1: 对未初始化的结构体指针里的成员进行操作"></a>Case 1: 对未初始化的结构体指针里的成员进行操作</h3><figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Customer</span>&#123;</span><br>    <span class="hljs-keyword">int</span> id;<br>    <span class="hljs-keyword">char</span> lname[<span class="hljs-number">25</span>];<br>&#125;customer;<br><br>customer *this1;<br></code></pre></td></tr></table></figure>
 <p>假设我们有这么一段代码，那么以下代码段是错误的</p>
 <figure class="hljs highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">this1-&gt;id = <span class="hljs-number">19260817</span>;<br><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%s"</span>, this1-&gt;lname);<br></code></pre></td></tr></table></figure>
@@ -278,6 +278,8 @@
       
     </div>
     <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2020/05/27/Discrete-Maths-with-Applications-Chapter-4-Note/" rel="prev" title="Discrete Maths. with Applications-Chapter 4-Note"><span class="nav-title">Discrete Maths. with Applications-Chapter 4-Note</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -361,21 +363,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">136</a></div>
+      <div><a href="/archives/">137</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">20</a></div>
+      <div><a href="/categories/">21</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">92</a></div>
+      <div><a href="/tags/">94</a></div>
     </div>
     
     
