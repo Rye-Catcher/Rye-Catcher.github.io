@@ -182,6 +182,53 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/09/luogu1282多米诺骨牌题解-线性DP/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Rye_Catcher">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="https://s2.ax1x.com/2019/10/22/K32J5n.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Rye_Catcher">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/09/09/luogu1282多米诺骨牌题解-线性DP/" itemprop="url">luogu1282多米诺骨牌题解--背包DP</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-09-09T08:00:08+08:00">2018-09-09 08:00:08</time></span>
+        </span>
+        
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      题目链接https://www.luogu.org/problemnew/show/P1282 分析题目中给的状态很少,我们先考虑最后能否得到一个值,这样的话我们可以比较容易的想出状态转移方程 用$f[i][j]$表示能否用前$i$张骨牌旋转或不旋转得到上下之差值为$j$，$a[i],b[i]$分别为第$i$张骨牌的上下点数,这样转移方程为 f[i+1][j+a[i+1]-b[i+1]]=f[i+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
+        
+        <a class="post-tag button" href="/tags/背包DP/" rel="tag"><i class="fas fa-tags"></i>背包DP</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/09/09/luogu1356数列的整数性题解-线性DP/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Rye_Catcher">
@@ -609,53 +656,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://rye-catcher.github.io/2018/08/11/ZROI17普及23-B-星空题解-图的灵活转化/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Rye_Catcher">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="https://s2.ax1x.com/2019/10/22/K32J5n.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Rye_Catcher">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/08/11/ZROI17普及23-B-星空题解-图的灵活转化/" itemprop="url">ZROI17普及23-B.星空题解--图的灵活转化</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-08-11T23:39:24+08:00">2018-08-11 23:39:24</time></span>
-        </span>
-        
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      题目链接版权原因不予提供 分析这题思路很妙啊,虽然已经算半个套路题（因为我太菜了） 将框视为点,若一个球能放在$x$或$y$框,则$x,y$连一条无向边。有一条非常显然的性质是:在联通块中,若有奇数条边,则经过一定能调整使得最少有一个答案贡献,若有奇数条边,则最少对答案没有贡献 这个性质其实非常好想,但我想了挺久找不出合适的话来解释，标程用图来解释就比较直观更好处理 于是我们只要模拟上述过程就好了
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/题解/" rel="tag"><i class="fas fa-tags"></i>题解</a>
-        
-        <a class="post-tag button" href="/tags/并查集/" rel="tag"><i class="fas fa-tags"></i>并查集</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/10/"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -702,7 +702,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">137</a></div>
+      <div><a href="/archives/">138</a></div>
     </div>
     
     
